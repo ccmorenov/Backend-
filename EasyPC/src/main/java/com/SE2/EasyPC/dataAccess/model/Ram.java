@@ -17,7 +17,7 @@ import javax.persistence.ManyToMany;
 @Entity
 @Table(name = "RAM")
 public class RAM {
-    @Id
+    @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer idRAM;
