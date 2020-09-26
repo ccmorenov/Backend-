@@ -8,31 +8,31 @@ import javax.persistence.Column;
 @Entity
 @Table(name="SSD")
 public class SSD {
-    @Column
+    @Column(name = "id_ssd")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idSSD;
-	@Column
+	@Column(name = "model")
     private String model;
-    @Column
+    @Column(name = "power")
     private Float power;
-    @Column
+    @Column(name = "memory")
     private Integer memory;
-    @Column
+    @Column(name = "speed")
     private String speed;
-    @Column
+    @Column(name = "price_sl")
     private Integer priceSL;
-    @Column
+    @Column(name = "price_tauret")
     private Integer priceTauret;
-    @Column
+    @Column(name = "price_cyp")
     private Integer priceCyP;
-    @Column
+    @Column(name = "link_sl")
     private String linkSL;
-    @Column
+    @Column(name = "link_tauret")
     private String linkTauret;
-    @Column
+    @Column(name = "link_cyp")
     private String linkCyP;
-    @Column
+    @Column(name = "link_picture")
     private String linkPicture;
 
 	public Integer getPriceSL() {

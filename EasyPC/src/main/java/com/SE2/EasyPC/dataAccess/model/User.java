@@ -23,10 +23,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUser;
 
-    @Column
+    @Column(name = "username")
     private String username;
 
-    @Column
+    @Column(name = "password")
     private String password;
 
     @JsonIgnore

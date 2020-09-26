@@ -17,9 +17,9 @@ import javax.persistence.ManyToMany;
 @Entity
 @Table(name = "RAM")
 public class RAM {
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_ram")
     private Integer idRAM;
 
     @Column
@@ -31,32 +31,24 @@ public class RAM {
     @Column
     private Integer memory;
 
-    @Column
+    @Column(name = "speed")
     private Float speed;
-
-    @Column
+    @Column(name = "price_sl")
     private Integer priceSL;
-
-    @Column
+    @Column(name = "price_tauret")
     private Integer priceTauret;
-
-    @Column
+    @Column(name = "price_cyp")
     private Integer priceCyP;
-
-    @Column
+    @Column(name = "link_sl")
     private String linkSL;
-
-    @Column
+    @Column(name = "link_tauret")
     private String linkTauret;
-
-    @Column
+    @Column(name = "link_cyp")
     private String linkCyP;
-
-    @Column
-    private String linkBenchmark;
-
-    @Column
+    @Column(name = "link_picture")
     private String linkPicture;
+    @Column(name = "link_benchmark")
+    private String linkBenchmark;
 
     @JsonIgnore
     @ManyToMany(mappedBy = "compatibleRAM")
