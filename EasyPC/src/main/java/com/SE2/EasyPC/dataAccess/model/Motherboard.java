@@ -57,13 +57,13 @@ public class Motherboard {
     @ManyToMany
     @JoinTable(name = "CompatibleRAM", joinColumns = {@JoinColumn(name = "idMotherboard")},
     inverseJoinColumns = {@JoinColumn(name = "idRAM")})
-    private List<Ram> compatibleRAM;
+    private List<RAM> compatibleRAM;
 
     @JsonIgnore
     @ManyToMany
     @JoinTable(name = "CompatibleCPU", joinColumns = {@JoinColumn(name = "idMotherboard")},
     inverseJoinColumns = {@JoinColumn(name = "idCPU")})
-    private List<Ram> compatibleCPU;
+    private List<RAM> compatibleCPU;
 
     public Integer getIdMotherboard() {
         return idMotherboard;
