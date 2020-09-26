@@ -1,4 +1,4 @@
-package com.SE2.EasyPC.Repository;
+package com.SE2.EasyPC.dataAccess.Repository;
 
 import com.SE2.EasyPC.dataAccess.model.Cooling;
 
