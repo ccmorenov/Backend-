@@ -11,7 +11,7 @@ import javax.persistence.Column;
 @Table( name = "Admin" )
 public class Admin {
     
-    @Column( name = "idAdmin" )
+    @Column(name = "id_admin")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idAdmin;
