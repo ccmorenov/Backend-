@@ -18,7 +18,7 @@ import javax.persistence.Column;
 @Table( name = "Motherboard" )
 public class Motherboard {
     
-    @Column
+    @Column(name="id_motherboard")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMotherboard;
