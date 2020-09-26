@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table( name = "Build" )
 public class Build {
     
-    @Column
+    @Column(name = "id_build")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idBuild;
@@ -24,54 +24,54 @@ public class Build {
     private Date date;
     
     @ManyToOne
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "id_user")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "idMouse")
+    @JoinColumn(name = "id_mouse")
     private Mouse mouse;
 
     @ManyToOne
-    @JoinColumn(name = "idKeyboard")
+    @JoinColumn(name = "id_keyboard")
     private Keyboard keyboard;
 
     @ManyToOne
-    @JoinColumn(name = "idMonitor")
+    @JoinColumn(name = "id_monitor")
     private Monitor monitor;
 
     @ManyToOne
-    @JoinColumn(name = "idMotherboard")
+    @JoinColumn(name = "id_motherboard")
     private Motherboard motherboard;
 
     @ManyToOne
-    @JoinColumn(name = "idCPU")
+    @JoinColumn(name = "id_cpu")
     private CPU cpu;
 
     @ManyToOne
-    @JoinColumn(name = "idGPU")
+    @JoinColumn(name = "id_gpu")
     private GPU GPU;
 
     @ManyToOne
-    @JoinColumn(name = "idRAM")
+    @JoinColumn(name = "id_ram")
     private RAM ram;
 
     @ManyToOne
-    @JoinColumn(name = "idCooling")
+    @JoinColumn(name = "id_cooling")
     private Cooling cooling;
 
     @ManyToOne
-    @JoinColumn(name = "idSSD")
+    @JoinColumn(name = "id_ssd")
     private SSD ssd;
 
     @ManyToOne
-    @JoinColumn(name = "idHDD")
+    @JoinColumn(name = "id_hdd")
     private HDD hdd;
 
     @ManyToOne
-    @JoinColumn(name = "idPowerSupply")
+    @JoinColumn(name = "id_powersupply")
     private PowerSupply powerSupply;
 
     @ManyToOne
-    @JoinColumn(name = "idCase")
+    @JoinColumn(name = "id_case")
     private Case caseObj;
 }

@@ -17,7 +17,7 @@ import javax.persistence.Column;
 @Table( name = "CPU" )
 public class CPU {
     
-    @Column
+    @Column(name = "id_cpu")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCPU;
@@ -34,28 +34,19 @@ public class CPU {
     @Column
     private Float speed;
 
-    @Column
-    private String priceSL;
-    
-    @Column
-    private String priceTauret;
-
-    @Column
-    private String priceCyP;
-
-    @Column
+    @Column(name = "price_sl")
+    private Integer priceSL;
+    @Column(name = "price_tauret")
+    private Integer priceTauret;
+    @Column(name = "price_cyp")
+    private Integer priceCyP;
+    @Column(name = "link_sl")
     private String linkSL;
-
-    @Column
+    @Column(name = "link_tauret")
     private String linkTauret;
-
-    @Column
+    @Column(name = "link_cyp")
     private String linkCyP;
-
-    @Column
-    private String linkBenchmark;
-
-    @Column
+    @Column(name = "link_picture")
     private String linkPicture;
 
     @JsonIgnore
@@ -102,27 +93,27 @@ public class CPU {
         this.speed = speed;
     }
 
-    public String getPriceSL() {
+    public Integer getPriceSL() {
         return priceSL;
     }
 
-    public void setPriceSL(String priceSL) {
+    public void setPriceSL(Integer priceSL) {
         this.priceSL = priceSL;
     }
 
-    public String getPriceTauret() {
+    public Integer getPriceTauret() {
         return priceTauret;
     }
 
-    public void setPriceTauret(String priceTauret) {
+    public void setPriceTauret(Integer priceTauret) {
         this.priceTauret = priceTauret;
     }
 
-    public String getPriceCyP() {
+    public Integer getPriceCyP() {
         return priceCyP;
     }
 
-    public void setPriceCyP(String priceCyP) {
+    public void setPriceCyP(Integer priceCyP) {
         this.priceCyP = priceCyP;
     }
 
@@ -150,14 +141,6 @@ public class CPU {
         this.linkCyP = linkCyP;
     }
 
-    public String getLinkBenchmark() {
-        return linkBenchmark;
-    }
-
-    public void setLinkBenchmark(String linkBenchmark) {
-        this.linkBenchmark = linkBenchmark;
-    }
-
     public String getLinkPicture() {
         return linkPicture;
     }
@@ -165,5 +148,15 @@ public class CPU {
     public void setLinkPicture(String linkPicture) {
         this.linkPicture = linkPicture;
     }
+
+    public List<Motherboard> getCompatibleMotherboard() {
+        return compatibleMotherboard;
+    }
+
+    public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {
+        this.compatibleMotherboard = compatibleMotherboard;
+    }
+
+    
 
 }
