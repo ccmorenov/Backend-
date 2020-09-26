@@ -5,10 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-<<<<<<< HEAD
-=======
 import javax.persistence.JoinColumn;
->>>>>>> 988efa530822531942e5977a5d6437f023ca471d
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -58,9 +55,6 @@ public class Motherboard {
 
     @JsonIgnore
     @ManyToMany
-<<<<<<< HEAD
-    @JoinTable
-=======
     @JoinTable(name = "CompatibleRAM", joinColumns = {@JoinColumn(name = "idMotherboard")},
     inverseJoinColumns = {@JoinColumn(name = "idRAM")})
     private List<Ram> compatibleRAM;
@@ -71,7 +65,6 @@ public class Motherboard {
     inverseJoinColumns = {@JoinColumn(name = "idCPU")})
     private List<Ram> compatibleCPU;
 
->>>>>>> 988efa530822531942e5977a5d6437f023ca471d
     public Integer getIdMotherboard() {
         return idMotherboard;
     }
