@@ -1,4 +1,4 @@
-package com.SE2.EasyPC.dataAccess.Repository;
+package com.SE2.EasyPC.dataAccess.repository;
 
 import com.SE2.EasyPC.dataAccess.model.Case;
 import org.springframework.data.jpa.repository.JpaRepository;
