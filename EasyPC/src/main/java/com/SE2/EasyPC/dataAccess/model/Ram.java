@@ -16,7 +16,7 @@ import javax.persistence.ManyToMany;
 
 @Entity
 @Table(name = "RAM")
-public class Ram {
+public class RAM {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
