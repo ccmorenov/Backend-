@@ -1,4 +1,7 @@
 package com.SE2.EasyPC.dataAccess.model;
+
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,14 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.ManyToMany;
+
 
 @Entity
-@Table(name = "Ram")
+@Table(name = "RAM")
 public class Ram {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Integer idRam;
+    private Integer idRAM;
 
     @Column
     private String model;
@@ -51,12 +58,16 @@ public class Ram {
     @Column
     private String linkPicture;
 
+    @JsonIgnore
+    @ManyToMany(mappedBy = "compatibleRAM")
+    private List<Motherboard> compatibleMotherboard;
+
     public Integer getIdRam() {
-        return idRam;
+        return idRAM;
     }
 
     public void setIdRam(Integer idRam) {
-        this.idRam = idRam;
+        this.idRAM = idRam;
     }
 
     public String getModel() {
