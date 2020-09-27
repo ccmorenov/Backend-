@@ -16,27 +16,26 @@ import javax.validation.Valid;
 public class AdminController {
     
     @Autowired
-    AdminService adminservice;
+    AdminService adminService;
 
     @GetMapping("/admins")
     public List<Admin> getAllAdmins() {
-        return adminservice.getAllAdmins();
+        return adminService.getAllAdmins();
     }
 
     @GetMapping("/admin/{id}")
     public Admin getAdminById(@PathVariable(value = "id") Long adminId) {
-        return adminservice.getAdminById(adminId);
+        return adminService.getAdminById(adminId);
     }
 
     @PostMapping("/admin")
     public Admin createAdmin(@Valid @RequestBody Admin admin) {
-        return adminservice.createAdmin(admin);
+        return adminService.createAdmin(admin);
     }
 
     @DeleteMapping("/admin/{id}")
     public ResponseEntity<?> deleteAdmin(@PathVariable(value = "id") Long adminId) {
-        adminservice.deleteAdmin(adminId);
+        adminService.deleteAdmin(adminId);
         return ResponseEntity.ok().build();
     }
-
 }
