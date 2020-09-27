@@ -18,7 +18,7 @@ public class Build {
     @Column(name = "id_build")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idBuild;
+    private Long idBuild;
 
     @Column
     private Date date;
@@ -74,4 +74,124 @@ public class Build {
     @ManyToOne
     @JoinColumn(name = "id_case")
     private Case caseObj;
+
+    public Long getIdBuild() {
+        return idBuild;
+    }
+
+    public void setIdBuild(Long idBuild) {
+        this.idBuild = idBuild;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Mouse getMouse() {
+        return mouse;
+    }
+
+    public void setMouse(Mouse mouse) {
+        this.mouse = mouse;
+    }
+
+    public Keyboard getKeyboard() {
+        return keyboard;
+    }
+
+    public void setKeyboard(Keyboard keyboard) {
+        this.keyboard = keyboard;
+    }
+
+    public Monitor getMonitor() {
+        return monitor;
+    }
+
+    public void setMonitor(Monitor monitor) {
+        this.monitor = monitor;
+    }
+
+    public Motherboard getMotherboard() {
+        return motherboard;
+    }
+
+    public void setMotherboard(Motherboard motherboard) {
+        this.motherboard = motherboard;
+    }
+
+    public CPU getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(CPU cpu) {
+        this.cpu = cpu;
+    }
+
+    public GPU getGPU() {
+        return GPU;
+    }
+
+    public void setGPU(GPU gPU) {
+        GPU = gPU;
+    }
+
+    public RAM getRam() {
+        return ram;
+    }
+
+    public void setRam(RAM ram) {
+        this.ram = ram;
+    }
+
+    public Cooling getCooling() {
+        return cooling;
+    }
+
+    public void setCooling(Cooling cooling) {
+        this.cooling = cooling;
+    }
+
+    public SSD getSsd() {
+        return ssd;
+    }
+
+    public void setSsd(SSD ssd) {
+        this.ssd = ssd;
+    }
+
+    public HDD getHdd() {
+        return hdd;
+    }
+
+    public void setHdd(HDD hdd) {
+        this.hdd = hdd;
+    }
+
+    public PowerSupply getPowerSupply() {
+        return powerSupply;
+    }
+
+    public void setPowerSupply(PowerSupply powerSupply) {
+        this.powerSupply = powerSupply;
+    }
+
+    public Case getCaseObj() {
+        return caseObj;
+    }
+
+    public void setCaseObj(Case caseObj) {
+        this.caseObj = caseObj;
+    }
 }

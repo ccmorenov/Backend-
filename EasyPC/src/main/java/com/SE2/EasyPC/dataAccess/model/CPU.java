@@ -20,7 +20,7 @@ public class CPU {
     @Column(name = "id_cpu")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idCPU;
+    private Long idCPU;
 
     @Column
     private String model;
@@ -53,11 +53,11 @@ public class CPU {
     @ManyToMany(mappedBy = "compatibleCPU")
     private List<Motherboard> compatibleMotherboard;
 
-    public Integer getIdCPU() {
+    public Long getIdCPU() {
         return idCPU;
     }
 
-    public void setIdCPU(Integer idCPU) {
+    public void setIdCPU(Long idCPU) {
         this.idCPU = idCPU;
     }
 

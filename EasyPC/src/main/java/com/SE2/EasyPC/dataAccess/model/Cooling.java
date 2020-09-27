@@ -11,7 +11,7 @@ public class Cooling {
     @Column(name = "id_cooling")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idCooling;
+    private Long idCooling;
     @Column
     private String model;
     @Column
@@ -73,5 +73,29 @@ public class Cooling {
 	}
 	public void setLinkPicture(String linkPicture) {
 		this.linkPicture = linkPicture;
+	}
+
+	public Long getIdCooling() {
+		return idCooling;
+	}
+
+	public void setIdCooling(Long idCooling) {
+		this.idCooling = idCooling;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public Float getPower() {
+		return power;
+	}
+
+	public void setPower(Float power) {
+		this.power = power;
 	}
 }

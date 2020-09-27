@@ -14,7 +14,7 @@ public class Mouse {
     @Column(name="id_mouse")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idMouse;
+    private Long idMouse;
 
     @Column(name="model")
     private String model;
@@ -34,11 +34,11 @@ public class Mouse {
     @Column(name = "link_picture")
     private String linkPicture;
 
-    public Integer getIdMouse() {
+    public Long getIdMouse() {
         return idMouse;
     }
 
-    public void setIdMouse(Integer idMouse) {
+    public void setIdMouse(Long idMouse) {
         this.idMouse = idMouse;
     }
 

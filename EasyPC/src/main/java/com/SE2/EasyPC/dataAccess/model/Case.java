@@ -13,7 +13,7 @@ public class Case{
     @Column(name = "id_case")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idCase;
+    private Long idCase;
 
     @Column
     private String model;
@@ -33,10 +33,10 @@ public class Case{
     @Column(name = "link_picture")
     private String linkPicture;
     
-	public Integer getIdCase() {
+	public Long getIdCase() {
 		return idCase;
 	}
-	public void setIdCase(Integer idCase) {
+	public void setIdCase(Long idCase) {
 		this.idCase = idCase;
 	}
 	public String getModel() {

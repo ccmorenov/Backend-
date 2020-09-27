@@ -14,7 +14,7 @@ public class GPU {
     @Column(name = "id_gpu")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idGPU;
+    private Long idGPU;
 
     @Column
     private String model;
@@ -40,11 +40,11 @@ public class GPU {
     @Column(name = "link_picture")
     private String linkPicture;
 
-    public Integer getIdGPU() {
+    public Long getIdGPU() {
         return idGPU;
     }
 
-    public void setIdGPU(Integer idGPU) {
+    public void setIdGPU(Long idGPU) {
         this.idGPU = idGPU;
     }
 

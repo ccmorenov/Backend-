@@ -11,7 +11,7 @@ public class PowerSupply {
     @Column(name = "id_powersupply")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idPowerSupply;
+    private Long idPowerSupply;
 
     @Column(name = "model")
     private String model;
@@ -75,11 +75,11 @@ public class PowerSupply {
 		this.linkPicture = linkPicture;
 	}
 
-    public Integer getIdPowerSupply() {
+    public Long getIdPowerSupply() {
         return idPowerSupply;
     }
 
-    public void setIdPowerSupply(Integer idPowerSupply) {
+    public void setIdPowerSupply(Long idPowerSupply) {
         this.idPowerSupply = idPowerSupply;
     }
 

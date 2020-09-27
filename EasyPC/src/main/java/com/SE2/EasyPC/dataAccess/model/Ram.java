@@ -20,7 +20,7 @@ public class RAM {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ram")
-    private Integer idRAM;
+    private Long idRAM;
 
     @Column
     private String model;
@@ -54,12 +54,12 @@ public class RAM {
     @ManyToMany(mappedBy = "compatibleRAM")
     private List<Motherboard> compatibleMotherboard;
 
-    public Integer getIdRam() {
+    public Long getIdRam() {
         return idRAM;
     }
 
-    public void setIdRam(Integer idRam) {
-        this.idRAM = idRam;
+    public void setIdRam(Long idRAM) {
+        this.idRAM = idRAM;
     }
 
     public String getModel() {

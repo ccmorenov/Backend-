@@ -21,7 +21,7 @@ public class User {
     @Column(name="id_user")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idUser;
+    private Long idUser;
 
     @Column(name = "username")
     private String username;
@@ -33,11 +33,11 @@ public class User {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<Build> builds;
 
-    public Integer getIdUser() {
+    public Long getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(Long idUser) {
         this.idUser = idUser;
     }
 

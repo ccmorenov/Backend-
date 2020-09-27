@@ -14,7 +14,7 @@ public class Keyboard {
     @Column(name = "id_keyboard")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idKeyboard;
+    private Long idKeyboard;
 
     @Column
     private String model;
@@ -34,11 +34,11 @@ public class Keyboard {
     @Column(name = "link_picture")
     private String linkPicture;
 
-    public Integer getIdKeyboard() {
+    public Long getIdKeyboard() {
         return idKeyboard;
     }
 
-    public void setIdKeyboard(Integer idKeyboard) {
+    public void setIdKeyboard(Long idKeyboard) {
         this.idKeyboard = idKeyboard;
     }
 
