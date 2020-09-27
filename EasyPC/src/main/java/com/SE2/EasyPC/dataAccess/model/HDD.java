@@ -11,7 +11,7 @@ public class HDD {
     @Column(name = "id_hdd")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idHDD;
+    private Long idHDD;
     @Column
     private String model;
     @Column
@@ -76,5 +76,45 @@ public class HDD {
 	}
 	public void setLinkPicture(String linkPicture) {
 		this.linkPicture = linkPicture;
+	}
+
+	public Long getIdHDD() {
+		return idHDD;
+	}
+
+	public void setIdHDD(Long idHDD) {
+		this.idHDD = idHDD;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public Float getPower() {
+		return power;
+	}
+
+	public void setPower(Float power) {
+		this.power = power;
+	}
+
+	public Integer getMemory() {
+		return memory;
+	}
+
+	public void setMemory(Integer memory) {
+		this.memory = memory;
+	}
+
+	public String getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(String speed) {
+		this.speed = speed;
 	}
 }

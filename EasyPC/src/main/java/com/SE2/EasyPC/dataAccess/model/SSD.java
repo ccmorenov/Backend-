@@ -11,7 +11,7 @@ public class SSD {
     @Column(name = "id_ssd")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idSSD;
+	private Long idSSD;
 	@Column(name = "model")
     private String model;
     @Column(name = "power")
@@ -76,5 +76,45 @@ public class SSD {
 	}
 	public void setLinkPicture(String linkPicture) {
 		this.linkPicture = linkPicture;
+	}
+
+	public Long getIdSSD() {
+		return idSSD;
+	}
+
+	public void setIdSSD(Long idSSD) {
+		this.idSSD = idSSD;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public Float getPower() {
+		return power;
+	}
+
+	public void setPower(Float power) {
+		this.power = power;
+	}
+
+	public Integer getMemory() {
+		return memory;
+	}
+
+	public void setMemory(Integer memory) {
+		this.memory = memory;
+	}
+
+	public String getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(String speed) {
+		this.speed = speed;
 	}
 }

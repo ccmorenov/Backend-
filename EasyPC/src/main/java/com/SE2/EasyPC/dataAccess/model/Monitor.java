@@ -14,7 +14,7 @@ public class Monitor {
     @Column(name = "id_monitor")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idMonitor;
+    private Long idMonitor;
 
     @Column
     private String model;
@@ -34,11 +34,11 @@ public class Monitor {
     @Column(name = "link_picture")
     private String linkPicture;
 
-    public Integer getIdMonitor() {
+    public Long getIdMonitor() {
         return idMonitor;
     }
 
-    public void setIdMonitor(Integer idMonitor) {
+    public void setIdMonitor(Long idMonitor) {
         this.idMonitor = idMonitor;
     }
 

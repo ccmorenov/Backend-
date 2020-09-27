@@ -21,7 +21,7 @@ public class Motherboard {
     @Column(name="id_motherboard")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idMotherboard;
+    private Long idMotherboard;
 
     @Column(name="model")
     private String model;
@@ -57,11 +57,11 @@ public class Motherboard {
     inverseJoinColumns = {@JoinColumn(name = "id_cpu")})
     private List<RAM> compatibleCPU;
 
-    public Integer getIdMotherboard() {
+    public Long getIdMotherboard() {
         return idMotherboard;
     }
 
-    public void setIdMotherboard(Integer idMotherboard) {
+    public void setIdMotherboard(Long idMotherboard) {
         this.idMotherboard = idMotherboard;
     }
 

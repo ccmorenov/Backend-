@@ -14,7 +14,7 @@ public class Admin {
     @Column(name = "id_admin")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idAdmin;
+    private Long idAdmin;
 
     @Column
     private String username;
@@ -22,11 +22,11 @@ public class Admin {
     @Column
     private String password;
 
-    public Integer getIdAdmin() {
+    public Long getIdAdmin() {
         return idAdmin;
     }
 
-    public void setIdAdmin(Integer idAdmin) {
+    public void setIdAdmin(Long idAdmin) {
         this.idAdmin = idAdmin;
     }
 
