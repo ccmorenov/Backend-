@@ -18,7 +18,7 @@ public class MouseController {
     @Autowired
     MouseService mouseService;
 
-    @GetMapping("/mouses")
+    @GetMapping("/mice")
     public List<Mouse> getAllMice() {
         return mouseService.getAllMice();
     }
