@@ -17,22 +17,22 @@ public class CaseController {
     @Autowired
     CaseService caseService;
 
-    @GetMapping("/Cases")
+    @GetMapping("/cases")
     public List<Case> getAllCases() {
         return caseService.getAllCases();
     }
 
-    @GetMapping("/Case/{id}")
+    @GetMapping("/case/{id}")
     public Case getCaseById(@PathVariable(value = "id") Long CaseId) {
         return caseService.getCaseById(CaseId);
     }
 
-    @PostMapping("/Case")
+    @PostMapping("/case")
     public Case createCase(@Valid @RequestBody Case caseObj) {
         return caseService.createCase(caseObj);
     }
 
-    @DeleteMapping("/Case/{id}")
+    @DeleteMapping("/case/{id}")
     public ResponseEntity<?> deleteCase(@PathVariable(value = "id") Long CaseId) {
         caseService.deleteCase(CaseId);
         return ResponseEntity.ok().build();
