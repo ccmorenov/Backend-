@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
-    <changeSet author="USER (generated)" id="1601673631510-1">
+    <changeSet author="andre (generated)" id="1601678403461-1">
         <createTable tableName="admin">
-            <column autoIncrement="true" name="idAdmin" type="INT">
+            <column autoIncrement="true" name="id_admin" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="username" type="VARCHAR(45)">
@@ -13,91 +13,91 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-2">
+    <changeSet author="andre (generated)" id="1601678403461-2">
         <createTable tableName="build">
-            <column autoIncrement="true" name="idBuild" type="INT">
+            <column autoIncrement="true" name="id_build" type="INT">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="idUser" type="INT">
+            <column name="id_user" type="INT">
                 <constraints nullable="false"/>
             </column>
             <column name="date" type="date">
                 <constraints nullable="false"/>
             </column>
-            <column name="idMouse" type="INT"/>
-            <column name="idKeyboard" type="INT"/>
-            <column name="idMonitor" type="INT"/>
-            <column name="idMotherboard" type="INT">
+            <column name="id_mouse" type="INT"/>
+            <column name="id_keyboard" type="INT"/>
+            <column name="id_monitor" type="INT"/>
+            <column name="id_motherboard" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idCPU" type="INT">
+            <column name="id_cpu" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idGPU" type="INT">
+            <column name="id_gpu" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idRAM" type="INT">
+            <column name="id_ram" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idCooling" type="INT">
+            <column name="id_cooling" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idSSD" type="INT"/>
-            <column name="idHDD" type="INT"/>
-            <column name="idPowerSupply" type="INT">
+            <column name="id_ssd" type="INT"/>
+            <column name="id_hdd" type="INT"/>
+            <column name="id_powersupply" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idCase" type="INT">
+            <column name="id_case" type="INT">
                 <constraints nullable="false"/>
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-3">
+    <changeSet author="andre (generated)" id="1601678403461-3">
         <createTable tableName="case">
-            <column autoIncrement="true" name="idCase" type="INT">
+            <column autoIncrement="true" name="id_case" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="model" type="VARCHAR(45)">
                 <constraints nullable="false"/>
             </column>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-4">
+    <changeSet author="andre (generated)" id="1601678403461-4">
         <createTable tableName="compatiblecpu">
-            <column autoIncrement="true" name="idCompatibleCPU" type="INT">
+            <column autoIncrement="true" name="id_compatible_cpu" type="INT">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="idCPU" type="INT">
+            <column name="id_cpu" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idMotherboard" type="INT">
+            <column name="id_motherboard" type="INT">
                 <constraints nullable="false"/>
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-5">
+    <changeSet author="andre (generated)" id="1601678403461-5">
         <createTable tableName="compatibleram">
-            <column autoIncrement="true" name="idCompatibleRAM" type="INT">
+            <column autoIncrement="true" name="id_compatible_ram" type="INT">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="idRAM" type="INT">
+            <column name="id_ram" type="INT">
                 <constraints nullable="false"/>
             </column>
-            <column name="idMotherboard" type="INT">
+            <column name="id_motherboard" type="INT">
                 <constraints nullable="false"/>
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-6">
+    <changeSet author="andre (generated)" id="1601678403461-6">
         <createTable tableName="cooling">
-            <column autoIncrement="true" name="idCooling" type="INT">
+            <column autoIncrement="true" name="id_cooling" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="model" type="VARCHAR(45)">
@@ -106,18 +106,18 @@
             <column name="power" type="FLOAT(12)">
                 <constraints nullable="false"/>
             </column>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-7">
+    <changeSet author="andre (generated)" id="1601678403461-7">
         <createTable tableName="cpu">
-            <column autoIncrement="true" name="idCPU" type="INT">
+            <column autoIncrement="true" name="id_cpu" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="model" type="VARCHAR(45)">
@@ -128,19 +128,19 @@
             </column>
             <column name="cores" type="INT"/>
             <column name="speed" type="FLOAT(12)"/>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkBenchmark" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-8">
+    <changeSet author="andre (generated)" id="1601678403461-8">
         <createTable tableName="gpu">
-            <column autoIncrement="true" name="idGPU" type="INT">
+            <column autoIncrement="true" name="id_gpu" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="model" type="VARCHAR(45)">
@@ -150,134 +150,19 @@
                 <constraints nullable="false"/>
             </column>
             <column name="memory" type="INT"/>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkBenchmark" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-9">
+    <changeSet author="andre (generated)" id="1601678403461-9">
         <createTable tableName="hdd">
-            <column autoIncrement="true" name="idHDD" type="INT">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="model" type="VARCHAR(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="power" type="FLOAT(12)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="memory" type="INT"/>
-            <column name="speed" type="VARCHAR(45)"/>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkBenchmark" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-10">
-        <createTable tableName="keyboard">
-            <column autoIncrement="true" name="idKeyboard" type="INT">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="model" type="VARCHAR(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-11">
-        <createTable tableName="monitor">
-            <column autoIncrement="true" name="idMonitor" type="INT">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="model" type="VARCHAR(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-12">
-        <createTable tableName="motherboard">
-            <column autoIncrement="true" name="idMotherboard" type="INT">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="model" type="VARCHAR(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="power" type="FLOAT(12)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkBenchmark" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-13">
-        <createTable tableName="mouse">
-            <column autoIncrement="true" name="idMouse" type="INT">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="model" type="VARCHAR(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-14">
-        <createTable tableName="powersupply">
-            <column autoIncrement="true" name="idPowerSupply" type="INT">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="model" type="VARCHAR(45)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="maxPower" type="FLOAT(12)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
-        </createTable>
-    </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-15">
-        <createTable tableName="ram">
-            <column autoIncrement="true" name="idRAM" type="INT">
+            <column autoIncrement="true" name="id_hdd" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="model" type="VARCHAR(45)">
@@ -288,19 +173,111 @@
             </column>
             <column name="memory" type="INT"/>
             <column name="speed" type="FLOAT(12)"/>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkBenchmark" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-16">
-        <createTable tableName="ssd">
-            <column autoIncrement="true" name="idSSD" type="INT">
+    <changeSet author="andre (generated)" id="1601678403461-10">
+        <createTable tableName="keyboard">
+            <column autoIncrement="true" name="id_keyboard" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-11">
+        <createTable tableName="monitor">
+            <column autoIncrement="true" name="id_monitor" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-12">
+        <createTable tableName="motherboard">
+            <column autoIncrement="true" name="id_motherboard" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-13">
+        <createTable tableName="mouse">
+            <column autoIncrement="true" name="id_mouse" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-14">
+        <createTable tableName="powersupply">
+            <column autoIncrement="true" name="id_powersupply" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-15">
+        <createTable tableName="ram">
+            <column autoIncrement="true" name="id_ram" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="model" type="VARCHAR(45)">
@@ -310,20 +287,43 @@
                 <constraints nullable="false"/>
             </column>
             <column name="memory" type="INT"/>
-            <column name="speed" type="VARCHAR(45)"/>
-            <column name="priceSL" type="INT"/>
-            <column name="priceTauret" type="INT"/>
-            <column name="priceCyP" type="INT"/>
-            <column name="linkSL" type="VARCHAR(45)"/>
-            <column name="linkTauret" type="VARCHAR(45)"/>
-            <column name="linkCyP" type="VARCHAR(45)"/>
-            <column name="linkBenchmark" type="VARCHAR(45)"/>
-            <column name="linkPicture" type="VARCHAR(45)"/>
+            <column name="speed" type="FLOAT(12)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-17">
+    <changeSet author="andre (generated)" id="1601678403461-16">
+        <createTable tableName="ssd">
+            <column autoIncrement="true" name="id_ssd" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="model" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power" type="FLOAT(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="memory" type="INT"/>
+            <column name="speed" type="FLOAT(12)"/>
+            <column name="price_sl" type="INT"/>
+            <column name="price_tauret" type="INT"/>
+            <column name="price_cyp" type="INT"/>
+            <column name="link_sl" type="VARCHAR(45)"/>
+            <column name="link_tauret" type="VARCHAR(45)"/>
+            <column name="link_cyp" type="VARCHAR(45)"/>
+            <column name="link_picture" type="VARCHAR(45)"/>
+            <column name="link_benchmark" type="VARCHAR(45)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1601678403461-17">
         <createTable tableName="user">
-            <column autoIncrement="true" name="idUser" type="INT">
+            <column autoIncrement="true" name="id_user" type="INT">
                 <constraints primaryKey="true"/>
             </column>
             <column name="username" type="VARCHAR(45)">
@@ -334,146 +334,146 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-18">
+    <changeSet author="andre (generated)" id="1601678403461-18">
         <addUniqueConstraint columnNames="username" constraintName="username_UNIQUE" tableName="admin"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-19">
+    <changeSet author="andre (generated)" id="1601678403461-19">
         <addUniqueConstraint columnNames="username" constraintName="username_UNIQUE" tableName="user"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-20">
+    <changeSet author="andre (generated)" id="1601678403461-20">
         <createIndex indexName="fk_Build_CPU1_idx" tableName="build">
-            <column name="idCPU"/>
+            <column name="id_cpu"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-21">
+    <changeSet author="andre (generated)" id="1601678403461-21">
         <createIndex indexName="fk_Build_Case1_idx" tableName="build">
-            <column name="idCase"/>
+            <column name="id_case"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-22">
+    <changeSet author="andre (generated)" id="1601678403461-22">
         <createIndex indexName="fk_Build_Cooling1_idx" tableName="build">
-            <column name="idCooling"/>
+            <column name="id_cooling"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-23">
+    <changeSet author="andre (generated)" id="1601678403461-23">
         <createIndex indexName="fk_Build_GPU1_idx" tableName="build">
-            <column name="idGPU"/>
+            <column name="id_gpu"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-24">
+    <changeSet author="andre (generated)" id="1601678403461-24">
         <createIndex indexName="fk_Build_HDD1_idx" tableName="build">
-            <column name="idHDD"/>
+            <column name="id_hdd"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-25">
+    <changeSet author="andre (generated)" id="1601678403461-25">
         <createIndex indexName="fk_Build_Keyboard1_idx" tableName="build">
-            <column name="idKeyboard"/>
+            <column name="id_keyboard"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-26">
+    <changeSet author="andre (generated)" id="1601678403461-26">
         <createIndex indexName="fk_Build_Monitor1_idx" tableName="build">
-            <column name="idMonitor"/>
+            <column name="id_monitor"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-27">
+    <changeSet author="andre (generated)" id="1601678403461-27">
         <createIndex indexName="fk_Build_Motherboard1_idx" tableName="build">
-            <column name="idMotherboard"/>
+            <column name="id_motherboard"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-28">
+    <changeSet author="andre (generated)" id="1601678403461-28">
         <createIndex indexName="fk_Build_Mouse1_idx" tableName="build">
-            <column name="idMouse"/>
+            <column name="id_mouse"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-29">
+    <changeSet author="andre (generated)" id="1601678403461-29">
         <createIndex indexName="fk_Build_Power Supply1_idx" tableName="build">
-            <column name="idPowerSupply"/>
+            <column name="id_powersupply"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-30">
+    <changeSet author="andre (generated)" id="1601678403461-30">
         <createIndex indexName="fk_Build_RAM1_idx" tableName="build">
-            <column name="idRAM"/>
+            <column name="id_ram"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-31">
+    <changeSet author="andre (generated)" id="1601678403461-31">
         <createIndex indexName="fk_Build_SSD1_idx" tableName="build">
-            <column name="idSSD"/>
+            <column name="id_ssd"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-32">
+    <changeSet author="andre (generated)" id="1601678403461-32">
         <createIndex indexName="fk_Build_User_idx" tableName="build">
-            <column name="idUser"/>
+            <column name="id_user"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-33">
+    <changeSet author="andre (generated)" id="1601678403461-33">
         <createIndex indexName="fk_CompatibleCPU_CPU1_idx" tableName="compatiblecpu">
-            <column name="idCPU"/>
+            <column name="id_cpu"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-34">
+    <changeSet author="andre (generated)" id="1601678403461-34">
         <createIndex indexName="fk_CompatibleCPU_Motherboard1_idx" tableName="compatiblecpu">
-            <column name="idMotherboard"/>
+            <column name="id_motherboard"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-35">
+    <changeSet author="andre (generated)" id="1601678403461-35">
         <createIndex indexName="fk_CompatibleRAM_Motherboard1_idx" tableName="compatibleram">
-            <column name="idMotherboard"/>
+            <column name="id_motherboard"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-36">
+    <changeSet author="andre (generated)" id="1601678403461-36">
         <createIndex indexName="fk_CompatibleRAM_RAM1_idx" tableName="compatibleram">
-            <column name="idRAM"/>
+            <column name="id_ram"/>
         </createIndex>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-37">
-        <addForeignKeyConstraint baseColumnNames="idCPU" baseTableName="build" constraintName="fk_Build_CPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idCPU" referencedTableName="cpu"/>
+    <changeSet author="andre (generated)" id="1601678403461-37">
+        <addForeignKeyConstraint baseColumnNames="id_cpu" baseTableName="build" constraintName="fk_Build_CPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_cpu" referencedTableName="cpu"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-38">
-        <addForeignKeyConstraint baseColumnNames="idCase" baseTableName="build" constraintName="fk_Build_Case1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idCase" referencedTableName="case"/>
+    <changeSet author="andre (generated)" id="1601678403461-38">
+        <addForeignKeyConstraint baseColumnNames="id_case" baseTableName="build" constraintName="fk_Build_Case1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_case" referencedTableName="case"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-39">
-        <addForeignKeyConstraint baseColumnNames="idCooling" baseTableName="build" constraintName="fk_Build_Cooling1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idCooling" referencedTableName="cooling"/>
+    <changeSet author="andre (generated)" id="1601678403461-39">
+        <addForeignKeyConstraint baseColumnNames="id_cooling" baseTableName="build" constraintName="fk_Build_Cooling1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_cooling" referencedTableName="cooling"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-40">
-        <addForeignKeyConstraint baseColumnNames="idGPU" baseTableName="build" constraintName="fk_Build_GPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idGPU" referencedTableName="gpu"/>
+    <changeSet author="andre (generated)" id="1601678403461-40">
+        <addForeignKeyConstraint baseColumnNames="id_gpu" baseTableName="build" constraintName="fk_Build_GPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_gpu" referencedTableName="gpu"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-41">
-        <addForeignKeyConstraint baseColumnNames="idHDD" baseTableName="build" constraintName="fk_Build_HDD1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idHDD" referencedTableName="hdd"/>
+    <changeSet author="andre (generated)" id="1601678403461-41">
+        <addForeignKeyConstraint baseColumnNames="id_hdd" baseTableName="build" constraintName="fk_Build_HDD1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_hdd" referencedTableName="hdd"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-42">
-        <addForeignKeyConstraint baseColumnNames="idKeyboard" baseTableName="build" constraintName="fk_Build_Keyboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idKeyboard" referencedTableName="keyboard"/>
+    <changeSet author="andre (generated)" id="1601678403461-42">
+        <addForeignKeyConstraint baseColumnNames="id_keyboard" baseTableName="build" constraintName="fk_Build_Keyboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_keyboard" referencedTableName="keyboard"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-43">
-        <addForeignKeyConstraint baseColumnNames="idMonitor" baseTableName="build" constraintName="fk_Build_Monitor1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idMonitor" referencedTableName="monitor"/>
+    <changeSet author="andre (generated)" id="1601678403461-43">
+        <addForeignKeyConstraint baseColumnNames="id_monitor" baseTableName="build" constraintName="fk_Build_Monitor1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_monitor" referencedTableName="monitor"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-44">
-        <addForeignKeyConstraint baseColumnNames="idMotherboard" baseTableName="build" constraintName="fk_Build_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idMotherboard" referencedTableName="motherboard"/>
+    <changeSet author="andre (generated)" id="1601678403461-44">
+        <addForeignKeyConstraint baseColumnNames="id_motherboard" baseTableName="build" constraintName="fk_Build_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_motherboard" referencedTableName="motherboard"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-45">
-        <addForeignKeyConstraint baseColumnNames="idMouse" baseTableName="build" constraintName="fk_Build_Mouse1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idMouse" referencedTableName="mouse"/>
+    <changeSet author="andre (generated)" id="1601678403461-45">
+        <addForeignKeyConstraint baseColumnNames="id_mouse" baseTableName="build" constraintName="fk_Build_Mouse1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_mouse" referencedTableName="mouse"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-46">
-        <addForeignKeyConstraint baseColumnNames="idPowerSupply" baseTableName="build" constraintName="fk_Build_Power Supply1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idPowerSupply" referencedTableName="powersupply"/>
+    <changeSet author="andre (generated)" id="1601678403461-46">
+        <addForeignKeyConstraint baseColumnNames="id_powersupply" baseTableName="build" constraintName="fk_Build_Power Supply1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_powersupply" referencedTableName="powersupply"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-47">
-        <addForeignKeyConstraint baseColumnNames="idRAM" baseTableName="build" constraintName="fk_Build_RAM1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idRAM" referencedTableName="ram"/>
+    <changeSet author="andre (generated)" id="1601678403461-47">
+        <addForeignKeyConstraint baseColumnNames="id_ram" baseTableName="build" constraintName="fk_Build_RAM1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_ram" referencedTableName="ram"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-48">
-        <addForeignKeyConstraint baseColumnNames="idSSD" baseTableName="build" constraintName="fk_Build_SSD1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idSSD" referencedTableName="ssd"/>
+    <changeSet author="andre (generated)" id="1601678403461-48">
+        <addForeignKeyConstraint baseColumnNames="id_ssd" baseTableName="build" constraintName="fk_Build_SSD1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_ssd" referencedTableName="ssd"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-49">
-        <addForeignKeyConstraint baseColumnNames="idUser" baseTableName="build" constraintName="fk_Build_User" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idUser" referencedTableName="user"/>
+    <changeSet author="andre (generated)" id="1601678403461-49">
+        <addForeignKeyConstraint baseColumnNames="id_user" baseTableName="build" constraintName="fk_Build_User" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_user" referencedTableName="user"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-50">
-        <addForeignKeyConstraint baseColumnNames="idCPU" baseTableName="compatiblecpu" constraintName="fk_CompatibleCPU_CPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idCPU" referencedTableName="cpu"/>
+    <changeSet author="andre (generated)" id="1601678403461-50">
+        <addForeignKeyConstraint baseColumnNames="id_cpu" baseTableName="compatiblecpu" constraintName="fk_CompatibleCPU_CPU1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_cpu" referencedTableName="cpu"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-51">
-        <addForeignKeyConstraint baseColumnNames="idMotherboard" baseTableName="compatiblecpu" constraintName="fk_CompatibleCPU_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idMotherboard" referencedTableName="motherboard"/>
+    <changeSet author="andre (generated)" id="1601678403461-51">
+        <addForeignKeyConstraint baseColumnNames="id_motherboard" baseTableName="compatiblecpu" constraintName="fk_CompatibleCPU_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_motherboard" referencedTableName="motherboard"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-52">
-        <addForeignKeyConstraint baseColumnNames="idMotherboard" baseTableName="compatibleram" constraintName="fk_CompatibleRAM_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idMotherboard" referencedTableName="motherboard"/>
+    <changeSet author="andre (generated)" id="1601678403461-52">
+        <addForeignKeyConstraint baseColumnNames="id_motherboard" baseTableName="compatibleram" constraintName="fk_CompatibleRAM_Motherboard1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_motherboard" referencedTableName="motherboard"/>
     </changeSet>
-    <changeSet author="USER (generated)" id="1601673631510-53">
-        <addForeignKeyConstraint baseColumnNames="idRAM" baseTableName="compatibleram" constraintName="fk_CompatibleRAM_RAM1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="idRAM" referencedTableName="ram"/>
+    <changeSet author="andre (generated)" id="1601678403461-53">
+        <addForeignKeyConstraint baseColumnNames="id_ram" baseTableName="compatibleram" constraintName="fk_CompatibleRAM_RAM1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_ram" referencedTableName="ram"/>
     </changeSet>
 </databaseChangeLog>
