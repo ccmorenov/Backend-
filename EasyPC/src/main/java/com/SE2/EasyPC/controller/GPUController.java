@@ -11,6 +11,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class GPUController {
