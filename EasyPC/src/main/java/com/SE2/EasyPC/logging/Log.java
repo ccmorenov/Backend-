@@ -2,12 +2,15 @@ package com.SE2.EasyPC.logging;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Log {
 
     public static void createLog(int level, String text) {
         try {
-            FileWriter fw = new FileWriter("log.txt");
+            PrintWriter writer = new PrintWriter(new FileWriter("logs\\"+LocalDate.now()+".txt", true));
             String lvl = "";
             switch(level){
                 case 0:
@@ -29,9 +32,9 @@ public class Log {
                     lvl = "Critical";
                     break;
             }
-            String message = "" + lvl +", "+ text + "\n";
-            fw.write(message);
-            fw.close();
+            String message = LocalDate.now() + " " + LocalTime.now() + " (" + lvl +") "+ text + "\n";
+            writer.write(message);
+            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
