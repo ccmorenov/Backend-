@@ -5,6 +5,7 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.SSD;
 import com.SE2.EasyPC.dataAccess.repository.SSDRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
+import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,19 +17,43 @@ public class SSDService {
     SSDRepository ssdRepository; 
 
     public List<SSD> getAllSSDs() {
-        return ssdRepository.findAll();
+        try{
+            return ssdRepository.findAll();
+        }catch( Exception e ){
+            Log.createLog(3, "Service getAllSSDs failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 
     public SSD getSSDById( Long id ) {
-        return ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
+        try{
+            return ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
+        }catch( Exception e ){
+            Log.createLog(3, "Service getSSDById failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 
     public SSD createSSD(SSD ssd) {
-        return ssdRepository.save(ssd);
+        try{
+            return ssdRepository.save(ssd);
+        }catch( Exception e ){
+            Log.createLog(3, "Service createSSD failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 
     public void deleteSSD( Long id ) {
-        SSD ssd = ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
-        ssdRepository.delete(ssd);
+        try{
+            SSD ssd = ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
+            ssdRepository.delete(ssd);
+        }catch( Exception e ){
+            Log.createLog(3, "Service deleteSSD failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 }
