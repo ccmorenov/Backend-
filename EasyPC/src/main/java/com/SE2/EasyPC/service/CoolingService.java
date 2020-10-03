@@ -10,12 +10,13 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for Cooling, recives calls from CoolingController and calls CoolingRepository
 @Service
 public class CoolingService {
     @Autowired
     CoolingRepository coolingRepository; 
 
-    public List<Cooling> getAllCoolings() {
+    public List<Cooling> getAllCoolings() { // returns a list with all Coolings in the database
         try{
             return coolingRepository.findAll();
         }catch( Exception e ){
@@ -24,7 +25,7 @@ public class CoolingService {
         }
     }
 
-    public Cooling getCoolingById( Long id ) {
+    public Cooling getCoolingById( Long id ) { // returns the Cooling with the requested ID or an exception if it does not exist
         try{
             return coolingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cooling", "id", id));
         }catch( Exception e ){
@@ -33,7 +34,7 @@ public class CoolingService {
         }
     }
 
-    public Cooling createCooling(Cooling cooling) {
+    public Cooling createCooling(Cooling cooling) { // creates a new Cooling in the database
         try{
             return coolingRepository.save(cooling);
         }catch( Exception e ){
@@ -42,7 +43,7 @@ public class CoolingService {
         }
     }
 
-    public void deleteCooling( Long id ) {
+    public void deleteCooling( Long id ) { // deletes the Cooling with the requested ID or an exception if it does not exist
         try{
             Cooling cooling = coolingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cooling", "id", id));
             coolingRepository.delete(cooling);

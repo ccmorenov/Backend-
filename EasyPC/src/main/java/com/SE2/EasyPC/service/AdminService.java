@@ -10,13 +10,14 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for Admin, recives calls from AdminController and calls AdminRepository
 @Service
 public class AdminService {
     
     @Autowired
     AdminRepository adminRepository; 
 
-    public List<Admin> getAllAdmins() {
+    public List<Admin> getAllAdmins() { // returns a list with all Admins in the database
         try{
             return adminRepository.findAll();
         }catch( Exception e ){
@@ -25,7 +26,7 @@ public class AdminService {
         }
     }
 
-    public Admin getAdminById( Long id ) {
+    public Admin getAdminById( Long id ) { // returns the Admin with the requested ID or an exception if it does not exist
         try{
             return adminRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Admin", "id", id));
         }catch( Exception e ){
@@ -34,7 +35,7 @@ public class AdminService {
         }
     }
 
-    public Admin createAdmin(Admin admin) {
+    public Admin createAdmin(Admin admin) { // creates a new Admin in the database
         try{
             return adminRepository.save(admin);
         }catch( Exception e ){
@@ -43,7 +44,7 @@ public class AdminService {
         }
     }
 
-    public void deleteAdmin( Long id ) {
+    public void deleteAdmin( Long id ) { // deletes the Admin with the requested ID or an exception if it does not exist
         try{
             Admin admin = adminRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Admin", "id", id));
             adminRepository.delete(admin);

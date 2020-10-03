@@ -10,13 +10,14 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for SSD, recives calls from SSDController and calls SSDRepository
 @Service
 public class SSDService {
 
     @Autowired
     SSDRepository ssdRepository; 
 
-    public List<SSD> getAllSSDs() {
+    public List<SSD> getAllSSDs() { // returns a list with all SSDs in the database
         try{
             return ssdRepository.findAll();
         }catch( Exception e ){
@@ -26,7 +27,7 @@ public class SSDService {
         
     }
 
-    public SSD getSSDById( Long id ) {
+    public SSD getSSDById( Long id ) { // returns the SSD with the requested ID or an exception if it does not exist
         try{
             return ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
         }catch( Exception e ){
@@ -36,7 +37,7 @@ public class SSDService {
         
     }
 
-    public SSD createSSD(SSD ssd) {
+    public SSD createSSD(SSD ssd) { // creates a new SSD in the database
         try{
             return ssdRepository.save(ssd);
         }catch( Exception e ){
@@ -46,7 +47,7 @@ public class SSDService {
         
     }
 
-    public void deleteSSD( Long id ) {
+    public void deleteSSD( Long id ) { // deletes the SSD with the requested ID or an exception if it does not exist
         try{
             SSD ssd = ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
             ssdRepository.delete(ssd);
