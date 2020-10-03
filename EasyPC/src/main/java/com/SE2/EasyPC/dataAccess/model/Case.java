@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 @Entity
-@Table(name="Case")
+@Table(name="easypc.case")
 public class Case{
     @Column(name = "id_case")
     @Id
