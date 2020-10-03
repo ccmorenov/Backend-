@@ -5,7 +5,7 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.Case;
 import com.SE2.EasyPC.dataAccess.repository.CaseRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-
+import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,20 +17,40 @@ public class CaseService {
     CaseRepository caseRepository;
 
     public List<Case> getAllCases() {
-        return caseRepository.findAll();
+        try{
+            return caseRepository.findAll();
+        }catch( Exception e ){
+            Log.createLog(3, "Service getAllCases failed: " + e.getMessage() );
+            throw e;
+        }
     }
 
     public Case getCaseById( Long id ) {
-        return caseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Case", "id", id));
+        try{
+            return caseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Case", "id", id));
+        }catch( Exception e ){
+            Log.createLog(3, "Service getCaseById failed: " + e.getMessage() );
+            throw e;
+        }
     }
 
     public Case createCase(Case caseObj) {
-        return caseRepository.save(caseObj);
+        try{
+            return caseRepository.save(caseObj);
+        }catch( Exception e ){
+            Log.createLog(3, "Service createCase failed: " + e.getMessage() );
+            throw e;
+        }
     }
 
     public void deleteCase( Long id ) {
-        Case caseObj = caseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Case", "id", id));
-        caseRepository.delete(caseObj);
+        try{
+            Case caseObj = caseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Case", "id", id));
+            caseRepository.delete(caseObj);
+        }catch( Exception e ){
+            Log.createLog(3, "Service deleteCase failed: " + e.getMessage() );
+            throw e;
+        }
     }
 
     
