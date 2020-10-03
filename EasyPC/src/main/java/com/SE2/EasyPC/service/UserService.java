@@ -5,6 +5,7 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.User;
 import com.SE2.EasyPC.dataAccess.repository.UserRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
+import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,19 +17,43 @@ public class UserService {
     UserRepository userRepository; 
 
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        try{
+            return userRepository.findAll();
+        }catch( Exception e ){
+            Log.createLog(3, "Service getAllUsers failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 
     public User getUserById( Long id ) {
-        return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
+        try{
+            return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
+        }catch( Exception e ){
+            Log.createLog(3, "Service getUserById failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 
     public User createUser(User user) {
-        return userRepository.save(user);
+        try{
+            return userRepository.save(user);
+        }catch( Exception e ){
+            Log.createLog(3, "Service createUser failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 
     public void deleteUser( Long id ) {
-        User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
-        userRepository.delete(user);
+        try{
+            User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
+            userRepository.delete(user);
+        }catch( Exception e ){
+            Log.createLog(3, "Service deleteUser failed: " + e.getMessage() );
+            throw e;
+        }
+        
     }
 }
