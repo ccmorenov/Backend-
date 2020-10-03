@@ -1,0 +1,3 @@
+2020-10-02 21:43:43.787196800 (Trace) getAdminById query received by 0:0:0:0:0:0:0:1
+2020-10-02 21:43:43.814221100 (Warning) Service getAdminById failed: Admin not found with id : '123456'
+2020-10-02 21:43:47.030161300 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
