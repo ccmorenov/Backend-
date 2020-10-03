@@ -1,5 +1,6 @@
 package com.SE2.EasyPC.logging;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,8 +10,16 @@ import java.time.LocalTime;
 public class Log {
 
     public static void createLog(int level, String text) {
+        
+        File file = new File("C:\\Users\\Public\\Documents\\logs\\"+LocalDate.now()+".txt");
         try {
-            PrintWriter writer = new PrintWriter(new FileWriter("logs\\"+LocalDate.now()+".txt", true));
+            file.createNewFile();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            
+            PrintWriter writer = new PrintWriter(new FileWriter(file, true));
             String lvl = "";
             switch(level){
                 case 0:
