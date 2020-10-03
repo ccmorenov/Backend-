@@ -9,13 +9,14 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for Keyboard, recives calls from KeyboardController and calls KeyboardRepository
 @Service
 public class KeyboardService {
     
     @Autowired
     KeyboardRepository keyboardRepository; 
 
-    public List<Keyboard> getAllKeyboards() {
+    public List<Keyboard> getAllKeyboards() { // returns a list with all Keyboards in the database
         try{
             return keyboardRepository.findAll();
         }catch( Exception e ){
@@ -24,7 +25,7 @@ public class KeyboardService {
         }
     }
 
-    public Keyboard getKeyboardById( Long id ) {
+    public Keyboard getKeyboardById( Long id ) { // returns the Keyboard with the requested ID or an exception if it does not exist
         try{
             return keyboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Keyboard", "id", id));
         }catch( Exception e ){
@@ -33,7 +34,7 @@ public class KeyboardService {
         }
     }
 
-    public Keyboard createKeyboard(Keyboard keyboard) {
+    public Keyboard createKeyboard(Keyboard keyboard) { // creates a new Keyboard in the database
         try{
             return keyboardRepository.save(keyboard);
         }catch( Exception e ){
@@ -42,7 +43,7 @@ public class KeyboardService {
         }
     }
 
-    public void deleteKeyboard( Long id ) {
+    public void deleteKeyboard( Long id ) { // deletes the Keyboard with the requested ID or an exception if it does not exist
         try{
             Keyboard keyboard = keyboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Keyboard", "id", id));
             keyboardRepository.delete(keyboard);

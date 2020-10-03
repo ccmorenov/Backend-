@@ -9,12 +9,13 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for Motherboard, recives calls from MotherboardController and calls MotherboardRepository
 @Service
 public class MotherboardService {
     
     @Autowired
     MotherboardRepository motherboardRepository; 
-    public List<Motherboard> getAllMotherboards() {
+    public List<Motherboard> getAllMotherboards() { // returns a list with all Motherboards in the database
         try{
             return motherboardRepository.findAll();
         }catch( Exception e ){
@@ -23,7 +24,7 @@ public class MotherboardService {
         }
     }
 
-    public Motherboard getMotherboardById( Long id ) {
+    public Motherboard getMotherboardById( Long id ) { // returns the Motherboard with the requested ID or an exception if it does not exist
         try{
             return motherboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", id));
         }catch( Exception e ){
@@ -32,7 +33,7 @@ public class MotherboardService {
         }
     }
 
-    public Motherboard createMotherboard(Motherboard motherboard) {
+    public Motherboard createMotherboard(Motherboard motherboard) { // creates a new Motherboard in the database
         try{
             return motherboardRepository.save(motherboard);
         }catch( Exception e ){
@@ -41,7 +42,7 @@ public class MotherboardService {
         }
     }
 
-    public void deleteMotherboard( Long id ) {
+    public void deleteMotherboard( Long id ) { // deletes the Motherboard with the requested ID or an exception if it does not exist
         try{
             Motherboard motherboard = motherboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", id));
             motherboardRepository.delete(motherboard);

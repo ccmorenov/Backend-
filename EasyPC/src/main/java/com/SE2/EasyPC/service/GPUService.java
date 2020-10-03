@@ -9,13 +9,14 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for GPU, recives calls from GPUController and calls GPURepository
 @Service
 public class GPUService {
     
     @Autowired
     GPURepository gpuRepository; 
 
-    public List<GPU> getAllGPUs() {
+    public List<GPU> getAllGPUs() { // returns a list with all GPUs in the database
         try{
             return gpuRepository.findAll();
         }catch( Exception e ){
@@ -24,7 +25,7 @@ public class GPUService {
         }
     }
 
-    public GPU getGPUById( Long id ) {
+    public GPU getGPUById( Long id ) { // returns the GPU with the requested ID or an exception if it does not exist
         try{
             return gpuRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("GPU", "id", id));
         }catch(Exception e){
@@ -34,7 +35,7 @@ public class GPUService {
         
     }
 
-    public GPU createGPU(GPU gpu) {
+    public GPU createGPU(GPU gpu) { // creates a new GPU in the database
         try{
             return gpuRepository.save(gpu);
         }catch( Exception e ){
@@ -43,7 +44,7 @@ public class GPUService {
         }
     }
 
-    public void deleteGPU( Long id ) {
+    public void deleteGPU( Long id ) { // deletes the GPU with the requested ID or an exception if it does not exist
         try{
             GPU gpu = gpuRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("GPU", "id", id));
             gpuRepository.delete(gpu);

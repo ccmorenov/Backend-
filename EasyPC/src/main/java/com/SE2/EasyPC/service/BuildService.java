@@ -10,12 +10,13 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for Build, recives calls from BuildService and calls BuildRepository
 @Service
 public class BuildService {
     @Autowired
     BuildRepository buildRepository; 
 
-    public List<Build> getAllBuilds() {
+    public List<Build> getAllBuilds() { // returns a list with all Builds in the database
         try{
             return buildRepository.findAll();
         }catch( Exception e ){
@@ -24,7 +25,7 @@ public class BuildService {
         }
     }
 
-    public Build getBuildById( Long id ) {
+    public Build getBuildById( Long id ) { // returns the Build with the requested ID or an exception if it does not exist
         try{
             return buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
         }catch( Exception e ){
@@ -33,7 +34,7 @@ public class BuildService {
         }
     }
 
-    public Build createBuild(Build build) {
+    public Build createBuild(Build build) { // creates a new Build in the database
         try{
             return buildRepository.save(build);
         }catch( Exception e ){
@@ -42,7 +43,7 @@ public class BuildService {
         }
     }
 
-    public void deleteBuild( Long id ) {
+    public void deleteBuild( Long id ) { // deletes the Build with the requested ID or an exception if it does not exist
         try{
             Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
         buildRepository.delete(build);

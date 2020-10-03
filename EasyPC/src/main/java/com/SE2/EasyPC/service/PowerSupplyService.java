@@ -10,13 +10,14 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for PowerSupply, recives calls from PowerSupplyController and calls PowerSupplyRepository
 @Service
 public class PowerSupplyService {
      
     @Autowired
     PowerSupplyRepository powerSupplyRepository; 
 
-    public List<PowerSupply> getAllPowerSupplies() {
+    public List<PowerSupply> getAllPowerSupplies() { // returns a list with all Power Supplies in the database
         try{
             return powerSupplyRepository.findAll();
         }catch( Exception e ){
@@ -26,7 +27,7 @@ public class PowerSupplyService {
         
     }
 
-    public PowerSupply getPowerSupplyById( Long id ) {
+    public PowerSupply getPowerSupplyById( Long id ) { // returns the Power Supply with the requested ID or an exception if it does not exist
         try{
             return powerSupplyRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("PowerSupply", "id", id));
         }catch( Exception e ){
@@ -36,7 +37,7 @@ public class PowerSupplyService {
         
     }
 
-    public PowerSupply createPowerSupply(PowerSupply powerSupply) {
+    public PowerSupply createPowerSupply(PowerSupply powerSupply) { // creates a new Power Supply in the database
         try{
             return powerSupplyRepository.save(powerSupply);
         }catch( Exception e ){
@@ -46,7 +47,7 @@ public class PowerSupplyService {
         
     }
 
-    public void deletePowerSupply( Long id ) {
+    public void deletePowerSupply( Long id ) { // deletes the Power Supply with the requested ID or an exception if it does not exist
         try{
             PowerSupply powerSupply = powerSupplyRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("PowerSupply", "id", id));
             powerSupplyRepository.delete(powerSupply);

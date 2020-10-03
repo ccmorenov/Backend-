@@ -9,13 +9,14 @@ import com.SE2.EasyPC.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+// Business logic layer for Monitor, recives calls from MonitorController and calls MonitorRepository
 @Service
 public class MonitorService {
     
     @Autowired
     MonitorRepository monitorRepository; 
 
-    public List<Monitor> getAllMonitors() {
+    public List<Monitor> getAllMonitors() { // returns a list with all Monitors in the database
         try{
             return monitorRepository.findAll();
         }catch( Exception e ){
@@ -24,7 +25,7 @@ public class MonitorService {
         }
     }
 
-    public Monitor getMonitorById( Long id ) {
+    public Monitor getMonitorById( Long id ) { // returns the Monitor with the requested ID or an exception if it does not exist
         try{
             return monitorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Monitor", "id", id));
         }catch( Exception e ){
@@ -33,7 +34,7 @@ public class MonitorService {
         }
     }
 
-    public Monitor createMonitor(Monitor monitor) {
+    public Monitor createMonitor(Monitor monitor) { // creates a new Monitor in the database
         try{
             return monitorRepository.save(monitor);
         }catch( Exception e ){
@@ -42,7 +43,7 @@ public class MonitorService {
         }
     }
 
-    public void deleteMonitor( Long id ) {
+    public void deleteMonitor( Long id ) { // deletes the Monitor with the requested ID or an exception if it does not exist
         try{
             Monitor monitor = monitorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Monitor", "id", id));
             monitorRepository.delete(monitor);
