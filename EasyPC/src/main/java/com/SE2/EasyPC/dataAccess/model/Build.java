@@ -13,8 +13,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table( name = "Build" )
-public class Build {
-    
+public class Build {//Build class definition
+
+    //Build attributes
     @Column(name = "id_build")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -75,123 +76,123 @@ public class Build {
     @JoinColumn(name = "id_case")
     private Case caseObj;
 
-    public Long getIdBuild() {
+    public Long getIdBuild() {//idBuild getter
         return idBuild;
     }
 
-    public void setIdBuild(Long idBuild) {
+    public void setIdBuild(Long idBuild) {//idBuild setter
         this.idBuild = idBuild;
     }
 
-    public Date getDate() {
+    public Date getDate() {//date getter
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Date date) {//date setter
         this.date = date;
     }
 
-    public User getUser() {
+    public User getUser() {//user getter
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(User user) {//user setter
         this.user = user;
     }
 
-    public Mouse getMouse() {
+    public Mouse getMouse() {//mouse getter
         return mouse;
     }
 
-    public void setMouse(Mouse mouse) {
+    public void setMouse(Mouse mouse) {//mouse setter
         this.mouse = mouse;
     }
 
-    public Keyboard getKeyboard() {
+    public Keyboard getKeyboard() {//keyboard getter
         return keyboard;
     }
 
-    public void setKeyboard(Keyboard keyboard) {
+    public void setKeyboard(Keyboard keyboard) {//keyboard setter
         this.keyboard = keyboard;
     }
 
-    public Monitor getMonitor() {
+    public Monitor getMonitor() {//monitor getter
         return monitor;
     }
 
-    public void setMonitor(Monitor monitor) {
+    public void setMonitor(Monitor monitor) {//monitor setter
         this.monitor = monitor;
     }
 
-    public Motherboard getMotherboard() {
+    public Motherboard getMotherboard() {//motherboard getter
         return motherboard;
     }
 
-    public void setMotherboard(Motherboard motherboard) {
+    public void setMotherboard(Motherboard motherboard) {//motherboard setter
         this.motherboard = motherboard;
     }
 
-    public CPU getCpu() {
+    public CPU getCpu() {//cpu getter
         return cpu;
     }
 
-    public void setCpu(CPU cpu) {
+    public void setCpu(CPU cpu) {//cpu setter
         this.cpu = cpu;
     }
 
-    public GPU getGPU() {
+    public GPU getGPU() {//cpu getter
         return GPU;
     }
 
-    public void setGPU(GPU gPU) {
+    public void setGPU(GPU gPU) {//gpu setter
         GPU = gPU;
     }
 
-    public RAM getRam() {
+    public RAM getRam() {//ram getter
         return ram;
     }
 
-    public void setRam(RAM ram) {
+    public void setRam(RAM ram) {//ram setter
         this.ram = ram;
     }
 
-    public Cooling getCooling() {
+    public Cooling getCooling() {//cooling getter
         return cooling;
     }
 
-    public void setCooling(Cooling cooling) {
+    public void setCooling(Cooling cooling) {//cooling setter
         this.cooling = cooling;
     }
 
-    public SSD getSsd() {
+    public SSD getSsd() {//ssd getter
         return ssd;
     }
 
-    public void setSsd(SSD ssd) {
+    public void setSsd(SSD ssd) {//ssd setter
         this.ssd = ssd;
     }
 
-    public HDD getHdd() {
+    public HDD getHdd() {//hdd getter
         return hdd;
     }
 
-    public void setHdd(HDD hdd) {
+    public void setHdd(HDD hdd) {//hdd setter
         this.hdd = hdd;
     }
 
-    public PowerSupply getPowerSupply() {
+    public PowerSupply getPowerSupply() {//powerSupply getter
         return powerSupply;
     }
 
-    public void setPowerSupply(PowerSupply powerSupply) {
+    public void setPowerSupply(PowerSupply powerSupply) {//powerSupply setter
         this.powerSupply = powerSupply;
     }
 
-    public Case getCaseObj() {
+    public Case getCaseObj() {//caseObj getter
         return caseObj;
     }
 
-    public void setCaseObj(Case caseObj) {
+    public void setCaseObj(Case caseObj) {//caseObj setter
         this.caseObj = caseObj;
     }
 }

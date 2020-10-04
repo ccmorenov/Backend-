@@ -9,8 +9,7 @@ import javax.persistence.Column;
 
 @Entity
 @Table( name = "Admin" )
-public class Admin {
-    
+public class Admin {//Admin class definition
     @Column(name = "id_admin")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,27 +21,27 @@ public class Admin {
     @Column
     private String password;
 
-    public Long getIdAdmin() {
+    public Long getIdAdmin() {//idAdmin getter
         return idAdmin;
     }
 
-    public void setIdAdmin(Long idAdmin) {
+    public void setIdAdmin(Long idAdmin) {//idAmin setter
         this.idAdmin = idAdmin;
     }
 
-    public String getUsername() {
+    public String getUsername() {//username getter
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(String username) {//username setter
         this.username = username;
     }
 
-    public String getPassword() {
+    public String getPassword() {//password getter
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password) {//password setter
         this.password = password;
     }
 

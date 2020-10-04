@@ -16,7 +16,8 @@ import javax.persistence.ManyToMany;
 
 @Entity
 @Table(name = "RAM")
-public class RAM {
+public class RAM {//RAM class definition
+    //RAM attributes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ram")
@@ -54,115 +55,103 @@ public class RAM {
     @ManyToMany(mappedBy = "compatibleRAM")
     private List<Motherboard> compatibleMotherboard;
 
-    public String getModel() {
+    public String getModel() {//model getter
         return model;
     }
 
-    public void setModel(String model) {
+    public void setModel(String model) {//model setter
         this.model = model;
     }
 
-    public Float getPower() {
+    public Float getPower() {//power getter
         return power;
     }
 
-    public void setPower(Float power) {
+    public void setPower(Float power) {//power setter
         this.power = power;
     }
 
-    public Integer getMemory() {
+    public Integer getMemory() {//memory getter
         return memory;
     }
 
-    public void setMemory(Integer memory) {
+    public void setMemory(Integer memory) {//memory setter
         this.memory = memory;
     }
 
-    public Float getSpeed() {
+    public Float getSpeed() {//speed getter
         return speed;
     }
 
-    public void setSpeed(Float speed) {
+    public void setSpeed(Float speed) {//speed setter
         this.speed = speed;
     }
 
-    public Integer getPriceSL() {
-        return priceSL;
-    }
+    
+	public Integer getPriceSL() {//priceSL getter
+		return priceSL;
+	}
+	public void setPriceSL(Integer priceSL) {//priceSL setter
+		this.priceSL = priceSL;
+	}
+	public Integer getPriceTauret() {//priceTauret getter
+		return priceTauret;
+	}
+	public void setPriceTauret(Integer priceTauret) {//priceTauret setter
+		this.priceTauret = priceTauret;
+	}
+	public Integer getPriceCyP() {//priceCyP getter
+		return priceCyP;
+	}
+	public void setPriceCyP(Integer priceCyP) {//priceCyP setter
+		this.priceCyP = priceCyP;
+	}
+	public String getLinkSL() { //linkSL getter
+		return linkSL;
+	}
+	public void setLinkSL(String linkSL) {//linkSL setter
+		this.linkSL = linkSL;
+	}
+	public String getLinkTauret() {//linkTauret getter
+		return linkTauret;
+	}
+	public void setLinkTauret(String linkTauret) {//linkTauret setter
+		this.linkTauret = linkTauret;
+	}
+	public String getLinkCyP() {//linkCyP getter
+		return linkCyP;
+	}
+	public void setLinkCyP(String linkCyP) {//linkCyP setter
+		this.linkCyP = linkCyP;
+	}
+	public String getLinkPicture() {//linkPicture getter
+		return linkPicture;
+	}
+	public void setLinkPicture(String linkPicture) {//linkPicture setter
+		this.linkPicture = linkPicture;
+	}
 
-    public void setPriceSL(Integer priceSL) {
-        this.priceSL = priceSL;
-    }
-
-    public Integer getPriceTauret() {
-        return priceTauret;
-    }
-
-    public void setPriceTauret(Integer priceTauret) {
-        this.priceTauret = priceTauret;
-    }
-
-    public Integer getPriceCyP() {
-        return priceCyP;
-    }
-
-    public void setPriceCyP(Integer priceCyP) {
-        this.priceCyP = priceCyP;
-    }
-
-    public String getLinkSL() {
-        return linkSL;
-    }
-
-    public void setLinkSL(String linkSL) {
-        this.linkSL = linkSL;
-    }
-
-    public String getLinkTauret() {
-        return linkTauret;
-    }
-
-    public void setLinkTauret(String linkTauret) {
-        this.linkTauret = linkTauret;
-    }
-
-    public String getLinkCyP() {
-        return linkCyP;
-    }
-
-    public void setLinkCyP(String linkCyP) {
-        this.linkCyP = linkCyP;
-    }
-
-    public String getLinkBenchmark() {
+    public String getLinkBenchmark() {//linkBenchmark getter
         return linkBenchmark;
     }
 
-    public void setLinkBenchmark(String linkBenchmark) {
+    public void setLinkBenchmark(String linkBenchmark) {//linkBenchmark setter
         this.linkBenchmark = linkBenchmark;
     }
 
-    public String getLinkPicture() {
-        return linkPicture;
-    }
-
-    public void setLinkPicture(String linkPicture) {
-        this.linkPicture = linkPicture;
-    }
-
-    public Long getIdRAM() {
+    public Long getIdRAM() {////idRAM getter
         return idRAM;
     }
 
-    public void setIdRAM(Long idRAM) {
+    public void setIdRAM(Long idRAM) {//idRAM setter
         this.idRAM = idRAM;
     }
 
-    public List<Motherboard> getCompatibleMotherboard() {
+    public List<Motherboard> getCompatibleMotherboard() {//compatibleMotherboard getter
         return compatibleMotherboard;
     }
 
-    public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {
+    public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {//compatibleMotherboard setter
         this.compatibleMotherboard = compatibleMotherboard;
     }
 }

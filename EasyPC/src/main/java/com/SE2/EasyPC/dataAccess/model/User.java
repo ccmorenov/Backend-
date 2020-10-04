@@ -16,8 +16,8 @@ import javax.persistence.Column;
 
 @Entity
 @Table( name = "User" )
-public class User {
-
+public class User {//User class definition
+    //User attributes
     @Column(name="id_user")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,28 +33,27 @@ public class User {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<Build> builds;
 
-    public Long getIdUser() {
+    public Long getIdUser() {//idUser getter
         return idUser;
     }
 
-    public void setIdUser(Long idUser) {
+    public void setIdUser(Long idUser) {//idUser setter
         this.idUser = idUser;
     }
 
-    public String getUsername() {
+    public String getUsername() {//username getter
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(String username) {//username setter
         this.username = username;
     }
 
-    public String getPassword() {
+    public String getPassword() {//password getter
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password) {//password setter
         this.password = password;
     }
-
 }
