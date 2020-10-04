@@ -48,6 +48,8 @@ public class CPU {
     private String linkCyP;
     @Column(name = "link_picture")
     private String linkPicture;
+    @Column(name = "link_benchmark")
+    private String linkBenchmark;
 
     @JsonIgnore
     @ManyToMany(mappedBy = "compatibleCPU")
@@ -157,6 +159,12 @@ public class CPU {
         this.compatibleMotherboard = compatibleMotherboard;
     }
 
-    
+    public String getLinkBenchmark() {
+        return linkBenchmark;
+    }
+
+    public void setLinkBenchmark(String linkBenchmark) {
+        this.linkBenchmark = linkBenchmark;
+    }
 
 }
