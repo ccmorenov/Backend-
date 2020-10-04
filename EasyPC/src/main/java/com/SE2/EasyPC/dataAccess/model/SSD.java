@@ -33,7 +33,9 @@ public class SSD {
     @Column(name = "link_cyp")
     private String linkCyP;
     @Column(name = "link_picture")
-    private String linkPicture;
+	private String linkPicture;
+	@Column(name = "link_benchmark")
+    private String linkBenchmark;
 
 	public Integer getPriceSL() {
 		return priceSL;
@@ -116,5 +118,13 @@ public class SSD {
 
 	public void setSpeed(String speed) {
 		this.speed = speed;
+	}
+
+	public String getLinkBenchmark() {
+		return linkBenchmark;
+	}
+
+	public void setLinkBenchmark(String linkBenchmark) {
+		this.linkBenchmark = linkBenchmark;
 	}
 }

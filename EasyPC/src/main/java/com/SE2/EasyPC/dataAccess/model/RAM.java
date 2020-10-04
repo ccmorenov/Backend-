@@ -54,14 +54,6 @@ public class RAM {
     @ManyToMany(mappedBy = "compatibleRAM")
     private List<Motherboard> compatibleMotherboard;
 
-    public Long getIdRam() {
-        return idRAM;
-    }
-
-    public void setIdRam(Long idRAM) {
-        this.idRAM = idRAM;
-    }
-
     public String getModel() {
         return model;
     }
@@ -156,5 +148,21 @@ public class RAM {
 
     public void setLinkPicture(String linkPicture) {
         this.linkPicture = linkPicture;
+    }
+
+    public Long getIdRAM() {
+        return idRAM;
+    }
+
+    public void setIdRAM(Long idRAM) {
+        this.idRAM = idRAM;
+    }
+
+    public List<Motherboard> getCompatibleMotherboard() {
+        return compatibleMotherboard;
+    }
+
+    public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {
+        this.compatibleMotherboard = compatibleMotherboard;
     }
 }

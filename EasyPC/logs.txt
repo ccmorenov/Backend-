@@ -1,1 +1,6 @@
 2020-10-02 21:46:02.884489 (Trace) getAllGPUs query received by 0:0:0:0:0:0:0:1
+2020-10-03 18:47:14.063250400 (Trace) getAllCases query received by 0:0:0:0:0:0:0:1
+2020-10-03 18:47:14.477089400 (Warning) Service getAllCases failed: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-10-03 18:52:47.106071100 (Trace) getAllCases query received by 0:0:0:0:0:0:0:1
+2020-10-03 18:52:47.141501600 (Warning) Service getAllCases failed: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-10-03 18:54:11.520457200 (Trace) getAllCases query received by 0:0:0:0:0:0:0:1

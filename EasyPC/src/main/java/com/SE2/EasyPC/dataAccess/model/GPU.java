@@ -39,6 +39,8 @@ public class GPU {
     private String linkCyP;
     @Column(name = "link_picture")
     private String linkPicture;
+    @Column(name = "link_benchmark")
+    private String linkBenchmark;
 
     public Long getIdGPU() {
         return idGPU;
@@ -126,6 +128,14 @@ public class GPU {
 
     public void setLinkPicture(String linkPicture) {
         this.linkPicture = linkPicture;
+    }
+
+    public String getLinkBenchmark() {
+        return linkBenchmark;
+    }
+
+    public void setLinkBenchmark(String linkBenchmark) {
+        this.linkBenchmark = linkBenchmark;
     }
     
 }
