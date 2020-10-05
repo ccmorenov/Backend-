@@ -13,36 +13,52 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+//permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class CPUController {
     
+    //declares corresponding service
     @Autowired
     CPUService cpuService;
 
+    //get http request for all cpus
     @GetMapping("/cpus")
     public List<CPU> getAllCPUs( HttpServletRequest request ) {
+        //append to log
         Log.createLog(0, "getAllCPUs query received by " + request.getRemoteAddr());
+        //return the corresponding service logical function
         return cpuService.getAllCPUs();
     }
 
+    //get http request for cpu by specific ID
     @GetMapping("/cpu/{id}")
     public CPU getCPUById(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
+        //append to log
         Log.createLog(0, "getCPUById query received by " + request.getRemoteAddr());
+        //return the corresponding service logical function
         return cpuService.getCPUById(cpuId);
     }
 
+    //Post http request for cpu
     @PostMapping("/cpu")
+    //request body with object to post
     public CPU createCPU(@Valid @RequestBody CPU cpu, HttpServletRequest request ) {
+        //append to log
         Log.createLog(0, "createCPU query received by " + request.getRemoteAddr());
+        //return the corresponding service logical function
         return cpuService.createCPU(cpu);
     }
 
+    //Delete http request for cpu by ID
     @DeleteMapping("/cpu/{id}")
     public ResponseEntity<?> deleteCPU(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
+        //append to log
         Log.createLog(0, "deleteCPU query received by " + request.getRemoteAddr());
+        //call the corresponding service logical function
         cpuService.deleteCPU(cpuId);
+        //Check deletion
         return ResponseEntity.ok().build();
     }
 

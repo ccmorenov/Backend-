@@ -13,36 +13,52 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+//permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class SSDController {
     
+    //declares corresponding service
     @Autowired
     SSDService ssdService;
 
+    //get http request for all ssds
     @GetMapping("/ssds")
     public List<SSD> getAllSSDs(HttpServletRequest request ) {
+        //append to log
         Log.createLog(0, "getAllSSDs query received by " + request.getRemoteAddr());
+        //return the corresponding service logical function
         return ssdService.getAllSSDs();
     }
 
+    //get http request for ssd by specific ID
     @GetMapping("/ssd/{id}")
     public SSD getSSDById(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
+        //append to log
         Log.createLog(0, "getSSDById query received by " + request.getRemoteAddr() );
+        //return the corresponding service logical function
         return ssdService.getSSDById(ssdId);
     }
 
+    //Post http request for ssd
     @PostMapping("/ssd")
+    //request body with object to post
     public SSD createSSD(@Valid @RequestBody SSD ssd, HttpServletRequest request) {
+        //append to log
         Log.createLog(0, "createSSD query received by " + request.getRemoteAddr() );
+        //return the corresponding service logical function
         return ssdService.createSSD(ssd);
     }
 
+    //Delete http request for ssd by ID
     @DeleteMapping("/ssd/{id}")
     public ResponseEntity<?> deleteSSD(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
+        //append to log
         Log.createLog(0, "deleteSSD query received by " + request.getRemoteAddr() );
+        //call the corresponding service logical function
         ssdService.deleteSSD(ssdId);
+        //Check deletion
         return ResponseEntity.ok().build();
     }
 

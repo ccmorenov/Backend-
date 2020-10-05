@@ -13,36 +13,52 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+//permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class RAMController {
     
+    //declares corresponding service
     @Autowired
     RAMService ramService;
 
+    //get http request for all rams
     @GetMapping("/rams")
     public List<RAM> getAllRAMs(HttpServletRequest request ) {
+        //append to log
         Log.createLog(0, "getAllRAMs query received by " + request.getRemoteAddr());
+        //return the corresponding service logical function
         return ramService.getAllRAMs();
     }
 
+    //get http request for ram by specific ID
     @GetMapping("/ram/{id}")
     public RAM getRAMById(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
+        //append to log
         Log.createLog(0, "getRAMById query received by " + request.getRemoteAddr() );
+        //return the corresponding service logical function
         return ramService.getRAMById(ramId);
     }
 
+    //Post http request for ram
     @PostMapping("/ram")
+    //request body with object to post
     public RAM createRAM(@Valid @RequestBody RAM ram, HttpServletRequest request) {
+        //append to log
         Log.createLog(0, "createRAM query received by " + request.getRemoteAddr() );
+        //return the corresponding service logical function
         return ramService.createRAM(ram);
     }
 
+    //Delete http request for ram by ID
     @DeleteMapping("/ram/{id}")
     public ResponseEntity<?> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
+        //append to log
         Log.createLog(0, "deleteRAM query received by " + request.getRemoteAddr() );
+        //call the corresponding service logical function
         ramService.deleteRAM(ramId);
+        //Check deletion
         return ResponseEntity.ok().build();
     }
 }
