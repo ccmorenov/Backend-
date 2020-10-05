@@ -88,5 +88,4 @@ public class Case{//Case class definition
 	public void setLinkPicture(String linkPicture) {//linkPicture setter
 		this.linkPicture = linkPicture;
 	}
-
 }
