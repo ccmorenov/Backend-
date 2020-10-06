@@ -26,7 +26,7 @@ public class MotherboardController {
     @GetMapping("/motherboards")
     public List<Motherboard> getAllMotherboards(HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getAllAdmins query received by " + request.getRemoteAddr());
+        Log.createLog(0, "getAllmotherboards query received by " + request.getRemoteAddr());
         //return the corresponding service logical function
         return motherboardService.getAllMotherboards();
     }
@@ -35,7 +35,7 @@ public class MotherboardController {
     @GetMapping("/motherboard/{id}")
     public Motherboard getMotherboardById(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getAllAdmins query received by " + request.getRemoteAddr());
+        Log.createLog(0, "getMotherboardById query received by " + request.getRemoteAddr());
         //return the corresponding service logical function
         return motherboardService.getMotherboardById(motherboardId);
     }
@@ -45,7 +45,7 @@ public class MotherboardController {
     //request body with object to post
     public Motherboard createMotherboard(@Valid @RequestBody Motherboard motherboard,HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getAllAdmins query received by " + request.getRemoteAddr());
+        Log.createLog(0, "createMotherboard query received by " + request.getRemoteAddr());
         //return the corresponding service logical function
         return motherboardService.createMotherboard(motherboard);
     }
@@ -54,7 +54,7 @@ public class MotherboardController {
     @DeleteMapping("/motherboard/{id}")
     public ResponseEntity<?> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getAllAdmins query received by " + request.getRemoteAddr());
+        Log.createLog(0, "deleteMotherboard query received by " + request.getRemoteAddr());
         //call the corresponding service logical function
         motherboardService.deleteMotherboard(motherboardId);
         //Check deletion

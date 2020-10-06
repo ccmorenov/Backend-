@@ -51,7 +51,7 @@ public class HDDController {
         return hddService.createHDD(hdd);
     }
 
-    //Delete http request for cpu by hdd
+    //Delete http request for hdd by ID
     @DeleteMapping("/hdd/{id}")
     public ResponseEntity<?> deleteHDD(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log

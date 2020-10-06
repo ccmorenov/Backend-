@@ -1,3 +1,42 @@
 2020-10-02 21:43:43.787196800 (Trace) getAdminById query received by 0:0:0:0:0:0:0:1
 2020-10-02 21:43:43.814221100 (Warning) Service getAdminById failed: Admin not found with id : '123456'
 2020-10-02 21:43:47.030161300 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:21:55.249963900 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:21:55.318014600 (Warning) Service createMotherboard failed: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.DataException: could not execute statement
+2020-10-05 18:22:35.840219100 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:22:35.844222600 (Warning) Service createMotherboard failed: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.DataException: could not execute statement
+2020-10-05 18:23:14.219179400 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:24:11.499687800 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:38:51.836851400 (Trace) createCPU query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:39:20.246187500 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:40:22.964458800 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
+2020-10-05 18:47:19.692669300 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:07:31.826112300 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:07:58.397340700 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:08:05.386823 (Trace) deleteCPU query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:08:23.688884700 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:08:58.720595300 (Trace) deleteCPU query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:08:58.753632500 (Warning) Service deleteCPU failed: CPU not found with id : '1'
+2020-10-05 19:09:34.767567600 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:09:41.318888800 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:09:44.229147 (Trace) deleteCPU query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:09:44.233149900 (Warning) Service deleteCPU failed: CPU not found with id : '1'
+2020-10-05 19:10:25.982042 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:10:29.167024400 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:10:34.526004800 (Trace) deleteCPU query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:10:34.530007700 (Warning) Service deleteCPU failed: CPU not found with id : '1'
+2020-10-05 19:12:17.807033400 (Trace) createPowerSupply query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:12:38.965233200 (Trace) getAllPowerSupplies query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:12:41.636744300 (Trace) deletePowerSupply query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:14:47.633451 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:15:19.138562600 (Trace) getAllKeyboards query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:15:22.256929400 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:15:28.186665100 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:16:56.263182 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:17:23.482972100 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:26:32.061842600 (Trace) getAllmotherboards query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:26:50.689693400 (Trace) getAllmotherboards query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:26:53.798957600 (Trace) getAllAdmins query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:27:05.682717200 (Trace) getAllmotherboards query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:27:07.991574900 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:27:09.465973100 (Trace) getAllmotherboards query received by 0:0:0:0:0:0:0:1

@@ -43,6 +43,7 @@ public class CaseController {
 
     //Post http request for case
     @PostMapping("/case")
+    //request body with object to post
     public Case createCase(@Valid @RequestBody Case caseObj , HttpServletRequest request ) {
         //append to log
         Log.createLog(0, "createCase query received by " + request.getRemoteAddr());

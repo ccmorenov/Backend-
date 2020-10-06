@@ -52,7 +52,7 @@ public class KeyboardController {
         return keyboardService.createKeyboard(keyboard);
     }
 
-    //Delete http request for keyboard by hdd
+    //Delete http request for keyboard by ID
     @DeleteMapping("/keyboard/{id}")
     public ResponseEntity<?> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
         //append to log

@@ -51,7 +51,7 @@ public class GPUController {
         return gpuService.createGPU(gpu);
     }
 
-    //Delete http request for cpu by gpu
+    //Delete http request for gpu by ID
     @DeleteMapping("/gpu/{id}")
     public ResponseEntity<?> deleteGPU(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
