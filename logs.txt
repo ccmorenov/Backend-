@@ -40,3 +40,14 @@
 2020-10-05 19:27:05.682717200 (Trace) getAllmotherboards query received by 0:0:0:0:0:0:0:1
 2020-10-05 19:27:07.991574900 (Trace) getAllCPUs query received by 0:0:0:0:0:0:0:1
 2020-10-05 19:27:09.465973100 (Trace) getAllmotherboards query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:50:08.948324800 (Trace) createKeyboard query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:50:16.387389100 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:50:25.162924500 (Trace) getAllKeyboards query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:54:59.485805300 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:55:12.372431200 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
+2020-10-05 19:55:18.656947700 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
+2020-10-05 20:14:41.197362300 (Trace) createRAM query received by 0:0:0:0:0:0:0:1
+2020-10-05 20:14:48.149005300 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
+2020-10-05 20:15:23.173595200 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
+2020-10-05 20:15:28.575304700 (Trace) deleteRAM query received by 0:0:0:0:0:0:0:1
+2020-10-05 20:15:30.811375300 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1

@@ -55,7 +55,5 @@ public class RAMService {
             Log.createLog(3, "Service deleteRAM failed: " + e.getMessage() );
             throw e;
         }
-        RAM ram = ramRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("RAM", "id", id));
-        ramRepository.delete(ram);
     }
 }
