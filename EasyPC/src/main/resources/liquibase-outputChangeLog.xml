@@ -476,4 +476,394 @@
     <changeSet author="andre (generated)" id="1601678403461-53">
         <addForeignKeyConstraint baseColumnNames="id_ram" baseTableName="compatibleram" constraintName="fk_CompatibleRAM_RAM1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id_ram" referencedTableName="ram"/>
     </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-case-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-case-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-case-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-case-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-cooling-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-cooling-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-cooling-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-cooling-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-cpu-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-cpu-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-cpu-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-cpu-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-cpu-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-gpu-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-gpu-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-gpu-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-gpu-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-gpu-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-hdd-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-hdd-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-hdd-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-hdd-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-hdd-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-keyboard-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-keyboard-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-keyboard-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-keyboard-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-monitor-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-monitor-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-monitor-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-monitor-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-motherboard-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-motherboard-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-motherboard-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-motherboard-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-motherboard-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <!--SSD-->
+<changeSet  author="Andres+Alejandra"  id="fix-link-length-ssd-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-ssd-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-ssd-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-ssd-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-ssd-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+<!---->
+
+<!--RAM-->
+<changeSet  author="Andres+Alejandra"  id="fix-link-length-ram-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-ram-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-ram-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-ram-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+        <changeSet  author="Andres+Alejandra"  id="fix-length-ram-link_benchmark"> 
+        <modifyDataType 
+                columnName="link_benchmark"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+<!---->
+
+<!--power-->
+<changeSet  author="Andres+Alejandra"  id="fix-link-length-powersupply-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-powersupply-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-powersupply-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-powersupply-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <!---->
+
+<!--mouse-->
+<changeSet  author="Andres+Alejandra"  id="fix-link-length-mouse-sl">  
+        <modifyDataType 
+                columnName="link_sl"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-link-length-mouse-tauret"> 
+        <modifyDataType 
+                columnName="link_tauret"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-mouse-link_cyp"> 
+        <modifyDataType 
+                columnName="link_cyp"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres+Alejandra"  id="fix-length-mouse-link_picture"> 
+        <modifyDataType 
+                columnName="link_picture"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+
+    <!---->
 </databaseChangeLog>
