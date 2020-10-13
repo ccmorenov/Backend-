@@ -865,5 +865,90 @@
                 tableName="mouse"/>
     </changeSet>
 
+    <changeSet  author="Andres"  id="fix-length-model-case"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="case"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-cooling"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cooling"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-cpu"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="cpu"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-gpu"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="gpu"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-hdd"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="hdd"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-keyboard"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="keyboard"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-monitor"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="monitor"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-motherboard"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="motherboard"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-mouse"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="mouse"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-powersupply"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="powersupply"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-ram"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ram"/>
+    </changeSet>
+    <changeSet  author="Andres"  id="fix-length-model-ssd"> 
+        <modifyDataType 
+                columnName="model"  
+                newDataType="VARCHAR(100)"  
+                schemaName="easypc"  
+                tableName="ssd"/>
+    </changeSet>
+
     <!---->
 </databaseChangeLog>

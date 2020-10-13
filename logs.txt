@@ -51,3 +51,5 @@
 2020-10-05 20:15:23.173595200 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
 2020-10-05 20:15:28.575304700 (Trace) deleteRAM query received by 0:0:0:0:0:0:0:1
 2020-10-05 20:15:30.811375300 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
+2020-10-12 18:39:02.928097400 (Trace) getAllMice query received by 0:0:0:0:0:0:0:1
+2020-10-12 18:39:24.644308900 (Trace) getAllMice query received by 0:0:0:0:0:0:0:1
