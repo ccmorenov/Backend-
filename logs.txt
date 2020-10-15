@@ -53,3 +53,11 @@
 2020-10-05 20:15:30.811375300 (Trace) getAllRAMs query received by 0:0:0:0:0:0:0:1
 2020-10-12 18:39:02.928097400 (Trace) getAllMice query received by 0:0:0:0:0:0:0:1
 2020-10-12 18:39:24.644308900 (Trace) getAllMice query received by 0:0:0:0:0:0:0:1
+2020-10-15 10:31:33.186576900 (Trace) getRecommendedBuild query received by 0:0:0:0:0:0:0:1
+2020-10-15 10:31:33.481810500 (Warning) Service getMotherboardById failed: Cannot invoke "com.SE2.EasyPC.dataAccess.repository.MotherboardRepository.findById(Object)" because "this.motherboardRepository" is null
+2020-10-15 10:35:52.494080400 (Trace) getAllMice query received by 0:0:0:0:0:0:0:1
+2020-10-15 10:36:09.658185800 (Trace) getRecommendedBuild query received by 0:0:0:0:0:0:0:1
+2020-10-15 10:36:10.033826400 (Warning) Service getHDDById failed: HDD not found with id : '4'
+2020-10-15 10:36:41.845636800 (Trace) getRecommendedBuild query received by 0:0:0:0:0:0:0:1
+2020-10-15 10:36:42.069260900 (Warning) Service getHDDById failed: HDD not found with id : '4'
+2020-10-15 10:37:09.308584400 (Trace) getRecommendedBuild query received by 0:0:0:0:0:0:0:1
