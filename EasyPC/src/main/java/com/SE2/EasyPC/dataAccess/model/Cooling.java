@@ -90,4 +90,21 @@ public class Cooling {//Cooling class definition
 	public void setPower(Float power) {//power setter
 		this.power = power;
 	}
+
+	public int getPrice(){
+		int ret = Integer.MAX_VALUE;
+		if( priceSL != null ) ret = Integer.min( ret , priceSL.intValue() );
+		if( priceCyP != null ) ret = Integer.min( ret , priceCyP.intValue() );
+		if( priceTauret != null ) ret = Integer.min( ret , priceTauret.intValue() );
+		if( ret == Integer.MAX_VALUE ) return 0;
+		return ret;
+	}
+
+	public Long getIdCooling() {
+		return idCooling;
+	}
+
+	public void setIdCooling(Long idCooling) {
+		this.idCooling = idCooling;
+	}
 }

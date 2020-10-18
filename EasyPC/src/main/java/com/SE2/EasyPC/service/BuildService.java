@@ -1,5 +1,8 @@
 package com.SE2.EasyPC.service;
 
+import java.time.LocalDate;
+import java.sql.Date;
+import java.util.Calendar;
 import java.util.List;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
@@ -36,6 +39,7 @@ public class BuildService {
 
     public Build createBuild(Build build) { // creates a new Build in the database
         try{
+            if( build.getDate() == null ) build.setDate( new java.sql.Date( Calendar.getInstance().getTime().getTime() ) );
             return buildRepository.save(build);
         }catch( Exception e ){
             Log.createLog(3, "Service createBuild failed: " + e.getMessage() );

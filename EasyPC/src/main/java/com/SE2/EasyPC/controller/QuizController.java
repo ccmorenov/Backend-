@@ -25,8 +25,8 @@ public class QuizController {
      @Autowired
      QuizService quizService;
 
-    //Post http request for build
-    @PostMapping("/quiz-beginner")
+    //Get http request for build
+    @GetMapping("/quiz-beginner")
     //request body with object to post
     public Build getRecommendedBuild(@Valid @RequestBody List<String> answers,  HttpServletRequest request ) {
         //append to log

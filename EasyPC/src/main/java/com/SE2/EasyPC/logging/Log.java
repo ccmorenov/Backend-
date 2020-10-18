@@ -11,7 +11,7 @@ public class Log {
 
     public static void createLog(int level, String text) {
         
-        File file = new File("logs.txt");
+        File file = new File("Logs/"+LocalDate.now()+".txt");
         try {
             file.createNewFile();
         } catch (IOException e1) {

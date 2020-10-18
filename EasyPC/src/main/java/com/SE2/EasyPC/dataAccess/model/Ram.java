@@ -154,4 +154,13 @@ public class RAM {//RAM class definition
     public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {//compatibleMotherboard setter
         this.compatibleMotherboard = compatibleMotherboard;
     }
+
+    public int getPrice(){
+		int ret = Integer.MAX_VALUE;
+		if( priceSL != null ) ret = Integer.min( ret , priceSL.intValue() );
+		if( priceCyP != null ) ret = Integer.min( ret , priceCyP.intValue() );
+		if( priceTauret != null ) ret = Integer.min( ret , priceTauret.intValue() );
+		if( ret == Integer.MAX_VALUE ) return 0;
+		return ret;
+	}
 }

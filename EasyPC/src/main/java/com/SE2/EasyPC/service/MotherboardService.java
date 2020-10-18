@@ -24,9 +24,9 @@ public class MotherboardService {
         }
     }
 
-    public Motherboard getMotherboardById( Long id ) { // returns the Motherboard with the requested ID or an exception if it does not exist
+    public Motherboard getMotherboardById( Long i ) { // returns the Motherboard with the requested ID or an exception if it does not exist
         try{
-            return motherboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", id));
+            return motherboardRepository.findById(i).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", i));
         }catch( Exception e ){
             Log.createLog(3, "Service getMotherboardById failed: " + e.getMessage() );
             throw e;

@@ -50,7 +50,7 @@ public class Build {//Build class definition
 
     @ManyToOne
     @JoinColumn(name = "id_gpu")
-    private GPU GPU;
+    private GPU gpu;
 
     @ManyToOne
     @JoinColumn(name = "id_ram")
@@ -141,11 +141,11 @@ public class Build {//Build class definition
     }
 
     public GPU getGPU() {//cpu getter
-        return GPU;
+        return gpu;
     }
 
-    public void setGPU(GPU gPU) {//gpu setter
-        GPU = gPU;
+    public void setGPU(GPU gpu) {//gpu setter
+        this.gpu = gpu;
     }
 
     public RAM getRam() {//ram getter
@@ -194,5 +194,37 @@ public class Build {//Build class definition
 
     public void setCaseObj(Case caseObj) {//caseObj setter
         this.caseObj = caseObj;
+    }
+
+    public Build(){}
+
+    public Build(Motherboard motherboard, CPU cpu, GPU gpu, RAM ram, Cooling cooling,
+            SSD ssd, HDD hdd, PowerSupply powerSupply, Case caseObj) {
+        this.motherboard = motherboard;
+        this.cpu = cpu;
+        this.gpu = gpu;
+        this.ram = ram;
+        this.cooling = cooling;
+        this.ssd = ssd;
+        this.hdd = hdd;
+        this.powerSupply = powerSupply;
+        this.caseObj = caseObj;
+    }
+
+    public int getPrice(){
+        int ret = 0;
+        ret += caseObj.getPrice();
+        ret += cooling.getPrice();
+        ret += cpu.getPrice();   
+        ret += gpu.getPrice();
+        if( hdd != null ) ret += hdd.getPrice();
+        if( keyboard != null ) ret += keyboard.getPrice();
+        if( monitor != null ) ret += monitor.getPrice();
+        ret += motherboard.getPrice();
+        if( mouse != null ) ret += mouse.getPrice();
+        ret += powerSupply.getPrice();
+        ret += ram.getPrice();
+        if( ssd != null ) ret += ssd.getPrice();
+        return ret;
     }
 }
