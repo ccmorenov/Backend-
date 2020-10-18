@@ -99,4 +99,12 @@ public class Cooling {//Cooling class definition
 		if( ret == Integer.MAX_VALUE ) return 0;
 		return ret;
 	}
+
+	public Long getIdCooling() {
+		return idCooling;
+	}
+
+	public void setIdCooling(Long idCooling) {
+		this.idCooling = idCooling;
+	}
 }
