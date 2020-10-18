@@ -196,6 +196,8 @@ public class Build {//Build class definition
         this.caseObj = caseObj;
     }
 
+    public Build(){}
+
     public Build(Motherboard motherboard, CPU cpu, GPU gpu, RAM ram, Cooling cooling,
             SSD ssd, HDD hdd, PowerSupply powerSupply, Case caseObj) {
         this.motherboard = motherboard;
@@ -210,6 +212,19 @@ public class Build {//Build class definition
     }
 
     public int getPrice(){
-        return 0;
+        int ret = 0;
+        ret += caseObj.getPrice();
+        ret += cooling.getPrice();
+        ret += cpu.getPrice();   
+        ret += gpu.getPrice();
+        if( hdd != null ) ret += hdd.getPrice();
+        if( keyboard != null ) ret += keyboard.getPrice();
+        if( monitor != null ) ret += monitor.getPrice();
+        ret += motherboard.getPrice();
+        if( mouse != null ) ret += mouse.getPrice();
+        ret += powerSupply.getPrice();
+        ret += ram.getPrice();
+        if( ssd != null ) ret += ssd.getPrice();
+        return ret;
     }
 }
