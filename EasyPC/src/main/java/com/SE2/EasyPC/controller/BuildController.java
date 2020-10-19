@@ -61,4 +61,13 @@ public class BuildController {
         //Check deletion
         return ResponseEntity.ok().build();
     }
+
+    //Get price of an specific build
+    @GetMapping("/build-price/{id}")
+    public Integer getBuildPriceById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
+        //append to log
+        Log.createLog(0, "getBuildPriceById query received by " + request.getRemoteAddr());
+        //return the corresponding service logical function
+        return buildService.getBuildPriceById(buildId);
+    }
 }

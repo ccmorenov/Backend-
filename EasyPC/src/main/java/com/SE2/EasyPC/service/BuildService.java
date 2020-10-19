@@ -50,12 +50,21 @@ public class BuildService {
     public void deleteBuild( Long id ) { // deletes the Build with the requested ID or an exception if it does not exist
         try{
             Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
-        buildRepository.delete(build);
+            buildRepository.delete(build);
         }catch( Exception e ){
             Log.createLog(3, "Service deleteBuild failed: " + e.getMessage() );
             throw e;
         }
+    }
 
+    public Integer getBuildPriceById( Long id ) { // returns the price of an spcefic build
+        try{
+            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
+            return build.getPrice();
+        }catch( Exception e ){
+            Log.createLog(3, "Service getBuildPriceById failed: " + e.getMessage() );
+            throw e;
+        }
     }
     
 }
