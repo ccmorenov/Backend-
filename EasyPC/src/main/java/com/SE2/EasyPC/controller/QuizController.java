@@ -1,13 +1,10 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
-import com.SE2.EasyPC.dataAccess.model.PowerSupply;
-import com.SE2.EasyPC.service.PowerSupplyService;
 import com.SE2.EasyPC.service.QuizService;
 import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

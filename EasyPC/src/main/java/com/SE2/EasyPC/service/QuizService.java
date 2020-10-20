@@ -2,14 +2,9 @@ package com.SE2.EasyPC.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
-import com.SE2.EasyPC.dataAccess.model.Motherboard;
-import com.SE2.EasyPC.dataAccess.model.PowerSupply;
 import com.SE2.EasyPC.dataAccess.repository.BuildRepository;
-import com.SE2.EasyPC.dataAccess.repository.PowerSupplyRepository;
-import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,8 +48,6 @@ public class QuizService {
             return null;
         }
         // concatenate all other answers into a single String
-        String all_answers = answers.get(1) + answers.get(2) + answers.get(3) + answers.get(4);
-
         Build basic = createBuild( 1,1,1,1,1,1,1,1,1 );
         Build mid = createBuild( 3,3,3,3,3,3,3,3,3 );
         Build ultra = createBuild( 4,4,4,4,4,4,3,4,4 );
