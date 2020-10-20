@@ -34,5 +34,14 @@ public class QuizController {
         //return the corresponding service logical function
         return quizService.getRecommendedBuild(answers);
     }
+    //Get http request for build price
+    @GetMapping("/quiz-beginner-price") 
+    public int getRecommendedBuildPrice(@Valid @RequestBody List<String> answers,  HttpServletRequest request ) {
+        //append to log
+        Log.createLog(0, "getRecommendedBuildPrice query received by " + request.getRemoteAddr());
+        //return the corresponding service logical function
+        Build recommended= quizService.getRecommendedBuild(answers);
+        return recommended.getPrice();
+    }
 
 }
