@@ -40,6 +40,9 @@ public class Log {
                 case 5:
                     lvl = "Critical";
                     break;
+                default:
+                    lvl = "";
+                    break;
             }
             String message = LocalDate.now() + " " + LocalTime.now() + " (" + lvl +") "+ text + "\n";
             writer.write(message);
