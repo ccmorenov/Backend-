@@ -83,7 +83,7 @@ public class QuizService {
 
         if( answers.get(1).equals("1") ){
             options.add( gaming_1 );
-            if( answers.get(2).equals("3") || answers.get(2).equals("1") || answers.get(3).equals("1")
+            if( answers.get(2).equals("4") || answers.get(2).equals("3") || answers.get(3).equals("1")
             || answers.get(4).equals("3") ){
                 options.add( gaming_gpu );
             }else{
