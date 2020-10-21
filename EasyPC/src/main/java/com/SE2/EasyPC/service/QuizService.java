@@ -51,31 +51,18 @@ public class QuizService {
         Build basic = createBuild( 1,1,1,1,1,1,1,1,1 );
         Build mid = createBuild( 3,3,3,3,3,3,3,3,3 );
         Build ultra = createBuild( 4,4,4,4,4,4,3,4,4 );
-        System.out.println("basic " + basic.getPrice());
-        System.out.println("mid " + mid.getPrice());
-        System.out.println("ultra " + ultra.getPrice());
 
         Build gaming_1 = createBuild( 2,2,2,2,2,2,2,2,2 );
         Build gaming_cpu = createBuild( 3,3,2,2,2,2,2,2,2 );
         Build gaming_gpu = createBuild( 2,2,3,3,3,3,1,3,3 );
-        System.out.println("gaming_1 " + gaming_1.getPrice());
-        System.out.println("gaming_cpu " + gaming_cpu.getPrice());
-        System.out.println("gaming_gpu " + gaming_gpu.getPrice());
 
         Build design_1 = createBuild( 2,3,1,2,1,3,2,2,2 );
         Build design_disk = createBuild( 3,4,1,3,2,3,3,3,2 );
         Build design_performance = createBuild( 4,4,2,4,2,4,3,3,2 );
-        System.out.println("design_1 " + design_1.getPrice());
-        System.out.println("design_disk " + design_disk.getPrice());
-        System.out.println("design_performance " + design_performance.getPrice());
 
         Build work_gpu = createBuild( 3,1,3,3,2,3,2,2,2 );
         Build work_cpu = createBuild( 2,3,1,2,2,2,1,1,1 );
         Build work_disk = createBuild( 2,2,1,2,1,2,3,1,1 );
-        System.out.println("work_gpu " + work_gpu.getPrice());
-        System.out.println("work_cpu " + work_cpu.getPrice());
-        System.out.println("work_disk " + work_disk.getPrice());
-
         List <Build> options = new ArrayList <> ();
         options.add( basic );
         options.add( mid );
