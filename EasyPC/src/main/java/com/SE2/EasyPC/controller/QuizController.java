@@ -23,7 +23,7 @@ public class QuizController {
      QuizService quizService;
 
     //Get http request for build
-    @GetMapping("/quiz-beginner")
+    @PostMapping("/quiz-beginner")
     //request body with object to post
     public Build getRecommendedBuild(@Valid @RequestBody List<String> answers,  HttpServletRequest request ) {
         //append to log
@@ -32,7 +32,7 @@ public class QuizController {
         return quizService.getRecommendedBuild(answers);
     }
     //Get http request for build price
-    @GetMapping("/quiz-beginner-price") 
+    @PostMapping("/quiz-beginner-price") 
     public int getRecommendedBuildPrice(@Valid @RequestBody List<String> answers,  HttpServletRequest request ) {
         //append to log
         Log.createLog(0, "getRecommendedBuildPrice query received by " + request.getRemoteAddr());
