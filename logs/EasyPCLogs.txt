@@ -340,3 +340,6 @@ com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.38.jar:9.0.38]
 	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
 2020-10-30 15:09:05 WARN  com.SE2.EasyPC.service.AdminService AdminService:38 - Exception at getAdminById method of AdminService com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1'
+2020-10-30 15:39:14 TRACE com.SE2.EasyPC.controller.QuizController QuizController:34 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-10-30 15:39:14 TRACE com.SE2.EasyPC.service.QuizService QuizService:54 - Quiz answers received
+2020-10-30 15:39:41 TRACE com.SE2.EasyPC.controller.BuildController BuildController:34 - getAllBuilds query at BuildController from 0:0:0:0:0:0:0:1

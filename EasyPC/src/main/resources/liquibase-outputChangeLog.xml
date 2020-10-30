@@ -949,6 +949,10 @@
                 schemaName="easypc"  
                 tableName="ssd"/>
     </changeSet>
-
+    <changeSet  author="Andres+Gabriel+Alejandra"  id="dropTable-RAMCompatibilty">  
+        <dropTable  cascadeConstraints="false"  
+                schemaName="easypc"  
+                tableName="compatibleram"/>  
+    </changeSet>
     <!---->
 </databaseChangeLog>

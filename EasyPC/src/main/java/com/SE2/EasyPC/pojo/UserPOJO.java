@@ -6,8 +6,6 @@ public class UserPOJO {
 
     private String username;
 
-    private String password;
-
     public Long getIdUser() {//idUser getter
         return idUser;
     }
@@ -24,11 +22,5 @@ public class UserPOJO {
         this.username = username;
     }
 
-    public String getPassword() {//password getter
-        return password;
-    }
 
-    public void setPassword(String password) {//password setter
-        this.password = password;
-    }
 }
