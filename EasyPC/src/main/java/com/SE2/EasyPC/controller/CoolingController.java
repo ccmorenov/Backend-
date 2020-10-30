@@ -1,7 +1,6 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Cooling;
-import com.SE2.EasyPC.logging.Log;
 import com.SE2.EasyPC.service.CoolingService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +12,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class CoolingController {
+
+    private static final Logger logger = LogManager.getLogger();
     
     //declares corresponding service
     @Autowired
@@ -27,7 +31,7 @@ public class CoolingController {
     @GetMapping("/coolings")
     public List<Cooling> getAllCoolings( HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllCoolings query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return coolingService.getAllCoolings();
     }
@@ -36,7 +40,7 @@ public class CoolingController {
     @GetMapping("/cooling/{id}")
     public Cooling getCoolingById(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getCoolingById query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return coolingService.getCoolingById(coolingId);
     }
@@ -46,7 +50,7 @@ public class CoolingController {
     //request body with object to post
     public Cooling createCooling(@Valid @RequestBody Cooling cooling, HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "createCooling query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return coolingService.createCooling(cooling);
     }
@@ -55,7 +59,7 @@ public class CoolingController {
     @DeleteMapping("/cooling/{id}")
     public ResponseEntity<?> deleteCooling(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "deleteCooling query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         coolingService.deleteCooling(coolingId);
         //Check deletion

@@ -5,14 +5,18 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.Mouse;
 import com.SE2.EasyPC.dataAccess.repository.MouseRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for Mouse, recives calls from MouseController and calls MouseRepository
 @Service
 public class MouseService {
+
+    private static final Logger logger = LogManager.getLogger();
         
     @Autowired
     MouseRepository mouseRepository; 
@@ -21,7 +25,7 @@ public class MouseService {
         try{
             return mouseRepository.findAll();
         }catch( Exception e ){
-            Log.createLog(3, "Service getAllMice failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -31,7 +35,7 @@ public class MouseService {
         try{
             return mouseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Mouse", "id", id));
         }catch( Exception e ){
-            Log.createLog(3, "Service getMouseById failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -41,7 +45,7 @@ public class MouseService {
         try{
             return mouseRepository.save(mouse);
         }catch( Exception e ){
-            Log.createLog(3, "Service createMouse failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -52,7 +56,7 @@ public class MouseService {
             Mouse mouse = mouseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Mouse", "id", id));
             mouseRepository.delete(mouse);
         }catch( Exception e ){
-            Log.createLog(3, "Service deleteMouse failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         

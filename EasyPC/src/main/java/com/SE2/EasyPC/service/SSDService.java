@@ -5,14 +5,18 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.SSD;
 import com.SE2.EasyPC.dataAccess.repository.SSDRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for SSD, recives calls from SSDController and calls SSDRepository
 @Service
 public class SSDService {
+
+    private static final Logger logger = LogManager.getLogger();
 
     @Autowired
     SSDRepository ssdRepository; 
@@ -21,7 +25,7 @@ public class SSDService {
         try{
             return ssdRepository.findAll();
         }catch( Exception e ){
-            Log.createLog(3, "Service getAllSSDs failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -31,7 +35,7 @@ public class SSDService {
         try{
             return ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
         }catch( Exception e ){
-            Log.createLog(3, "Service getSSDById failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -41,7 +45,7 @@ public class SSDService {
         try{
             return ssdRepository.save(ssd);
         }catch( Exception e ){
-            Log.createLog(3, "Service createSSD failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -52,7 +56,7 @@ public class SSDService {
             SSD ssd = ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
             ssdRepository.delete(ssd);
         }catch( Exception e ){
-            Log.createLog(3, "Service deleteSSD failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         

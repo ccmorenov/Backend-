@@ -2,7 +2,6 @@ package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.SSD;
 import com.SE2.EasyPC.service.SSDService;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,12 +12,17 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class SSDController {
     
+    private static final Logger logger = LogManager.getLogger();
+
     //declares corresponding service
     @Autowired
     SSDService ssdService;
@@ -27,7 +31,7 @@ public class SSDController {
     @GetMapping("/ssds")
     public List<SSD> getAllSSDs(HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllSSDs query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return ssdService.getAllSSDs();
     }
@@ -36,7 +40,7 @@ public class SSDController {
     @GetMapping("/ssd/{id}")
     public SSD getSSDById(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getSSDById query received by " + request.getRemoteAddr() );
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return ssdService.getSSDById(ssdId);
     }
@@ -46,7 +50,7 @@ public class SSDController {
     //request body with object to post
     public SSD createSSD(@Valid @RequestBody SSD ssd, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "createSSD query received by " + request.getRemoteAddr() );
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return ssdService.createSSD(ssd);
     }
@@ -55,7 +59,7 @@ public class SSDController {
     @DeleteMapping("/ssd/{id}")
     public ResponseEntity<?> deleteSSD(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "deleteSSD query received by " + request.getRemoteAddr() );
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         ssdService.deleteSSD(ssdId);
         //Check deletion

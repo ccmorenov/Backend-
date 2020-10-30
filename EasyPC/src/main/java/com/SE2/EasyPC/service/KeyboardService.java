@@ -5,13 +5,18 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.Keyboard;
 import com.SE2.EasyPC.dataAccess.repository.KeyboardRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-import com.SE2.EasyPC.logging.Log;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 // Business logic layer for Keyboard, recives calls from KeyboardController and calls KeyboardRepository
 @Service
 public class KeyboardService {
+    
+    private static final Logger logger = LogManager.getLogger();
     
     @Autowired
     KeyboardRepository keyboardRepository; 
@@ -20,7 +25,7 @@ public class KeyboardService {
         try{
             return keyboardRepository.findAll();
         }catch( Exception e ){
-            Log.createLog(3, "Service getAllKeyboards failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -29,7 +34,7 @@ public class KeyboardService {
         try{
             return keyboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Keyboard", "id", id));
         }catch( Exception e ){
-            Log.createLog(3, "Service getKeyboardById failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -38,7 +43,7 @@ public class KeyboardService {
         try{
             return keyboardRepository.save(keyboard);
         }catch( Exception e ){
-            Log.createLog(3, "Service createKeyboard failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -48,7 +53,7 @@ public class KeyboardService {
             Keyboard keyboard = keyboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Keyboard", "id", id));
             keyboardRepository.delete(keyboard);
         }catch( Exception e ){
-            Log.createLog(3, "Service deleteKeyboard failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }

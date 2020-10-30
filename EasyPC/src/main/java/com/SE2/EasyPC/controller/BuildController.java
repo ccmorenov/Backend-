@@ -1,7 +1,7 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
-import com.SE2.EasyPC.logging.Log;
+import com.SE2.EasyPC.pojo.BuildPOJO;
 import com.SE2.EasyPC.service.BuildService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +13,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class BuildController {
+
+    private static final Logger logger = LogManager.getLogger();
 
     //declares corresponding service
     @Autowired
@@ -25,18 +30,18 @@ public class BuildController {
 
     //get http request for all builds
     @GetMapping("/builds")
-    public List<Build> getAllBuilds( HttpServletRequest request ) {
+    public List<BuildPOJO> getAllBuilds( HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllBuilds query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getAllBuilds();
     }
 
     //get http request for build by specific ID
     @GetMapping("/build/{id}")
-    public Build getBuildById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
+    public BuildPOJO getBuildById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getBuildById query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getBuildById(buildId);
     }
@@ -44,18 +49,18 @@ public class BuildController {
     //Post http request for build
     @PostMapping("/build")
     //request body with object to post
-    public Build createBuild(@Valid @RequestBody Build build,  HttpServletRequest request ) {
+    public BuildPOJO createBuild(@Valid @RequestBody BuildPOJO build,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "createBuild query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
-        return buildService.createBuild(build);
+        return buildService.createBuild(build , null); //pending: Token with OAUTH
     }
 
     //Delete http request for build by ID
     @DeleteMapping("/build/{id}")
     public ResponseEntity<?> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "deleteBuild query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         buildService.deleteBuild(buildId);
         //Check deletion
@@ -66,7 +71,7 @@ public class BuildController {
     @GetMapping("/build-price/{id}")
     public Integer getBuildPriceById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getBuildPriceById query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getBuildPriceById(buildId);
     }

@@ -1,7 +1,6 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Admin;
-import com.SE2.EasyPC.logging.Log;
 import com.SE2.EasyPC.service.AdminService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +12,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class AdminController {
+
+    private static final Logger logger = LogManager.getLogger();
     
     //declares corresponding service
     @Autowired
@@ -27,7 +31,7 @@ public class AdminController {
     @GetMapping("/admins")
     public List<Admin> getAllAdmins( HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllAdmins query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return adminService.getAllAdmins();
     }
@@ -36,7 +40,7 @@ public class AdminController {
     @GetMapping("/admin/{id}")
     public Admin getAdminById(@PathVariable(value = "id") Long adminId , HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAdminById query received by " + request.getRemoteAddr() );
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return adminService.getAdminById(adminId);
     }
@@ -46,7 +50,7 @@ public class AdminController {
     //request body with object to post
     public Admin createAdmin(@Valid @RequestBody Admin admin , HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "createAdmin query received by " + request.getRemoteAddr() );
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return adminService.createAdmin(admin);
     }
@@ -55,7 +59,7 @@ public class AdminController {
     @DeleteMapping("/admin/{id}")
     public ResponseEntity<?> deleteAdmin(@PathVariable(value = "id") Long adminId , HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "deleteAdmin query received by " + request.getRemoteAddr() );
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         adminService.deleteAdmin(adminId);
         //Check deletion

@@ -5,13 +5,18 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.Motherboard;
 import com.SE2.EasyPC.dataAccess.repository.MotherboardRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-import com.SE2.EasyPC.logging.Log;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 // Business logic layer for Motherboard, recives calls from MotherboardController and calls MotherboardRepository
 @Service
 public class MotherboardService {
+
+    private static final Logger logger = LogManager.getLogger();
     
     @Autowired
     MotherboardRepository motherboardRepository; 
@@ -19,7 +24,7 @@ public class MotherboardService {
         try{
             return motherboardRepository.findAll();
         }catch( Exception e ){
-            Log.createLog(3, "Service getAllMotherboards failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -28,7 +33,7 @@ public class MotherboardService {
         try{
             return motherboardRepository.findById(i).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", i));
         }catch( Exception e ){
-            Log.createLog(3, "Service getMotherboardById failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -37,7 +42,7 @@ public class MotherboardService {
         try{
             return motherboardRepository.save(motherboard);
         }catch( Exception e ){
-            Log.createLog(3, "Service createMotherboard failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -47,7 +52,7 @@ public class MotherboardService {
             Motherboard motherboard = motherboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", id));
             motherboardRepository.delete(motherboard);
         }catch( Exception e ){
-            Log.createLog(3, "Service deleteMotherboard failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }

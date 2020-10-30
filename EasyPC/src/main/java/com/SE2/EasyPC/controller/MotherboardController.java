@@ -2,7 +2,6 @@ package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Motherboard;
 import com.SE2.EasyPC.service.MotherboardService;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +11,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class MotherboardController {
+    
+    private static final Logger logger = LogManager.getLogger();
     
     //declares corresponding service
     @Autowired
@@ -26,7 +30,7 @@ public class MotherboardController {
     @GetMapping("/motherboards")
     public List<Motherboard> getAllMotherboards(HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getAllmotherboards query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.getAllMotherboards();
     }
@@ -35,7 +39,7 @@ public class MotherboardController {
     @GetMapping("/motherboard/{id}")
     public Motherboard getMotherboardById(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getMotherboardById query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.getMotherboardById(motherboardId);
     }
@@ -45,7 +49,7 @@ public class MotherboardController {
     //request body with object to post
     public Motherboard createMotherboard(@Valid @RequestBody Motherboard motherboard,HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "createMotherboard query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.createMotherboard(motherboard);
     }
@@ -54,7 +58,7 @@ public class MotherboardController {
     @DeleteMapping("/motherboard/{id}")
     public ResponseEntity<?> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "deleteMotherboard query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         motherboardService.deleteMotherboard(motherboardId);
         //Check deletion

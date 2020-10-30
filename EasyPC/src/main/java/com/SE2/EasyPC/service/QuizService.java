@@ -5,14 +5,19 @@ import java.util.List;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
 import com.SE2.EasyPC.dataAccess.repository.BuildRepository;
-import com.SE2.EasyPC.logging.Log;
+import com.SE2.EasyPC.pojo.BuildPOJO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for the beginner quiz
 @Service
 public class QuizService {
+    
+    private static final Logger logger = LogManager.getLogger();
     
     @Autowired
     BuildRepository buildRepository;
@@ -35,18 +40,19 @@ public class QuizService {
     @Autowired
     CaseService caseService;
 
-    public Build getRecommendedBuild( List<String> answers ) {
+    public BuildPOJO getRecommendedBuild( List<String> answers ) {
         long budget = 0;
         if( answers.size() != 5 ){
-            Log.createLog(4, "Incorrect number of quiz answers");
+            logger.error( "Incorrect number of quiz answers" );
             return null;
         }
         try{
             budget = Long.parseLong( answers.get(0) );
         }catch( Exception e ){
-            Log.createLog(4, "Price is not a number");
+            logger.error( "Quiz answer for budget is not a number" );
             return null;
         }
+        logger.trace( "Quiz answers received" );
         // concatenate all other answers into a single String
         Build basic = createBuild( 1,1,1,1,1,1,1,1,1 );
         Build mid = createBuild( 3,3,3,3,3,3,3,3,3 );
@@ -99,9 +105,8 @@ public class QuizService {
                 current_price = build.getPrice();
             }
         }
-        return recommendation;
+        return new BuildPOJO( recommendation );
     }
-
 
     private Build createBuild( long id_motherboard , long id_cpu , long id_gpu , long id_ram ,
                                 long id_cooling , long id_ssd , long id_hdd , long id_powerSupply ,

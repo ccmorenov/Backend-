@@ -5,13 +5,18 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.Monitor;
 import com.SE2.EasyPC.dataAccess.repository.MonitorRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-import com.SE2.EasyPC.logging.Log;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 // Business logic layer for Monitor, recives calls from MonitorController and calls MonitorRepository
 @Service
 public class MonitorService {
+    
+    private static final Logger logger = LogManager.getLogger();
     
     @Autowired
     MonitorRepository monitorRepository; 
@@ -20,7 +25,7 @@ public class MonitorService {
         try{
             return monitorRepository.findAll();
         }catch( Exception e ){
-            Log.createLog(3, "Service getAllMonitors failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -29,7 +34,7 @@ public class MonitorService {
         try{
             return monitorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Monitor", "id", id));
         }catch( Exception e ){
-            Log.createLog(3, "Service getMonitorById failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -38,7 +43,7 @@ public class MonitorService {
         try{
             return monitorRepository.save(monitor);
         }catch( Exception e ){
-            Log.createLog(3, "Service createMonitor failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -48,7 +53,7 @@ public class MonitorService {
             Monitor monitor = monitorRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Monitor", "id", id));
             monitorRepository.delete(monitor);
         }catch( Exception e ){
-            Log.createLog(3, "Service deleteMonitor failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }

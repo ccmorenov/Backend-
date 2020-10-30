@@ -1,12 +1,17 @@
 package com.SE2.EasyPC.pojo;
 
+import com.SE2.EasyPC.dataAccess.model.User;
+
 public class UserPOJO {
     
     private Long idUser;
 
     private String username;
 
-    private String password;
+    public UserPOJO( User user ){
+        this.idUser = user.getIdUser();
+        this.username = user.getUsername();
+    }
 
     public Long getIdUser() {//idUser getter
         return idUser;
@@ -24,11 +29,5 @@ public class UserPOJO {
         this.username = username;
     }
 
-    public String getPassword() {//password getter
-        return password;
-    }
 
-    public void setPassword(String password) {//password setter
-        this.password = password;
-    }
 }

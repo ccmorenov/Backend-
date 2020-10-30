@@ -5,13 +5,18 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.HDD;
 import com.SE2.EasyPC.dataAccess.repository.HDDRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-import com.SE2.EasyPC.logging.Log;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 // Business logic layer for HDD, recives calls from HDDController and calls HDDRepository
 @Service
 public class HDDService {
+    
+    private static final Logger logger = LogManager.getLogger();
     
     @Autowired
     HDDRepository hddRepository; 
@@ -20,7 +25,7 @@ public class HDDService {
         try{
             return hddRepository.findAll();
         }catch( Exception e ){
-            Log.createLog(3, "Service getAllHDDs failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -29,7 +34,7 @@ public class HDDService {
         try{
             return hddRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("HDD", "id", id));
         }catch( Exception e ){
-            Log.createLog(3, "Service getHDDById failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -38,7 +43,7 @@ public class HDDService {
         try{
             return hddRepository.save(hdd);
         }catch( Exception e ){
-            Log.createLog(3, "Service createHDD failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -48,7 +53,7 @@ public class HDDService {
             HDD hdd = hddRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("HDD", "id", id));
             hddRepository.delete(hdd);
         }catch( Exception e ){
-            Log.createLog(3, "Service deleteHDD failed: " + e.getMessage() );
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }

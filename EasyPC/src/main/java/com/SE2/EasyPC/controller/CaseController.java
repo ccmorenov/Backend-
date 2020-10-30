@@ -2,7 +2,6 @@ package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.service.CaseService;
 import com.SE2.EasyPC.dataAccess.model.Case;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,11 +12,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class CaseController {
+
+    private static final Logger logger = LogManager.getLogger();
 
     //declares corresponding service
     @Autowired
@@ -27,7 +31,7 @@ public class CaseController {
     @GetMapping("/cases")
     public List<Case> getAllCases( HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllCases query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return caseService.getAllCases();
     }
@@ -36,7 +40,7 @@ public class CaseController {
     @GetMapping("/case/{id}")
     public Case getCaseById(@PathVariable(value = "id") Long CaseId , HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getCaseById query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return caseService.getCaseById(CaseId);
     }
@@ -46,7 +50,7 @@ public class CaseController {
     //request body with object to post
     public Case createCase(@Valid @RequestBody Case caseObj , HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "createCase query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return caseService.createCase(caseObj);
     }
@@ -55,7 +59,7 @@ public class CaseController {
     @DeleteMapping("/case/{id}")
     public ResponseEntity<?> deleteCase(@PathVariable(value = "id") Long CaseId , HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "deleteCase query received by " + request.getRemoteAddr());
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         caseService.deleteCase(CaseId);
         //Check deletion

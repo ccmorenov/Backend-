@@ -1,0 +1,345 @@
+2020-10-30 14:23:39 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:23:39 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:23:39 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:23:39 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:23:39 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:23:39 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:24:52 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:24:52 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:24:52 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:24:52 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:24:52 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:24:52 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:24:59 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:24:59 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:24:59 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:24:59 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:24:59 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:24:59 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:25:26 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:25:26 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:25:26 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:25:26 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:25:26 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:25:26 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:26:53 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:26:53 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:26:53 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:26:53 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:26:53 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:26:53 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:29:12 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:29:12 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:29:12 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:29:12 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:29:12 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:29:12 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:32:00 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:32:00 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:32:00 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:32:00 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:32:00 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:32:00 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:32:19 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:32:19 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:32:19 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:32:19 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:32:19 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:32:19 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:32:35 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:32:35 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:32:35 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:32:35 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:32:35 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:32:35 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:32:48 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:32:48 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:32:48 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:32:48 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:32:48 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:32:48 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:32:53 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:32:53 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:32:53 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:32:53 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:32:53 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:32:53 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:32:57 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:32:57 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:32:57 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:32:57 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:32:57 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:32:57 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:34:00 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:34:00 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:34:00 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:34:00 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:34:00 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:34:00 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:34:06 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:34:06 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:34:06 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:34:06 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:34:06 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:34:06 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:34:13 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:34:13 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:34:13 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:34:13 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:34:13 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:34:13 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:36:28 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:36:28 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:36:28 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:36:28 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:36:28 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:36:28 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:37:09 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 14:37:42 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:37:42 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:37:42 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:37:42 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:37:42 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:37:42 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:43:07 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:43:07 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:43:07 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:43:07 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:43:07 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:43:07 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:43:50 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:43:50 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:43:50 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:43:50 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:43:50 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:43:50 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:44:02 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:44:02 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:44:02 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:44:02 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:44:02 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:44:02 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:44:20 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:44:20 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:44:20 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:44:20 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:44:20 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:44:20 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:44:33 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:44:33 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:44:33 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:44:33 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:44:33 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:44:33 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:44:39 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:44:39 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:44:39 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:44:39 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:44:39 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:44:39 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:46:28 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:46:28 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:46:28 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:46:28 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:46:28 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:46:28 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:46:31 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminControllerfrom 0:0:0:0:0:0:0:1
+2020-10-30 14:47:12 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:47:12 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:47:12 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:47:12 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:47:12 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:47:12 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:47:26 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 14:47:33 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 14:48:11 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:48:11 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:48:11 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:48:11 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:48:11 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:48:11 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:48:44 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:48:44 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:48:44 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:48:44 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:48:44 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:48:44 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:48:47 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 14:48:48 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 14:48:49 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 14:52:43 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 14:54:12 TRACE com.SE2.EasyPC.controller.CaseController CaseController:34 - getAllCases query at CaseController from 0:0:0:0:0:0:0:1
+2020-10-30 15:01:17 TRACE com.SE2.EasyPC.controller.AdminController AdminController:35 - getAllAdmins query at AdminController from 0:0:0:0:0:0:0:1
+2020-10-30 15:01:21 WARN  com.SE2.EasyPC.service.AdminService AdminService:37 - Exception at getAdminById method of AdminService
+com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1'
+	at com.SE2.EasyPC.service.AdminService.lambda$0(AdminService.java:35) ~[classes/:?]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:401) ~[?:?]
+	at com.SE2.EasyPC.service.AdminService.getAdminById(AdminService.java:35) [classes/:?]
+	at com.SE2.EasyPC.controller.AdminController.getAdminById(AdminController.java:46) [classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2020-10-30 15:03:09 WARN  com.SE2.EasyPC.service.AdminService AdminService:37 - Exception at getAdminById method of AdminService
+2020-10-30 15:04:06 WARN  com.SE2.EasyPC.service.AdminService AdminService:37 - Exception at getAdminById method of AdminService
+com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1'
+	at com.SE2.EasyPC.service.AdminService.lambda$0(AdminService.java:35) ~[classes/:?]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:401) ~[?:?]
+	at com.SE2.EasyPC.service.AdminService.getAdminById(AdminService.java:35) [classes/:?]
+	at com.SE2.EasyPC.controller.AdminController.getAdminById(AdminController.java:46) [classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2020-10-30 15:09:05 WARN  com.SE2.EasyPC.service.AdminService AdminService:37 - Exception at getAdminById method of AdminService
+com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1'
+	at com.SE2.EasyPC.service.AdminService.lambda$0(AdminService.java:35) ~[classes/:?]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:401) ~[?:?]
+	at com.SE2.EasyPC.service.AdminService.getAdminById(AdminService.java:35) [classes/:?]
+	at com.SE2.EasyPC.controller.AdminController.getAdminById(AdminController.java:46) [classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2020-10-30 15:09:05 WARN  com.SE2.EasyPC.service.AdminService AdminService:38 - Exception at getAdminById method of AdminService com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1'
+2020-10-30 15:39:14 TRACE com.SE2.EasyPC.controller.QuizController QuizController:34 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-10-30 15:39:14 TRACE com.SE2.EasyPC.service.QuizService QuizService:54 - Quiz answers received
+2020-10-30 15:39:41 TRACE com.SE2.EasyPC.controller.BuildController BuildController:34 - getAllBuilds query at BuildController from 0:0:0:0:0:0:0:1
