@@ -12,11 +12,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class MouseController {
+
+    private static final Logger logger = LogManager.getLogger();
     
     //declares corresponding service
     @Autowired
@@ -26,7 +31,7 @@ public class MouseController {
     @GetMapping("/mice")
     public List<Mouse> getAllMice(HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return mouseService.getAllMice();
     }
@@ -35,7 +40,7 @@ public class MouseController {
     @GetMapping("/mouse/{id}")
     public Mouse getMouseById(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return mouseService.getMouseById(mouseId);
     }
@@ -45,7 +50,7 @@ public class MouseController {
     //request body with object to post
     public Mouse createMouse(@Valid @RequestBody Mouse mouse, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return mouseService.createMouse(mouse);
     }
@@ -54,7 +59,7 @@ public class MouseController {
     @DeleteMapping("/mouse/{id}")
     public ResponseEntity<?> deleteMouse(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         mouseService.deleteMouse(mouseId);
         //Check deletion

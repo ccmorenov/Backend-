@@ -9,9 +9,14 @@ import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for Mouse, recives calls from MouseController and calls MouseRepository
 @Service
 public class MouseService {
+
+    private static final Logger logger = LogManager.getLogger();
         
     @Autowired
     MouseRepository mouseRepository; 
@@ -20,7 +25,7 @@ public class MouseService {
         try{
             return mouseRepository.findAll();
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -30,7 +35,7 @@ public class MouseService {
         try{
             return mouseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Mouse", "id", id));
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -40,7 +45,7 @@ public class MouseService {
         try{
             return mouseRepository.save(mouse);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -51,7 +56,7 @@ public class MouseService {
             Mouse mouse = mouseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Mouse", "id", id));
             mouseRepository.delete(mouse);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
