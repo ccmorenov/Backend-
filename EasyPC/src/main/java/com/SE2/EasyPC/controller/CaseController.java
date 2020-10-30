@@ -40,7 +40,7 @@ public class CaseController {
     @GetMapping("/case/{id}")
     public Case getCaseById(@PathVariable(value = "id") Long CaseId , HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return caseService.getCaseById(CaseId);
     }
@@ -50,7 +50,7 @@ public class CaseController {
     //request body with object to post
     public Case createCase(@Valid @RequestBody Case caseObj , HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return caseService.createCase(caseObj);
     }
@@ -59,7 +59,7 @@ public class CaseController {
     @DeleteMapping("/case/{id}")
     public ResponseEntity<?> deleteCase(@PathVariable(value = "id") Long CaseId , HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         caseService.deleteCase(CaseId);
         //Check deletion

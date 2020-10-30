@@ -12,11 +12,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class BuildController {
+
+    private static final Logger logger = LogManager.getLogger();
 
     //declares corresponding service
     @Autowired
@@ -26,7 +31,7 @@ public class BuildController {
     @GetMapping("/builds")
     public List<Build> getAllBuilds( HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getAllBuilds();
     }
@@ -35,7 +40,7 @@ public class BuildController {
     @GetMapping("/build/{id}")
     public Build getBuildById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getBuildById(buildId);
     }
@@ -45,7 +50,7 @@ public class BuildController {
     //request body with object to post
     public Build createBuild(@Valid @RequestBody Build build,  HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.createBuild(build);
     }
@@ -54,7 +59,7 @@ public class BuildController {
     @DeleteMapping("/build/{id}")
     public ResponseEntity<?> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         buildService.deleteBuild(buildId);
         //Check deletion
@@ -65,7 +70,7 @@ public class BuildController {
     @GetMapping("/build-price/{id}")
     public Integer getBuildPriceById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getBuildPriceById(buildId);
     }

@@ -1,6 +1,5 @@
 package com.SE2.EasyPC.controller;
 
-import com.SE2.EasyPC.EasyPcApplication;
 import com.SE2.EasyPC.dataAccess.model.Admin;
 import com.SE2.EasyPC.service.AdminService;
 

@@ -12,11 +12,16 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class CPUController {
+
+    private static final Logger logger = LogManager.getLogger();
     
     //declares corresponding service
     @Autowired
@@ -26,7 +31,7 @@ public class CPUController {
     @GetMapping("/cpus")
     public List<CPU> getAllCPUs( HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return cpuService.getAllCPUs();
     }
@@ -35,7 +40,7 @@ public class CPUController {
     @GetMapping("/cpu/{id}")
     public CPU getCPUById(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return cpuService.getCPUById(cpuId);
     }
@@ -45,7 +50,7 @@ public class CPUController {
     //request body with object to post
     public CPU createCPU(@Valid @RequestBody CPU cpu, HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return cpuService.createCPU(cpu);
     }
@@ -54,7 +59,7 @@ public class CPUController {
     @DeleteMapping("/cpu/{id}")
     public ResponseEntity<?> deleteCPU(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         cpuService.deleteCPU(cpuId);
         //Check deletion

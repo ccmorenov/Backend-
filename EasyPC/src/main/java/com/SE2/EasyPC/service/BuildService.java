@@ -10,9 +10,15 @@ import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for Build, recives calls from BuildService and calls BuildRepository
 @Service
 public class BuildService {
+
+    private static final Logger logger = LogManager.getLogger();
+
     @Autowired
     BuildRepository buildRepository; 
 
@@ -20,7 +26,7 @@ public class BuildService {
         try{
             return buildRepository.findAll();
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -29,7 +35,7 @@ public class BuildService {
         try{
             return buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -39,7 +45,7 @@ public class BuildService {
             if( build.getDate() == null ) build.setDate( new java.sql.Date( Calendar.getInstance().getTime().getTime() ) );
             return buildRepository.save(build);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -49,7 +55,7 @@ public class BuildService {
             Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
             buildRepository.delete(build);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -59,7 +65,7 @@ public class BuildService {
             Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
             return build.getPrice();
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }

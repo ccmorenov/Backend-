@@ -9,9 +9,15 @@ import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for Cooling, recives calls from CoolingController and calls CoolingRepository
 @Service
 public class CoolingService {
+
+    private static final Logger logger = LogManager.getLogger();
+
     @Autowired
     CoolingRepository coolingRepository; 
 
@@ -19,7 +25,7 @@ public class CoolingService {
         try{
             return coolingRepository.findAll();
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -28,7 +34,7 @@ public class CoolingService {
         try{
             return coolingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cooling", "id", id));
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -37,7 +43,7 @@ public class CoolingService {
         try{
             return coolingRepository.save(cooling);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -47,7 +53,7 @@ public class CoolingService {
             Cooling cooling = coolingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cooling", "id", id));
             coolingRepository.delete(cooling);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }

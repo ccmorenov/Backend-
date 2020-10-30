@@ -9,9 +9,14 @@ import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for Case, recives calls from CaseController and calls CaseRepository
 @Service
 public class CaseService {
+
+    private static final Logger logger = LogManager.getLogger();
 
     @Autowired
     CaseRepository caseRepository;
@@ -20,7 +25,7 @@ public class CaseService {
         try{
             return caseRepository.findAll();
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -29,7 +34,7 @@ public class CaseService {
         try{
             return caseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Case", "id", id));
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -38,7 +43,7 @@ public class CaseService {
         try{
             return caseRepository.save(caseObj);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
@@ -48,7 +53,7 @@ public class CaseService {
             Case caseObj = caseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Case", "id", id));
             caseRepository.delete(caseObj);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
     }
