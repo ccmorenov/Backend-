@@ -12,12 +12,17 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class GPUController {
     
+    private static final Logger logger = LogManager.getLogger();
+
     //declares corresponding service
     @Autowired
     GPUService gpuService;
@@ -26,7 +31,7 @@ public class GPUController {
     @GetMapping("/gpus")
     public List<GPU> getAllGPUs(HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return gpuService.getAllGPUs();
     }
@@ -35,7 +40,7 @@ public class GPUController {
     @GetMapping("/gpu/{id}")
     public GPU getGPUById(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return gpuService.getGPUById(gpuId);
     }
@@ -45,7 +50,7 @@ public class GPUController {
     //request body with object to post
     public GPU createGPU(@Valid @RequestBody GPU gpu, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return gpuService.createGPU(gpu);
     }
@@ -54,7 +59,7 @@ public class GPUController {
     @DeleteMapping("/gpu/{id}")
     public ResponseEntity<?> deleteGPU(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         gpuService.deleteGPU(gpuId);
         //Check deletion
