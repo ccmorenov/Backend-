@@ -1,6 +1,7 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
+import com.SE2.EasyPC.pojo.BuildPOJO;
 import com.SE2.EasyPC.service.BuildService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class BuildController {
 
     //get http request for all builds
     @GetMapping("/builds")
-    public List<Build> getAllBuilds( HttpServletRequest request ) {
+    public List<BuildPOJO> getAllBuilds( HttpServletRequest request ) {
         //append to log
         logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
@@ -38,7 +39,7 @@ public class BuildController {
 
     //get http request for build by specific ID
     @GetMapping("/build/{id}")
-    public Build getBuildById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
+    public BuildPOJO getBuildById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
         logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
@@ -48,11 +49,11 @@ public class BuildController {
     //Post http request for build
     @PostMapping("/build")
     //request body with object to post
-    public Build createBuild(@Valid @RequestBody Build build,  HttpServletRequest request ) {
+    public BuildPOJO createBuild(@Valid @RequestBody BuildPOJO build,  HttpServletRequest request ) {
         //append to log
         logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
-        return buildService.createBuild(build);
+        return buildService.createBuild(build , null); //pending: Token with OAUTH
     }
 
     //Delete http request for build by ID

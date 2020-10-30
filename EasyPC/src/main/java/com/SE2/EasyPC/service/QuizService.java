@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
 import com.SE2.EasyPC.dataAccess.repository.BuildRepository;
+import com.SE2.EasyPC.pojo.BuildPOJO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,7 +40,7 @@ public class QuizService {
     @Autowired
     CaseService caseService;
 
-    public Build getRecommendedBuild( List<String> answers ) {
+    public BuildPOJO getRecommendedBuild( List<String> answers ) {
         long budget = 0;
         if( answers.size() != 5 ){
             logger.error( "Incorrect number of quiz answers" );
@@ -104,9 +105,8 @@ public class QuizService {
                 current_price = build.getPrice();
             }
         }
-        return recommendation;
+        return new BuildPOJO( recommendation );
     }
-
 
     private Build createBuild( long id_motherboard , long id_cpu , long id_gpu , long id_ram ,
                                 long id_cooling , long id_ssd , long id_hdd , long id_powerSupply ,

@@ -1,10 +1,17 @@
 package com.SE2.EasyPC.pojo;
 
+import com.SE2.EasyPC.dataAccess.model.User;
+
 public class UserPOJO {
     
     private Long idUser;
 
     private String username;
+
+    public UserPOJO( User user ){
+        this.idUser = user.getIdUser();
+        this.username = user.getUsername();
+    }
 
     public Long getIdUser() {//idUser getter
         return idUser;

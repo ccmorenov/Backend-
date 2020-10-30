@@ -227,4 +227,24 @@ public class Build {//Build class definition
         if( ssd != null ) ret += ssd.getPrice();
         return ret;
     }
+
+    public Build(Long idBuild, Date date, User user, Mouse mouse, Keyboard keyboard, Monitor monitor,
+            Motherboard motherboard, CPU cpu, GPU gpu, RAM ram, Cooling cooling, SSD ssd, HDD hdd,
+            PowerSupply powerSupply, Case caseObj) {
+        this.idBuild = idBuild;
+        this.date = date;
+        this.user = user;
+        this.mouse = mouse;
+        this.keyboard = keyboard;
+        this.monitor = monitor;
+        this.motherboard = motherboard;
+        this.cpu = cpu;
+        this.gpu = gpu;
+        this.ram = ram;
+        this.cooling = cooling;
+        this.ssd = ssd;
+        this.hdd = hdd;
+        this.powerSupply = powerSupply;
+        this.caseObj = caseObj;
+    }
 }
