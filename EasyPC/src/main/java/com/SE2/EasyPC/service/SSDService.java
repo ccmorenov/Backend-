@@ -9,9 +9,14 @@ import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for SSD, recives calls from SSDController and calls SSDRepository
 @Service
 public class SSDService {
+
+    private static final Logger logger = LogManager.getLogger();
 
     @Autowired
     SSDRepository ssdRepository; 
@@ -20,7 +25,7 @@ public class SSDService {
         try{
             return ssdRepository.findAll();
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -30,7 +35,7 @@ public class SSDService {
         try{
             return ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -40,7 +45,7 @@ public class SSDService {
         try{
             return ssdRepository.save(ssd);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -51,7 +56,7 @@ public class SSDService {
             SSD ssd = ssdRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("SSD", "id", id));
             ssdRepository.delete(ssd);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         

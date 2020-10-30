@@ -9,9 +9,14 @@ import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 // Business logic layer for User, recives calls from UserController and calls UserRepository
 @Service
 public class UserService {
+
+    private static final Logger logger = LogManager.getLogger();
 
     @Autowired
     UserRepository userRepository; 
@@ -20,7 +25,7 @@ public class UserService {
         try{
             return userRepository.findAll();
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -30,7 +35,7 @@ public class UserService {
         try{
             return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
        
@@ -40,7 +45,7 @@ public class UserService {
         try{
             return userRepository.save(user);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         
@@ -51,7 +56,7 @@ public class UserService {
             User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
             userRepository.delete(user);
         }catch( Exception e ){
-
+            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
         

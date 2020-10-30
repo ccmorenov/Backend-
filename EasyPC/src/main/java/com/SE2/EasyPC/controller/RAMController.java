@@ -12,12 +12,17 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class RAMController {
     
+    private static final Logger logger = LogManager.getLogger();
+
     //declares corresponding service
     @Autowired
     RAMService ramService;
@@ -26,7 +31,7 @@ public class RAMController {
     @GetMapping("/rams")
     public List<RAM> getAllRAMs(HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return ramService.getAllRAMs();
     }
@@ -35,7 +40,7 @@ public class RAMController {
     @GetMapping("/ram/{id}")
     public RAM getRAMById(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return ramService.getRAMById(ramId);
     }
@@ -45,7 +50,7 @@ public class RAMController {
     //request body with object to post
     public RAM createRAM(@Valid @RequestBody RAM ram, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return ramService.createRAM(ram);
     }
@@ -54,7 +59,7 @@ public class RAMController {
     @DeleteMapping("/ram/{id}")
     public ResponseEntity<?> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         ramService.deleteRAM(ramId);
         //Check deletion
