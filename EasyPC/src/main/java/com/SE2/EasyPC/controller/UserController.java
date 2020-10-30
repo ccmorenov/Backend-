@@ -12,12 +12,17 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //permit cross origin requests
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class UserController {
-    
+
+    private static final Logger logger = LogManager.getLogger();
+
     //declares corresponding service
     @Autowired
     UserService userService;
@@ -26,7 +31,7 @@ public class UserController {
     @GetMapping("/users")
     public List<User> getAllUsers( HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return userService.getAllUsers();
     }
@@ -35,7 +40,7 @@ public class UserController {
     @GetMapping("/user/{id}")
     public User getUsersById(@PathVariable(value = "id") Long userId, HttpServletRequest request ) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return userService.getUserById(userId);
     }
@@ -45,7 +50,7 @@ public class UserController {
     //request body with object to post
     public User createUser(@Valid @RequestBody User user, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
         return userService.createUser(user);
     }
@@ -54,7 +59,7 @@ public class UserController {
     @DeleteMapping("/user/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long userId, HttpServletRequest request) {
         //append to log
-
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //call the corresponding service logical function
         userService.deleteUser(userId);
         //Check deletion
