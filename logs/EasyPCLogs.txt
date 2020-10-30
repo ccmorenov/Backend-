@@ -1,0 +1,30 @@
+2020-10-30 14:02:02 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:02:02 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:02:02 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:02:02 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:02:02 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:02:02 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:02:52 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:02:52 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:02:52 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:02:52 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:02:52 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:02:52 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:03:19 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:03:19 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:03:19 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:03:19 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:03:19 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:03:19 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:03:44 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:03:44 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:03:44 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:03:44 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:03:44 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:03:44 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
+2020-10-30 14:06:45 TRACE com.SE2.EasyPC.EasyPcApplication EasyPcApplication:17 - trace Message Logged !!!
+2020-10-30 14:06:45 DEBUG com.SE2.EasyPC.EasyPcApplication EasyPcApplication:18 - Debug Message Logged !!!
+2020-10-30 14:06:45 INFO  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:19 - Info Message Logged !!!
+2020-10-30 14:06:45 WARN  com.SE2.EasyPC.EasyPcApplication EasyPcApplication:20 - warn Message Logged !!!
+2020-10-30 14:06:45 ERROR com.SE2.EasyPC.EasyPcApplication EasyPcApplication:21 - Error Message Logged !!!
+2020-10-30 14:06:45 FATAL com.SE2.EasyPC.EasyPcApplication EasyPcApplication:22 - Fatal :(
