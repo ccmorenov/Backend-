@@ -5,7 +5,6 @@ import java.util.List;
 import com.SE2.EasyPC.dataAccess.model.Admin;
 import com.SE2.EasyPC.dataAccess.repository.AdminRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +20,7 @@ public class AdminService {
         try{
             return adminRepository.findAll();
         }catch( Exception e ){
-            Log.createLog(3, "Service getAllAdmins failed: " + e.getMessage() );
+
             throw e;
         }
     }
@@ -30,7 +29,7 @@ public class AdminService {
         try{
             return adminRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Admin", "id", id));
         }catch( Exception e ){
-            Log.createLog(3, "Service getAdminById failed: " + e.getMessage() );
+
             throw e;
         }
     }
@@ -39,7 +38,7 @@ public class AdminService {
         try{
             return adminRepository.save(admin);
         }catch( Exception e ){
-            Log.createLog(3, "Service createAdmin failed: " + e.getMessage() );
+
             throw e;
         }
     }
@@ -49,7 +48,7 @@ public class AdminService {
             Admin admin = adminRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Admin", "id", id));
             adminRepository.delete(admin);
         }catch( Exception e ){
-            Log.createLog(3, "Service deleteAdmin failed: " + e.getMessage() );
+
             throw e;
         }
     }

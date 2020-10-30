@@ -1,7 +1,6 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
-import com.SE2.EasyPC.logging.Log;
 import com.SE2.EasyPC.service.BuildService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,7 @@ public class BuildController {
     @GetMapping("/builds")
     public List<Build> getAllBuilds( HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllBuilds query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return buildService.getAllBuilds();
     }
@@ -36,7 +35,7 @@ public class BuildController {
     @GetMapping("/build/{id}")
     public Build getBuildById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getBuildById query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return buildService.getBuildById(buildId);
     }
@@ -46,7 +45,7 @@ public class BuildController {
     //request body with object to post
     public Build createBuild(@Valid @RequestBody Build build,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "createBuild query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return buildService.createBuild(build);
     }
@@ -55,7 +54,7 @@ public class BuildController {
     @DeleteMapping("/build/{id}")
     public ResponseEntity<?> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "deleteBuild query received by " + request.getRemoteAddr());
+
         //call the corresponding service logical function
         buildService.deleteBuild(buildId);
         //Check deletion
@@ -66,7 +65,7 @@ public class BuildController {
     @GetMapping("/build-price/{id}")
     public Integer getBuildPriceById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getBuildPriceById query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return buildService.getBuildPriceById(buildId);
     }

@@ -1,7 +1,6 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.CPU;
-import com.SE2.EasyPC.logging.Log;
 import com.SE2.EasyPC.service.CPUService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,7 @@ public class CPUController {
     @GetMapping("/cpus")
     public List<CPU> getAllCPUs( HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllCPUs query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return cpuService.getAllCPUs();
     }
@@ -36,7 +35,7 @@ public class CPUController {
     @GetMapping("/cpu/{id}")
     public CPU getCPUById(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getCPUById query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return cpuService.getCPUById(cpuId);
     }
@@ -46,7 +45,7 @@ public class CPUController {
     //request body with object to post
     public CPU createCPU(@Valid @RequestBody CPU cpu, HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "createCPU query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return cpuService.createCPU(cpu);
     }
@@ -55,7 +54,7 @@ public class CPUController {
     @DeleteMapping("/cpu/{id}")
     public ResponseEntity<?> deleteCPU(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "deleteCPU query received by " + request.getRemoteAddr());
+
         //call the corresponding service logical function
         cpuService.deleteCPU(cpuId);
         //Check deletion

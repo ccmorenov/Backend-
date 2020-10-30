@@ -2,7 +2,7 @@ package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.User;
 import com.SE2.EasyPC.service.UserService;
-import com.SE2.EasyPC.logging.Log;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +26,7 @@ public class UserController {
     @GetMapping("/users")
     public List<User> getAllUsers( HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllUsers query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return userService.getAllUsers();
     }
@@ -35,7 +35,7 @@ public class UserController {
     @GetMapping("/user/{id}")
     public User getUsersById(@PathVariable(value = "id") Long userId, HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getUsersById query received by " + request.getRemoteAddr() );
+
         //return the corresponding service logical function
         return userService.getUserById(userId);
     }
@@ -45,7 +45,7 @@ public class UserController {
     //request body with object to post
     public User createUser(@Valid @RequestBody User user, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "createUser query received by " + request.getRemoteAddr() );
+
         //return the corresponding service logical function
         return userService.createUser(user);
     }
@@ -54,7 +54,7 @@ public class UserController {
     @DeleteMapping("/user/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long userId, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "deleteUser query received by " + request.getRemoteAddr() );
+
         //call the corresponding service logical function
         userService.deleteUser(userId);
         //Check deletion

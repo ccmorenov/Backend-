@@ -2,7 +2,6 @@ package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.HDD;
 import com.SE2.EasyPC.service.HDDService;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +26,7 @@ public class HDDController {
     @GetMapping("/hdds")
     public List<HDD> getAllHDDs(HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getAllHDDs query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return hddService.getAllHDDs();
     }
@@ -36,7 +35,7 @@ public class HDDController {
     @GetMapping("/hdd/{id}")
     public HDD getHDDById(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getHDDById query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return hddService.getHDDById(hddId);
     }
@@ -46,7 +45,7 @@ public class HDDController {
     //request body with object to post
     public HDD createHDD(@Valid @RequestBody HDD hdd, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "createHDD query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return hddService.createHDD(hdd);
     }
@@ -55,7 +54,7 @@ public class HDDController {
     @DeleteMapping("/hdd/{id}")
     public ResponseEntity<?> deleteHDD(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "deleteHDD query received by " + request.getRemoteAddr());
+
         //call the corresponding service logical function
         hddService.deleteHDD(hddId);
         //Check deletion

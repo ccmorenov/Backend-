@@ -2,7 +2,6 @@ package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.RAM;
 import com.SE2.EasyPC.service.RAMService;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +26,7 @@ public class RAMController {
     @GetMapping("/rams")
     public List<RAM> getAllRAMs(HttpServletRequest request ) {
         //append to log
-        Log.createLog(0, "getAllRAMs query received by " + request.getRemoteAddr());
+
         //return the corresponding service logical function
         return ramService.getAllRAMs();
     }
@@ -36,7 +35,7 @@ public class RAMController {
     @GetMapping("/ram/{id}")
     public RAM getRAMById(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "getRAMById query received by " + request.getRemoteAddr() );
+
         //return the corresponding service logical function
         return ramService.getRAMById(ramId);
     }
@@ -46,7 +45,7 @@ public class RAMController {
     //request body with object to post
     public RAM createRAM(@Valid @RequestBody RAM ram, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "createRAM query received by " + request.getRemoteAddr() );
+
         //return the corresponding service logical function
         return ramService.createRAM(ram);
     }
@@ -55,7 +54,7 @@ public class RAMController {
     @DeleteMapping("/ram/{id}")
     public ResponseEntity<?> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
-        Log.createLog(0, "deleteRAM query received by " + request.getRemoteAddr() );
+
         //call the corresponding service logical function
         ramService.deleteRAM(ramId);
         //Check deletion

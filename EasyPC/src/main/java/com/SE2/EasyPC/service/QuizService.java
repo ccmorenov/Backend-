@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
 import com.SE2.EasyPC.dataAccess.repository.BuildRepository;
-import com.SE2.EasyPC.logging.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,13 +37,13 @@ public class QuizService {
     public Build getRecommendedBuild( List<String> answers ) {
         long budget = 0;
         if( answers.size() != 5 ){
-            Log.createLog(4, "Incorrect number of quiz answers");
+
             return null;
         }
         try{
             budget = Long.parseLong( answers.get(0) );
         }catch( Exception e ){
-            Log.createLog(4, "Price is not a number");
+
             return null;
         }
         // concatenate all other answers into a single String
