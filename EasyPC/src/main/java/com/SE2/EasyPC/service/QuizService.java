@@ -42,15 +42,16 @@ public class QuizService {
     public Build getRecommendedBuild( List<String> answers ) {
         long budget = 0;
         if( answers.size() != 5 ){
-
+            logger.error( "Incorrect number of quiz answers" );
             return null;
         }
         try{
             budget = Long.parseLong( answers.get(0) );
         }catch( Exception e ){
-
+            logger.error( "Quiz answer for budget is not a number" );
             return null;
         }
+        logger.trace( "Quiz answers received" );
         // concatenate all other answers into a single String
         Build basic = createBuild( 1,1,1,1,1,1,1,1,1 );
         Build mid = createBuild( 3,3,3,3,3,3,3,3,3 );
