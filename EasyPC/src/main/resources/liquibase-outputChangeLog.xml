@@ -954,5 +954,13 @@
                 schemaName="easypc"  
                 tableName="compatibleram"/>  
     </changeSet>
+    <changeSet  author="Andres+Gabriel+Alejandra"  id="dropTable-Admin">  
+        <dropTable  cascadeConstraints="false"  
+                schemaName="easypc"  
+                tableName="admin"/>  
+    </changeSet>
+    <changeSet id="User-Roles-Creation" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="User-Role-Creation.sql"/>
+    </changeSet>
     <!---->
 </databaseChangeLog>

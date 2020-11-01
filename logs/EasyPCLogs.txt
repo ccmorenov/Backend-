@@ -343,3 +343,14 @@ com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1
 2020-10-30 15:39:14 TRACE com.SE2.EasyPC.controller.QuizController QuizController:34 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
 2020-10-30 15:39:14 TRACE com.SE2.EasyPC.service.QuizService QuizService:54 - Quiz answers received
 2020-10-30 15:39:41 TRACE com.SE2.EasyPC.controller.BuildController BuildController:34 - getAllBuilds query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-01 17:45:24 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 17:49:00 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 17:49:57 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 17:50:36 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 17:52:01 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 17:54:06 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 17:54:06 WARN  com.SE2.EasyPC.service.UserService UserService:28 - Exception at getAllUsers method of UserService: org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-11-01 18:04:57 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 18:05:47 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 18:07:19 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 18:09:05 TRACE com.SE2.EasyPC.controller.BuildController BuildController:35 - getAllBuilds query at BuildController from 0:0:0:0:0:0:0:1
