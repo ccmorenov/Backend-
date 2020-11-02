@@ -962,5 +962,12 @@
     <changeSet id="User-Roles-Creation" author="Andres+Gabriel+Alejandra">
         <sqlFile dbms="mysql" path="User-Role-Creation.sql"/>
     </changeSet>
+    <changeSet  author="Andres+Gabriel+Alejandra"  id="_fix-length-password"> 
+        <modifyDataType 
+                columnName="password"  
+                newDataType="VARCHAR(400)"  
+                schemaName="easypc"  
+                tableName="user"/>
+    </changeSet>
     <!---->
 </databaseChangeLog>

@@ -354,3 +354,6 @@ com.SE2.EasyPC.exception.ResourceNotFoundException: Admin not found with id : '1
 2020-11-01 18:05:47 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
 2020-11-01 18:07:19 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
 2020-11-01 18:09:05 TRACE com.SE2.EasyPC.controller.BuildController BuildController:35 - getAllBuilds query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-01 18:48:55 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 18:51:20 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1
+2020-11-01 18:55:34 TRACE com.SE2.EasyPC.controller.UserController UserController:34 - getAllUsers query at UserController from 0:0:0:0:0:0:0:1

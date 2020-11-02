@@ -43,6 +43,7 @@ public class UserService {
 
     public User createUser(User user) { // creates a new User in the database
         try{
+            
             return userRepository.save(user);
         }catch( Exception e ){
             logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
@@ -59,6 +60,10 @@ public class UserService {
             logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
             throw e;
         }
-        
     }
+
+    public User findByUsername( String username ){
+        return userRepository.findByUsername( username );
+    }
+
 }

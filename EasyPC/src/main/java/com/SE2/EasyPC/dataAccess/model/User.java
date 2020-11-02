@@ -32,7 +32,7 @@ public class User {//User class definition
     @Column(name = "password")
     private String password;
 
-    @JsonIgnore
+    //@JsonIgnore
     @ManyToMany( fetch = FetchType.EAGER )
     @JoinTable( name = "user_role" , joinColumns = { @JoinColumn(name = "id_user") } ,
                 inverseJoinColumns = { @JoinColumn( name = "id_role" ) } )
