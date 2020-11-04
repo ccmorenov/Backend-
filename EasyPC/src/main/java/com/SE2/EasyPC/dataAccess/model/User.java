@@ -5,6 +5,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -28,6 +31,12 @@ public class User {//User class definition
 
     @Column(name = "password")
     private String password;
+
+    //@JsonIgnore
+    @ManyToMany( fetch = FetchType.EAGER )
+    @JoinTable( name = "user_role" , joinColumns = { @JoinColumn(name = "id_user") } ,
+                inverseJoinColumns = { @JoinColumn( name = "id_role" ) } )
+    private List <Role> roles;
 
     @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
@@ -55,5 +64,21 @@ public class User {//User class definition
 
     public void setPassword(String password) {//password setter
         this.password = password;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
+    public List<Build> getBuilds() {
+        return builds;
+    }
+
+    public void setBuilds(List<Build> builds) {
+        this.builds = builds;
     }
 }
