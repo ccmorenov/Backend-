@@ -12,3 +12,7 @@
 2020-11-06 12:51:26 TRACE com.SE2.EasyPC.controller.BuildController BuildController:60 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
 2020-11-06 12:53:16 TRACE com.SE2.EasyPC.controller.UserController UserController:53 - createUser query at UserController from 0:0:0:0:0:0:0:1
 2020-11-06 12:57:16 TRACE com.SE2.EasyPC.controller.BuildController BuildController:60 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-06 14:36:34 TRACE com.SE2.EasyPC.controller.QuizController QuizController:35 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-06 14:36:34 TRACE com.SE2.EasyPC.service.QuizService QuizService:56 - Quiz answers received
+2020-11-06 14:36:58 TRACE com.SE2.EasyPC.controller.QuizController QuizController:35 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-06 14:36:58 TRACE com.SE2.EasyPC.service.QuizService QuizService:56 - Quiz answers received
