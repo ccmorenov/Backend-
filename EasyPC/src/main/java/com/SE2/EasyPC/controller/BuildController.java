@@ -1,11 +1,14 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.Build;
+import com.SE2.EasyPC.dataAccess.model.User;
 import com.SE2.EasyPC.pojo.BuildPOJO;
 import com.SE2.EasyPC.service.BuildService;
+import com.SE2.EasyPC.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +30,9 @@ public class BuildController {
     //declares corresponding service
     @Autowired
     BuildService buildService;
+
+    @Autowired
+    UserService userService;
 
     //get http request for all builds
     @GetMapping("/builds")
@@ -53,7 +59,12 @@ public class BuildController {
         //append to log
         logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
-        return buildService.createBuild(build , null); //pending: Token with OAUTH
+        if ( SecurityContextHolder.getContext( ).getAuthentication( ).getName().equals("anonymousUser") ){
+            return buildService.createBuild(build , null);
+        }
+        String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
+        User user = userService.findByUsername( username );
+        return buildService.createBuild(build,user);
     }
 
     //Delete http request for build by ID

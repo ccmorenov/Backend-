@@ -969,5 +969,11 @@
                 schemaName="easypc"  
                 tableName="user"/>
     </changeSet>
+    <changeSet id="Default-User-Creation" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="SQL_files/insert-initial-data.sql"/>
+    </changeSet>
+    <changeSet id="Create-beginner-builds" author="Andres+Gabriel">
+        <sqlFile dbms="mysql" path="SQL_files/beginner-builds.sql"/>
+    </changeSet>
     <!---->
 </databaseChangeLog>
