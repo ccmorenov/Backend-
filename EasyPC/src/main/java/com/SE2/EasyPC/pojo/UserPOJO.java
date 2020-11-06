@@ -13,6 +13,8 @@ public class UserPOJO {
         this.username = user.getUsername();
     }
 
+    public UserPOJO() {}
+
     public Long getIdUser() {//idUser getter
         return idUser;
     }
@@ -28,6 +30,5 @@ public class UserPOJO {
     public void setUsername(String username) {//username setter
         this.username = username;
     }
-
 
 }

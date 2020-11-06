@@ -53,6 +53,8 @@ public class BuildPOJO {
         this.caseObj = build.getCaseObj();
     }
 
+    public BuildPOJO ( ){}
+
     public Build toBuild(){
         return new Build( this.idBuild , this.date , null , this.mouse , this.keyboard , this.monitor ,
                         this.motherboard , this.cpu , this.gpu , this.ram , this.cooling , this.ssd ,

@@ -23,7 +23,10 @@ public class BuildService {
     private static final Logger logger = LogManager.getLogger();
 
     @Autowired
-    BuildRepository buildRepository; 
+    BuildRepository buildRepository;
+
+    @Autowired
+    UserService userService;
 
     public List<BuildPOJO> getAllBuilds() { // returns a list with all Builds in the database
         try{
@@ -51,6 +54,9 @@ public class BuildService {
     public BuildPOJO createBuild(BuildPOJO buildPOJO , User user) { // creates a new Build in the database
         try{
             Build build = buildPOJO.toBuild();
+            if (user == null){
+               user = userService.getUserById((long)1);
+            }
             build.setUser(user);
             if( build.getDate() == null ) build.setDate( new java.sql.Date( Calendar.getInstance().getTime().getTime() ) );
             build = buildRepository.save(build);

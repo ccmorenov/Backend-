@@ -1,1 +1,14 @@
-2020-11-03 07:33:20 TRACE com.SE2.EasyPC.controller.UserController UserController:53 - createUser query at UserController from 0:0:0:0:0:0:0:1
+2020-11-06 12:11:36 TRACE com.SE2.EasyPC.controller.BuildController BuildController:44 - getBuildById query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-06 12:15:42 TRACE com.SE2.EasyPC.controller.BuildController BuildController:54 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-06 12:15:42 WARN  com.SE2.EasyPC.service.BuildService BuildService:59 - Exception at createBuild method of BuildService: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-06 12:17:47 TRACE com.SE2.EasyPC.controller.BuildController BuildController:54 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-06 12:17:47 WARN  com.SE2.EasyPC.service.BuildService BuildService:59 - Exception at createBuild method of BuildService: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-06 12:33:06 TRACE com.SE2.EasyPC.controller.UserController UserController:53 - createUser query at UserController from 0:0:0:0:0:0:0:1
+2020-11-06 12:46:02 TRACE com.SE2.EasyPC.controller.BuildController BuildController:60 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-06 12:46:02 WARN  com.SE2.EasyPC.service.UserService UserService:40 - Exception at getUserById method of UserService: com.SE2.EasyPC.exception.ResourceNotFoundException: User not found with id : '0'
+2020-11-06 12:46:02 WARN  com.SE2.EasyPC.service.BuildService BuildService:65 - Exception at createBuild method of BuildService: com.SE2.EasyPC.exception.ResourceNotFoundException: User not found with id : '0'
+2020-11-06 12:46:35 TRACE com.SE2.EasyPC.controller.BuildController BuildController:60 - createBuild query at BuildController from 127.0.0.1
+2020-11-06 12:48:54 TRACE com.SE2.EasyPC.controller.BuildController BuildController:60 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-06 12:51:26 TRACE com.SE2.EasyPC.controller.BuildController BuildController:60 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
+2020-11-06 12:53:16 TRACE com.SE2.EasyPC.controller.UserController UserController:53 - createUser query at UserController from 0:0:0:0:0:0:0:1
+2020-11-06 12:57:16 TRACE com.SE2.EasyPC.controller.BuildController BuildController:60 - createBuild query at BuildController from 0:0:0:0:0:0:0:1
