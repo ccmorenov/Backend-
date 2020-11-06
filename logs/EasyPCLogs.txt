@@ -16,3 +16,7 @@
 2020-11-06 14:36:34 TRACE com.SE2.EasyPC.service.QuizService QuizService:56 - Quiz answers received
 2020-11-06 14:36:58 TRACE com.SE2.EasyPC.controller.QuizController QuizController:35 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
 2020-11-06 14:36:58 TRACE com.SE2.EasyPC.service.QuizService QuizService:56 - Quiz answers received
+2020-11-06 15:17:43 TRACE com.SE2.EasyPC.controller.DescriptionController DescriptionController:36 - getAllDescriptions query at DescriptionController from 0:0:0:0:0:0:0:1
+2020-11-06 15:31:06 TRACE com.SE2.EasyPC.controller.DescriptionController DescriptionController:36 - getAllDescriptions query at DescriptionController from 0:0:0:0:0:0:0:1
+2020-11-06 15:31:55 TRACE com.SE2.EasyPC.controller.DescriptionController DescriptionController:45 - getUsersById query at DescriptionController from 0:0:0:0:0:0:0:1
+2020-11-06 15:32:47 TRACE com.SE2.EasyPC.controller.DescriptionController DescriptionController:45 - getUsersById query at DescriptionController from 0:0:0:0:0:0:0:1

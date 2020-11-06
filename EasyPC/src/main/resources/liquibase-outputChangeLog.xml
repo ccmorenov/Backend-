@@ -975,5 +975,24 @@
     <changeSet id="Create-beginner-builds" author="Andres+Gabriel">
         <sqlFile dbms="mysql" path="SQL_files/beginner-builds.sql"/>
     </changeSet>
+    <changeSet author="Andres+Gabriel+Alejandra" id="create-descriptions-table">
+        <createTable tableName="description">
+            <column autoIncrement="true" name="id_description" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="part_name" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="part_description" type="VARCHAR(1500)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Andres+Gabriel+Alejandra" id="descriptions-table-constarints">
+        <addUniqueConstraint columnNames="part_name" constraintName="part_name_UNIQUE" tableName="description"/>
+    </changeSet>
+    <changeSet id="Add-descriptions" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="SQL_files/insert-descriptions.sql"/>
+    </changeSet>
     <!---->
 </databaseChangeLog>
