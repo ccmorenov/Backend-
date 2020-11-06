@@ -47,15 +47,9 @@ public class Motherboard {//Motherboard class definition
 
     @JsonIgnore
     @ManyToMany
-    @JoinTable(name = "CompatibleRAM", joinColumns = {@JoinColumn(name = "id_motherboard")},
-    inverseJoinColumns = {@JoinColumn(name = "id_ram")})
-    private List<RAM> compatibleRAM;
-
-    @JsonIgnore
-    @ManyToMany
     @JoinTable(name = "CompatibleCPU", joinColumns = {@JoinColumn(name = "id_motherboard")},
     inverseJoinColumns = {@JoinColumn(name = "id_cpu")})
-    private List<RAM> compatibleCPU;
+    private List<CPU> compatibleCPUs;
 
     public Long getIdMotherboard() {//idMotherboard getter
         return idMotherboard;
@@ -125,20 +119,12 @@ public class Motherboard {//Motherboard class definition
 		this.linkPicture = linkPicture;
 	}
 
-    public List<RAM> getCompatibleRAM() {//compatibleRAM getter
-        return compatibleRAM;
+    public List<CPU> getCompatibleCPUs() {//CompatibleCPU getter
+        return compatibleCPUs;
     }
 
-    public void setCompatibleRAM(List<RAM> compatibleRAM) {//compatibleRAM setter
-        this.compatibleRAM = compatibleRAM;
-    }
-
-    public List<RAM> getCompatibleCPU() {//CompatibleCPU getter
-        return compatibleCPU;
-    }
-
-    public void setCompatibleCPU(List<RAM> compatibleCPU) {//compatibleCPU setter
-        this.compatibleCPU = compatibleCPU;
+    public void setCompatibleCPUs(List<CPU> compatibleCPUs) {//compatibleCPU setter
+        this.compatibleCPUs = compatibleCPUs;
     }
 
     public String getLinkBenchmark() {//linkBenchmark getter

@@ -1,5 +1,6 @@
 package com.SE2.EasyPC.controller;
 
+import com.SE2.EasyPC.dataAccess.model.CPU;
 import com.SE2.EasyPC.dataAccess.model.Motherboard;
 import com.SE2.EasyPC.service.MotherboardService;
 
@@ -64,4 +65,23 @@ public class MotherboardController {
         //Check deletion
         return ResponseEntity.ok().build();
     }
+
+    //get http request for compatible cpus with motherboard by specific cpu ID
+    @GetMapping("/motherboard/compatible/{id}")
+    public List<CPU> getCompatibleCPUsById(@PathVariable(value = "id") Long motheboardId, HttpServletRequest request ) {
+        //append to log
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        //return the corresponding service logical function
+        return motherboardService.getCompatibleCPUsById(motheboardId);
+    }
+
+    //post http request for compatible cpus with motherboard
+    @PostMapping("/motherboard/compatible")
+    public List<CPU> getCompatibleCPUs(@Valid @RequestBody Motherboard motherboard, HttpServletRequest request ) {
+        //append to log
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        //return the corresponding service logical function
+        return motherboardService.getMotherboardById( motherboard.getIdMotherboard() ).getCompatibleCPUs();
+    }
+
 }
