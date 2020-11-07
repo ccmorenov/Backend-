@@ -51,10 +51,6 @@ public class RAM {//RAM class definition
     @Column(name = "link_benchmark")
     private String linkBenchmark;
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "compatibleRAM")
-    private List<Motherboard> compatibleMotherboard;
-
     public String getModel() {//model getter
         return model;
     }
@@ -145,14 +141,6 @@ public class RAM {//RAM class definition
 
     public void setIdRAM(Long idRAM) {//idRAM setter
         this.idRAM = idRAM;
-    }
-
-    public List<Motherboard> getCompatibleMotherboard() {//compatibleMotherboard getter
-        return compatibleMotherboard;
-    }
-
-    public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {//compatibleMotherboard setter
-        this.compatibleMotherboard = compatibleMotherboard;
     }
 
     public int getPrice(){
