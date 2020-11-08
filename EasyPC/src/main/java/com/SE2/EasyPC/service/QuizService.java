@@ -7,6 +7,7 @@ import com.SE2.EasyPC.dataAccess.model.Build;
 import com.SE2.EasyPC.dataAccess.repository.BuildRepository;
 import com.SE2.EasyPC.exception.ResourceNotFoundException;
 import com.SE2.EasyPC.pojo.BuildPOJO;
+import com.SE2.EasyPC.service.strategies.BuildChooser;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,6 +42,12 @@ public class QuizService {
     @Autowired
     CaseService caseService;
 
+    private BuildChooser buildChooser;
+
+    public void setStrategy( BuildChooser buildChooser ){
+        this.buildChooser =  buildChooser;
+    }
+
     public BuildPOJO getRecommendedBuild( List<String> answers ) {
         long budget = 0;
         if( answers.size() != 5 ){
@@ -71,41 +78,38 @@ public class QuizService {
         Build work_cpu = buildRepository.findById( (long)12 ).orElseThrow(() -> new ResourceNotFoundException("Build", "id", 12));;
         Build work_disk = buildRepository.findById( (long)13 ).orElseThrow(() -> new ResourceNotFoundException("Build", "id", 13));;
         List <Build> options = new ArrayList <> ();
-        options.add( basic );
-        options.add( mid );
-        options.add( ultra );
+        if( basic.getPrice() <= budget ) options.add( basic );
+        if( mid.getPrice() <= budget ) options.add( mid );
+        if( ultra.getPrice() <= budget ) options.add( ultra );
 
-        if( answers.get(1).equals("1") ){
+        if( answers.get(1).equals("1") && gaming_1.getPrice() <= budget ){
             options.add( gaming_1 );
-            if( answers.get(2).equals("4") || answers.get(2).equals("3") || answers.get(3).equals("1")
-            || answers.get(4).equals("3") ){
+            if( (answers.get(2).equals("4") || answers.get(2).equals("3") || answers.get(3).equals("1")
+            || answers.get(4).equals("3") ) && gaming_gpu.getPrice() <= budget ){
                 options.add( gaming_gpu );
-            }else{
+            }else if( gaming_cpu.getPrice() <= budget ){
                 options.add( gaming_cpu );
             }
-        }else if( answers.get(1).equals("2") ){
+        }else if( answers.get(1).equals("2") && design_1.getPrice() <= budget ){
             options.add( design_1 );
-            if( answers.get(3).equals("3") && !answers.get(2).equals("3") && !answers.get(4).equals("3") ){
+            if( answers.get(3).equals("3") && !answers.get(2).equals("3") && !answers.get(4).equals("3") 
+                && design_disk.getPrice() <= budget ){
                 options.add( design_disk );
-            }else options.add( design_performance );
+            }else if( design_performance.getPrice() <= budget ){
+                options.add( design_performance );
+            }
         }else if( answers.get(1).equals("3") ){
-            if( answers.get(2).equals("3") ){
+            if( answers.get(2).equals("3") && work_gpu.getPrice() <= budget ){
                 options.add( work_gpu );
-            }else if( answers.get(4).equals("3") ){
+            }else if( answers.get(4).equals("3") && work_disk.getPrice() <= budget ){
                 options.add( work_disk );
-            }else{
+            }else if( work_cpu.getPrice() <= budget ){
                 options.add( work_cpu );
             }
         }
 
-        Build recommendation = null;
-        int current_price = -1;
-        for( Build build : options ){
-            if( build.getPrice() > current_price && build.getPrice() <= budget ){
-                recommendation = build;
-                current_price = build.getPrice();
-            }
-        }
+        Build recommendation = buildChooser.chooseBuild(options);
+        
         return new BuildPOJO( recommendation );
     }
 

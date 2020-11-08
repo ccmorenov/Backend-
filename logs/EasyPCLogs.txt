@@ -64,3 +64,7 @@
 2020-11-08 16:45:37 TRACE com.SE2.EasyPC.controller.CPUController CPUController:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
 2020-11-08 16:47:26 TRACE com.SE2.EasyPC.controller.MotherboardController MotherboardController:91 - updateCompatibleCPUs query at MotherboardController from 0:0:0:0:0:0:0:1
 2020-11-08 16:47:36 TRACE com.SE2.EasyPC.controller.MotherboardController MotherboardController:73 - getCompatibleCPUsById query at MotherboardController from 0:0:0:0:0:0:0:1
+2020-11-08 17:44:48 TRACE com.SE2.EasyPC.controller.QuizController QuizController:36 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-08 17:44:48 TRACE com.SE2.EasyPC.service.QuizService QuizService:63 - Quiz answers received
+2020-11-08 17:45:11 TRACE com.SE2.EasyPC.controller.QuizController QuizController:45 - getRecommendedBuildPrice query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-08 17:45:11 TRACE com.SE2.EasyPC.service.QuizService QuizService:63 - Quiz answers received
