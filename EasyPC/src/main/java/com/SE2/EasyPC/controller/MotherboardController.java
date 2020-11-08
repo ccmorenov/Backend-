@@ -84,4 +84,15 @@ public class MotherboardController {
         return motherboardService.getMotherboardById( motherboard.getIdMotherboard() ).getCompatibleCPUs();
     }
 
+    //put http request for updating compatible cpus with motheboard
+    @PostMapping("/motherboard/compatible-cpus/{id}")
+    public Motherboard updateCompatibleCPUs( @PathVariable(value = "id") Long motheboardId , @Valid @RequestBody List<CPU> cpus, HttpServletRequest request ) {
+        //append to log
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        //return the corresponding service logical function
+        Motherboard motherboard = motherboardService.getMotherboardById(motheboardId);
+        motherboard.setCompatibleCPUs(cpus);
+        return motherboardService.createMotherboard(motherboard);
+    }
+
 }

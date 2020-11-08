@@ -52,7 +52,7 @@ public class CPU {//CPU class definition
     private String linkBenchmark;
 
     @JsonIgnore
-    @ManyToMany(mappedBy = "compatibleCPUs")
+    @ManyToMany(mappedBy = "compatibleCPUs" )
     private List<Motherboard> compatibleMotherboards;
 
     public Long getIdCPU() {//idCPU getter
