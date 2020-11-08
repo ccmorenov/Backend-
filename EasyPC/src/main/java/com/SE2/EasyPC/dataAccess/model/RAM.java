@@ -1,18 +1,11 @@
 package com.SE2.EasyPC.dataAccess.model;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import javax.persistence.ManyToMany;
-
 
 @Entity
 @Table(name = "RAM")
@@ -50,10 +43,6 @@ public class RAM {//RAM class definition
     private String linkPicture;
     @Column(name = "link_benchmark")
     private String linkBenchmark;
-
-    @JsonIgnore
-    @ManyToMany(mappedBy = "compatibleRAM")
-    private List<Motherboard> compatibleMotherboard;
 
     public String getModel() {//model getter
         return model;
@@ -145,14 +134,6 @@ public class RAM {//RAM class definition
 
     public void setIdRAM(Long idRAM) {//idRAM setter
         this.idRAM = idRAM;
-    }
-
-    public List<Motherboard> getCompatibleMotherboard() {//compatibleMotherboard getter
-        return compatibleMotherboard;
-    }
-
-    public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {//compatibleMotherboard setter
-        this.compatibleMotherboard = compatibleMotherboard;
     }
 
     public int getPrice(){

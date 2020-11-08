@@ -52,8 +52,8 @@ public class CPU {//CPU class definition
     private String linkBenchmark;
 
     @JsonIgnore
-    @ManyToMany(mappedBy = "compatibleCPU")
-    private List<Motherboard> compatibleMotherboard;
+    @ManyToMany(mappedBy = "compatibleCPUs" )
+    private List<Motherboard> compatibleMotherboards;
 
     public Long getIdCPU() {//idCPU getter
         return idCPU;
@@ -138,12 +138,12 @@ public class CPU {//CPU class definition
 		this.linkPicture = linkPicture;
 	}
 
-    public List<Motherboard> getCompatibleMotherboard() { //compatibleMotherboard getter
-        return compatibleMotherboard;
+    public List<Motherboard> getCompatibleMotherboards() { //compatibleMotherboard getter
+        return compatibleMotherboards;
     }
 
-    public void setCompatibleMotherboard(List<Motherboard> compatibleMotherboard) {//compatibleMotherboard setter
-        this.compatibleMotherboard = compatibleMotherboard;
+    public void setCompatibleMotherboards(List<Motherboard> compatibleMotherboard) {//compatibleMotherboard setter
+        this.compatibleMotherboards = compatibleMotherboard;
     }
 
     public String getLinkBenchmark() {//linkBenchmark getter

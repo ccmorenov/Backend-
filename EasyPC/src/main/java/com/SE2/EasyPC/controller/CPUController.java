@@ -1,6 +1,7 @@
 package com.SE2.EasyPC.controller;
 
 import com.SE2.EasyPC.dataAccess.model.CPU;
+import com.SE2.EasyPC.dataAccess.model.Motherboard;
 import com.SE2.EasyPC.service.CPUService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,6 +65,24 @@ public class CPUController {
         cpuService.deleteCPU(cpuId);
         //Check deletion
         return ResponseEntity.ok().build();
+    }
+
+    //get http request for compatible motheboards with cpu by specific cpu ID
+    @GetMapping("/cpu/compatible/{id}")
+    public List<Motherboard> getCompatibleMotherboardsById(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
+        //append to log
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        //return the corresponding service logical function
+        return cpuService.getCompatibleMotherboardsById(cpuId);
+    }
+
+    //post http request for compatible motheboards with cpu
+    @PostMapping("/cpu/compatible")
+    public List<Motherboard> getCompatibleMotherboards(@Valid @RequestBody CPU cpu, HttpServletRequest request ) {
+        //append to log
+        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        //return the corresponding service logical function
+        return cpuService.getCPUById( cpu.getIdCPU() ).getCompatibleMotherboards();
     }
 
 }
