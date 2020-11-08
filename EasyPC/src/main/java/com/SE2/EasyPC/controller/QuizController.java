@@ -3,6 +3,7 @@ package com.SE2.EasyPC.controller;
 import com.SE2.EasyPC.dataAccess.model.Build;
 import com.SE2.EasyPC.pojo.BuildPOJO;
 import com.SE2.EasyPC.service.QuizService;
+import com.SE2.EasyPC.service.strategies.MostExpensiveBuild;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +35,7 @@ public class QuizController {
         //append to log
         logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
+        quizService.setStrategy( new MostExpensiveBuild() );
         return quizService.getRecommendedBuild(answers);
     }
     //Get http request for build price
@@ -42,6 +44,7 @@ public class QuizController {
         //append to log
         logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
         //return the corresponding service logical function
+        quizService.setStrategy( new MostExpensiveBuild() );
         Build recommended = quizService.getRecommendedBuild(answers).toBuild();
         return recommended.getPrice();
     }
