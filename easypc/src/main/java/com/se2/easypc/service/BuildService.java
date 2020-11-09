@@ -28,8 +28,8 @@ public class BuildService {
     @Autowired
     UserService userService;
 
-    private static final String buildString = "Build";
-    private static final String idString = "id";
+    private static final String BuildString = "Build";
+    private static final String IdString = "id";
 
     public List<BuildPOJO> getAllBuilds() { // returns a list with all Builds in the database
         try{
@@ -46,7 +46,7 @@ public class BuildService {
 
     public BuildPOJO getBuildById( Long id ) { // returns the Build with the requested ID or an exception if it does not exist
         try{
-            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, id));
+            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, id));
             return new BuildPOJO(build);
         }catch( Exception e ){
             logger.warn( e );
@@ -72,7 +72,7 @@ public class BuildService {
 
     public void deleteBuild( Long id ) { // deletes the Build with the requested ID or an exception if it does not exist
         try{
-            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, id));
+            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, id));
             buildRepository.delete(build);
         }catch( Exception e ){
             logger.warn( e );
@@ -82,7 +82,7 @@ public class BuildService {
 
     public Integer getBuildPriceById( Long id ) { // returns the price of an spcefic build
         try{
-            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, id));
+            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, id));
             return build.getPrice();
         }catch( Exception e ){
             logger.warn( e );

@@ -48,8 +48,8 @@ public class QuizService {
         this.buildChooser =  buildChooser;
     }
 
-    private static final String buildString = "Build";
-    private static final String idString = "id";
+    private static final String BuildString = "Build";
+    private static final String IdString = "id";
 
     public BuildPOJO getRecommendedBuild( List<String> answers ) {
         long budget = 0;
@@ -65,21 +65,21 @@ public class QuizService {
         }
         logger.trace( "Quiz answers received" );
         // concatenate all other answers into a single String
-        Build basic = buildRepository.findById( (long)2 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 2));
-        Build mid = buildRepository.findById( (long)3 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 3));
-        Build ultra = buildRepository.findById( (long)4 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 4));
+        Build basic = buildRepository.findById( (long)2 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 2));
+        Build mid = buildRepository.findById( (long)3 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 3));
+        Build ultra = buildRepository.findById( (long)4 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 4));
 
-        Build gaming1 = buildRepository.findById( (long)5 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 5));
-        Build gamingCPU = buildRepository.findById( (long)6 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 6));
-        Build gamingGPU = buildRepository.findById( (long)7 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 7));
+        Build gaming1 = buildRepository.findById( (long)5 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 5));
+        Build gamingCPU = buildRepository.findById( (long)6 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 6));
+        Build gamingGPU = buildRepository.findById( (long)7 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 7));
 
-        Build design1 = buildRepository.findById( (long)8 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 8));
-        Build designDisk = buildRepository.findById( (long)9 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 9));
-        Build designPerformance = buildRepository.findById( (long)10 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 10));
+        Build design1 = buildRepository.findById( (long)8 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 8));
+        Build designDisk = buildRepository.findById( (long)9 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 9));
+        Build designPerformance = buildRepository.findById( (long)10 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 10));
 
-        Build workGPU = buildRepository.findById( (long)11 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 11));
-        Build workCPU = buildRepository.findById( (long)12 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 12));
-        Build workDisk = buildRepository.findById( (long)13 ).orElseThrow(() -> new ResourceNotFoundException(buildString, idString, 13));
+        Build workGPU = buildRepository.findById( (long)11 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 11));
+        Build workCPU = buildRepository.findById( (long)12 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 12));
+        Build workDisk = buildRepository.findById( (long)13 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 13));
         List <Build> options = new ArrayList <> ();
         if( basic.getPrice() <= budget ) options.add( basic );
         if( mid.getPrice() <= budget ) options.add( mid );
