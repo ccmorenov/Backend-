@@ -33,7 +33,7 @@ public class DescriptionController {
     @GetMapping("/descriptions")
     public List<Description> getAllDescriptions( HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return descriptionService.getAllDescriptions();
     }
@@ -42,8 +42,7 @@ public class DescriptionController {
     @GetMapping("/description/{name}")
     public Description getUsersById(@PathVariable(value = "name") String partName, HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
-        //return the corresponding service logical function
+        logger.trace( request.getRemoteAddr() );
         return descriptionService.findByPartName(partName);
     }
 
