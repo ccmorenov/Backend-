@@ -1,7 +1,7 @@
-package com.se2.easypc.controller;
+package com.SE2.EasyPC.controller;
 
-import com.se2.easypc.service.CaseService;
-import com.se2.easypc.dataAccess.model.Case;
+import com.SE2.EasyPC.service.CaseService;
+import com.SE2.EasyPC.dataAccess.model.Case;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

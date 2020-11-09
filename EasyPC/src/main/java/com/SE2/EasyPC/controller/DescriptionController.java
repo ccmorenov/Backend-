@@ -1,11 +1,11 @@
-package com.se2.easypc.controller;
+package com.SE2.EasyPC.controller;
 
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.se2.easypc.dataAccess.model.Description;
-import com.se2.easypc.service.DescriptionService;
+import com.SE2.EasyPC.dataAccess.model.Description;
+import com.SE2.EasyPC.service.DescriptionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

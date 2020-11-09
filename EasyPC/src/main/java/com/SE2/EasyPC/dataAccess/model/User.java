@@ -1,4 +1,4 @@
-package com.se2.easypc.dataAccess.model;
+package com.SE2.EasyPC.dataAccess.model;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
