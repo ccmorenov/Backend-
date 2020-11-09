@@ -1,8 +1,8 @@
-package com.se2.easypc.service.strategies;
+package com.SE2.EasyPC.service.strategies;
 
 import java.util.List;
 
-import com.se2.easypc.dataAccess.model.Build;
+import com.SE2.EasyPC.dataAccess.model.Build;
 
 public interface BuildChooser {
     

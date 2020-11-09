@@ -1,4 +1,4 @@
-package com.se2.easypc;
+package com.SE2.EasyPC;
 
 
 import org.springframework.boot.SpringApplication;

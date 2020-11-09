@@ -1,6 +1,6 @@
-package com.se2.easypc.pojo;
+package com.SE2.EasyPC.pojo;
 
-import com.se2.easypc.dataAccess.model.User;
+import com.SE2.EasyPC.dataAccess.model.User;
 
 public class UserPOJO {
     

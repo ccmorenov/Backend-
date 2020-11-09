@@ -1,7 +1,7 @@
-package com.se2.easypc.controller;
+package com.SE2.EasyPC.controller;
 
-import com.se2.easypc.dataAccess.model.Keyboard;
-import com.se2.easypc.service.KeyboardService;
+import com.SE2.EasyPC.dataAccess.model.Keyboard;
+import com.SE2.EasyPC.service.KeyboardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

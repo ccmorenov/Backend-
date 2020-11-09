@@ -1,4 +1,4 @@
-package com.se2.easypc.auth.model;
+package com.SE2.EasyPC.auth.model;
 
 
 import org.springframework.security.core.GrantedAuthority;
@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.se2.easypc.dataAccess.model.Role;
-import com.se2.easypc.dataAccess.model.User;
+import com.SE2.EasyPC.dataAccess.model.Role;
+import com.SE2.EasyPC.dataAccess.model.User;
 
 
 public class UserDetailsImpl implements UserDetails{

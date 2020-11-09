@@ -1,8 +1,8 @@
-package com.se2.easypc.auth.service;
+package com.SE2.EasyPC.auth.service;
 
-import com.se2.easypc.auth.model.UserDetailsImpl;
-import com.se2.easypc.dataAccess.model.User;
-import com.se2.easypc.service.UserService;
+import com.SE2.EasyPC.auth.model.UserDetailsImpl;
+import com.SE2.EasyPC.dataAccess.model.User;
+import com.SE2.EasyPC.service.UserService;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

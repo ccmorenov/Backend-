@@ -1,4 +1,4 @@
-package com.se2.easypc.auth.configuration;
+package com.SE2.EasyPC.auth.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 
@@ -24,6 +25,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure( AuthenticationManagerBuilder builder ) throws Exception{
         builder.userDetailsService( userDetailsService( ) ).passwordEncoder( passwordEncoder( ) );
+        //builder.userDetailsService( userDetailsService( ) );
     }
 
     @Override
@@ -41,5 +43,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
     public PasswordEncoder passwordEncoder( ){
         return new BCryptPasswordEncoder( );
     }
+
+    /*@Bean
+    public PasswordEncoder passwordEncoder( ){
+        return NoOpPasswordEncoder.getInstance( );
+    }*/
 
 }

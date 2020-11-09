@@ -1,6 +1,6 @@
-package com.se2.easypc.dataAccess.repository;
+package com.SE2.EasyPC.dataAccess.repository;
 
-import com.se2.easypc.dataAccess.model.GPU;
+import com.SE2.EasyPC.dataAccess.model.GPU;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.se2.easypc.dataAccess.model;
+package com.SE2.EasyPC.dataAccess.model;
 
 import java.util.*;
 import javax.persistence.Entity;
@@ -12,6 +12,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 @Entity

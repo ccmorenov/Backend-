@@ -1,7 +1,7 @@
-package com.se2.easypc.controller;
+package com.SE2.EasyPC.controller;
 
-import com.se2.easypc.dataAccess.model.RAM;
-import com.se2.easypc.service.RAMService;
+import com.SE2.EasyPC.dataAccess.model.RAM;
+import com.SE2.EasyPC.service.RAMService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

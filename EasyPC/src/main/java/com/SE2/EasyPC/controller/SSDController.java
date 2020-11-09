@@ -1,7 +1,7 @@
-package com.se2.easypc.controller;
+package com.SE2.EasyPC.controller;
 
-import com.se2.easypc.dataAccess.model.SSD;
-import com.se2.easypc.service.SSDService;
+import com.SE2.EasyPC.dataAccess.model.SSD;
+import com.SE2.EasyPC.service.SSDService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

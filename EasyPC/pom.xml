@@ -8,10 +8,10 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.se2</groupId>
-	<artifactId>easypc</artifactId>
+	<groupId>com.SE2</groupId>
+	<artifactId>EasyPC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>easypc</name>
+	<name>EasyPC</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

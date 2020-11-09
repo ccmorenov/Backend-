@@ -1,9 +1,10 @@
-package com.se2.easypc.controller;
+package com.SE2.EasyPC.controller;
 
-import com.se2.easypc.dataAccess.model.User;
-import com.se2.easypc.pojo.BuildPOJO;
-import com.se2.easypc.service.BuildService;
-import com.se2.easypc.service.UserService;
+import com.SE2.EasyPC.dataAccess.model.Build;
+import com.SE2.EasyPC.dataAccess.model.User;
+import com.SE2.EasyPC.pojo.BuildPOJO;
+import com.SE2.EasyPC.service.BuildService;
+import com.SE2.EasyPC.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

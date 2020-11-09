@@ -1,4 +1,4 @@
-package com.se2.easypc.auth.configuration;
+package com.SE2.EasyPC.auth.configuration;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

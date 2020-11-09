@@ -1,13 +1,13 @@
-package com.se2.easypc.service;
+package com.SE2.EasyPC.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.se2.easypc.dataAccess.model.Build;
-import com.se2.easypc.dataAccess.repository.BuildRepository;
-import com.se2.easypc.exception.ResourceNotFoundException;
-import com.se2.easypc.pojo.BuildPOJO;
-import com.se2.easypc.service.strategies.BuildChooser;
+import com.SE2.EasyPC.dataAccess.model.Build;
+import com.SE2.EasyPC.dataAccess.repository.BuildRepository;
+import com.SE2.EasyPC.exception.ResourceNotFoundException;
+import com.SE2.EasyPC.pojo.BuildPOJO;
+import com.SE2.EasyPC.service.strategies.BuildChooser;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

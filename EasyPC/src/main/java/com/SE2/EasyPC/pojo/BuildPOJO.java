@@ -1,7 +1,7 @@
-package com.se2.easypc.pojo;
+package com.SE2.EasyPC.pojo;
 
 import java.sql.Date;
-import com.se2.easypc.dataAccess.model.*;
+import com.SE2.EasyPC.dataAccess.model.*;
 
 public class BuildPOJO {
 

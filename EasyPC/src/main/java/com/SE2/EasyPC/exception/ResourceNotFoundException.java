@@ -1,4 +1,4 @@
-package com.se2.easypc.exception;
+package com.SE2.EasyPC.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
