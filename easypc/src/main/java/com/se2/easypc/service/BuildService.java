@@ -8,6 +8,7 @@ import com.se2.easypc.data_access.model.Build;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.data_access.repository.BuildRepository;
 import com.se2.easypc.exception.ResourceNotFoundException;
+import com.se2.easypc.pojo.BuildByPartsPOJO;
 import com.se2.easypc.pojo.BuildPOJO;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,42 @@ public class BuildService {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    CaseService caseService;
+
+    @Autowired
+    CoolingService coolingService;
+
+    @Autowired
+    CPUService cpuService;
+
+    @Autowired
+    GPUService gpuService;
+
+    @Autowired
+    HDDService hddService;
+
+    @Autowired
+    KeyboardService keyboardService;
+
+    @Autowired
+    MonitorService monitorService;
+
+    @Autowired
+    MotherboardService motherboardService;
+
+    @Autowired
+    MouseService mouseService;
+
+    @Autowired
+    PowerSupplyService powerSupplyService;
+
+    @Autowired
+    RAMService ramService;
+
+    @Autowired
+    SSDService ssdService;
 
     private static final String BuildString = "Build";
     private static final String IdString = "id";
@@ -88,6 +125,23 @@ public class BuildService {
             logger.warn( e );
             throw e;
         }
+    }
+
+    public BuildPOJO makeBuildFromParts( BuildByPartsPOJO buildParts ){
+        BuildPOJO build = new BuildPOJO();
+        if( buildParts.getIdCase() != null ) build.setCaseObj( caseService.getCaseById( buildParts.getIdCase() ) );
+        if( buildParts.getIdCooling() != null ) build.setCooling( coolingService.getCoolingById( buildParts.getIdCooling() ) );
+        if( buildParts.getIdCPU() != null ) build.setCpu( cpuService.getCPUById( buildParts.getIdCPU() ) );
+        if( buildParts.getIdGPU() != null ) build.setGpu( gpuService.getGPUById( buildParts.getIdGPU() ) );
+        if( buildParts.getIdHDD() != null ) build.setHdd( hddService.getHDDById( buildParts.getIdHDD() ) );
+        if( buildParts.getIdKeyboard() != null ) build.setKeyboard( keyboardService.getKeyboardById( buildParts.getIdKeyboard() ) );
+        if( buildParts.getIdMonitor() != null ) build.setMonitor( monitorService.getMonitorById( buildParts.getIdMonitor() ) );
+        if( buildParts.getIdMotherboard() != null ) build.setMotherboard( motherboardService.getMotherboardById( buildParts.getIdMotherboard() ) );
+        if( buildParts.getIdMouse() != null ) build.setMouse( mouseService.getMouseById( buildParts.getIdMouse() ) );
+        if( buildParts.getIdPowerSupply() != null ) build.setPowerSupply( powerSupplyService.getPowerSupplyById( buildParts.getIdPowerSupply() ) );
+        if( buildParts.getIdRAM() != null ) build.setRam( ramService.getRAMById( buildParts.getIdRAM() ) );
+        if( buildParts.getIdSSD() != null ) build.setSsd( ssdService.getSSDById( buildParts.getIdSSD() ) );
+        return build;
     }
     
 }

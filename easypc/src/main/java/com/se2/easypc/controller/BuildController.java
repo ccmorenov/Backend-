@@ -1,6 +1,7 @@
 package com.se2.easypc.controller;
 
 import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.pojo.BuildByPartsPOJO;
 import com.se2.easypc.pojo.BuildPOJO;
 import com.se2.easypc.service.BuildService;
 import com.se2.easypc.service.UserService;
@@ -84,5 +85,15 @@ public class BuildController {
         logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getBuildPriceById(buildId);
+    }
+
+    //Receive Build by the IDs of it parts
+    @PostMapping("/build-id")
+    public Long getSavedBuildByParts(@Valid @RequestBody BuildByPartsPOJO buildParts,  HttpServletRequest request ) {
+        //append to log
+        logger.trace( request.getRemoteAddr() );
+        //return the corresponding service logical function
+        BuildPOJO build = buildService.makeBuildFromParts(buildParts);
+        return createBuild(build, request).getIdBuild();
     }
 }

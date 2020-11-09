@@ -87,3 +87,6 @@
 2020-11-08 22:30:49 WARN  com.se2.easypc.service.CPUService CPUService getCPUById:38 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '55'
 2020-11-08 22:31:00 TRACE com.se2.easypc.controller.CPUController CPUController getCPUById:44 - 0:0:0:0:0:0:0:1
 2020-11-08 22:31:00 WARN  com.se2.easypc.service.CPUService CPUService getCPUById:38 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '88'
+2020-11-08 23:34:15 TRACE com.se2.easypc.controller.BuildController BuildController getBuildById:50 - 0:0:0:0:0:0:0:1
+2020-11-08 23:37:35 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-08 23:37:35 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
