@@ -35,7 +35,7 @@ public class PowerSupplyService {
         try{
             return powerSupplyRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("PowerSupply", "id", id));
         }catch( Exception e ){
-
+            logger.warn( e );
             throw e;
         }
         
@@ -45,7 +45,7 @@ public class PowerSupplyService {
         try{
             return powerSupplyRepository.save(powerSupply);
         }catch( Exception e ){
-
+            logger.warn( e );
             throw e;
         }
         
@@ -56,7 +56,7 @@ public class PowerSupplyService {
             PowerSupply powerSupply = powerSupplyRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("PowerSupply", "id", id));
             powerSupplyRepository.delete(powerSupply);
         }catch( Exception e ){
-
+            logger.warn( e );
             throw e;
         }
         
