@@ -36,7 +36,7 @@ public class BuildService {
             }
             return builds;
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -46,7 +46,7 @@ public class BuildService {
             Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
             return new BuildPOJO(build);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -62,7 +62,7 @@ public class BuildService {
             build = buildRepository.save(build);
             return new BuildPOJO(build);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -72,7 +72,7 @@ public class BuildService {
             Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
             buildRepository.delete(build);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -82,7 +82,7 @@ public class BuildService {
             Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
             return build.getPrice();
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
