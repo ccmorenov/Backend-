@@ -55,7 +55,6 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .authorizedGrantTypes( AUTHORIZED_GRANT_TYPES ).scopes( SCOPES )
                 .resourceIds( RESOURCE_IDS ).accessTokenValiditySeconds( ACCESS_TOKEN_VALIDITY_SECONDS )
                 .secret( passwordEncoder.encode( SECRET ) );
-                //.secret( SECRET );
     }
 
     @Bean
