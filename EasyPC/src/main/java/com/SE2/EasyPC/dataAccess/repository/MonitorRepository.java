@@ -1,6 +1,6 @@
-package com.SE2.EasyPC.dataAccess.repository;
+package com.se2.easypc.dataAccess.repository;
 
-import com.SE2.EasyPC.dataAccess.model.Monitor;
+import com.se2.easypc.dataAccess.model.Monitor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
