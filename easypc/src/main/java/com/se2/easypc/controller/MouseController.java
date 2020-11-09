@@ -31,7 +31,7 @@ public class MouseController {
     @GetMapping("/mice")
     public List<Mouse> getAllMice(HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return mouseService.getAllMice();
     }
@@ -40,7 +40,7 @@ public class MouseController {
     @GetMapping("/mouse/{id}")
     public Mouse getMouseById(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return mouseService.getMouseById(mouseId);
     }
@@ -50,7 +50,7 @@ public class MouseController {
     //request body with object to post
     public Mouse createMouse(@Valid @RequestBody Mouse mouse, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return mouseService.createMouse(mouse);
     }
@@ -59,7 +59,7 @@ public class MouseController {
     @DeleteMapping("/mouse/{id}")
     public ResponseEntity<?> deleteMouse(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         mouseService.deleteMouse(mouseId);
         //Check deletion

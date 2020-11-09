@@ -31,7 +31,7 @@ public class GPUController {
     @GetMapping("/gpus")
     public List<GPU> getAllGPUs(HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return gpuService.getAllGPUs();
     }
@@ -40,7 +40,7 @@ public class GPUController {
     @GetMapping("/gpu/{id}")
     public GPU getGPUById(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return gpuService.getGPUById(gpuId);
     }
@@ -50,7 +50,7 @@ public class GPUController {
     //request body with object to post
     public GPU createGPU(@Valid @RequestBody GPU gpu, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return gpuService.createGPU(gpu);
     }
@@ -59,7 +59,7 @@ public class GPUController {
     @DeleteMapping("/gpu/{id}")
     public ResponseEntity<?> deleteGPU(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         gpuService.deleteGPU(gpuId);
         //Check deletion
