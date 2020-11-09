@@ -1,5 +1,6 @@
 package com.se2.easypc.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import com.se2.easypc.data_access.model.CPU;
@@ -61,7 +62,7 @@ public class CPUService {
 
     public List<Motherboard> getCompatibleMotherboardsById( Long cpuId ) { // returns compatible Motherboards with the CPU of the given id
         CPU cpu = getCPUById(cpuId);
-        if( cpu == null ) return null;
+        if( cpu == null ) return Collections.emptyList();
         return cpu.getCompatibleMotherboards();
     }
 
