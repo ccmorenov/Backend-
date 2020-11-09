@@ -6,7 +6,7 @@ public class BuildByPartsPOJO {
     private Long idKeyboard;
     private Long idMonitor;
     private Long idMotherboard;
-    private Long idCPU;;
+    private Long idCPU;
     private Long idGPU;
     private Long idRAM;
     private Long idCooling;
