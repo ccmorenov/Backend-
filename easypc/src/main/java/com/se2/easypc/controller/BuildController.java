@@ -37,7 +37,7 @@ public class BuildController {
     @GetMapping("/builds")
     public List<BuildPOJO> getAllBuilds( HttpServletRequest request ) {
         //append to log
-        logger.trace( String.format("Query from %s", request.getRemoteAddr()) );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getAllBuilds();
     }
@@ -46,7 +46,7 @@ public class BuildController {
     @GetMapping("/build/{id}")
     public BuildPOJO getBuildById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        logger.trace(" Query from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getBuildById(buildId);
     }
@@ -56,7 +56,7 @@ public class BuildController {
     //request body with object to post
     public BuildPOJO createBuild(@Valid @RequestBody BuildPOJO build,  HttpServletRequest request ) {
         //append to log
-        logger.trace( String.format("Query from %s", request.getRemoteAddr()) );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         if ( SecurityContextHolder.getContext( ).getAuthentication( ).getName().equals("anonymousUser") ){
             return buildService.createBuild(build , null);
@@ -70,7 +70,7 @@ public class BuildController {
     @DeleteMapping("/build/{id}")
     public ResponseEntity<?> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        logger.trace( String.format("Query from %s", request.getRemoteAddr()) );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         buildService.deleteBuild(buildId);
         //Check deletion
@@ -81,7 +81,7 @@ public class BuildController {
     @GetMapping("/build-price/{id}")
     public Integer getBuildPriceById(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
-        logger.trace( String.format("Query from %s", request.getRemoteAddr()) );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return buildService.getBuildPriceById(buildId);
     }
