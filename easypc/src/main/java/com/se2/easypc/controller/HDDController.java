@@ -31,7 +31,7 @@ public class HDDController {
     @GetMapping("/hdds")
     public List<HDD> getAllHDDs(HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return hddService.getAllHDDs();
     }
@@ -40,7 +40,7 @@ public class HDDController {
     @GetMapping("/hdd/{id}")
     public HDD getHDDById(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return hddService.getHDDById(hddId);
     }
@@ -50,7 +50,7 @@ public class HDDController {
     //request body with object to post
     public HDD createHDD(@Valid @RequestBody HDD hdd, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return hddService.createHDD(hdd);
     }
@@ -59,7 +59,7 @@ public class HDDController {
     @DeleteMapping("/hdd/{id}")
     public ResponseEntity<?> deleteHDD(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         hddService.deleteHDD(hddId);
         //Check deletion

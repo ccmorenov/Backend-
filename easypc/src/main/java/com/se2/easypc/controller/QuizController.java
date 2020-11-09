@@ -33,7 +33,7 @@ public class QuizController {
     //request body with object to post
     public BuildPOJO getRecommendedBuild(@Valid @RequestBody List<String> answers,  HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         quizService.setStrategy( new MostExpensiveBuild() );
         return quizService.getRecommendedBuild(answers);
@@ -42,7 +42,7 @@ public class QuizController {
     @PostMapping("/quiz-beginner-price") 
     public int getRecommendedBuildPrice(@Valid @RequestBody List<String> answers,  HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         quizService.setStrategy( new MostExpensiveBuild() );
         Build recommended = quizService.getRecommendedBuild(answers).toBuild();

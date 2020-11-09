@@ -31,18 +31,18 @@ public class CaseController {
     @GetMapping("/cases")
     public List<Case> getAllCases( HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return caseService.getAllCases();
     }
 
     //get http request for case by specific ID
     @GetMapping("/case/{id}")
-    public Case getCaseById(@PathVariable(value = "id") Long CaseId , HttpServletRequest request ) {
+    public Case getCaseById(@PathVariable(value = "id") Long caseId , HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
-        return caseService.getCaseById(CaseId);
+        return caseService.getCaseById(caseId);
     }
 
     //Post http request for case
@@ -50,18 +50,17 @@ public class CaseController {
     //request body with object to post
     public Case createCase(@Valid @RequestBody Case caseObj , HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return caseService.createCase(caseObj);
     }
 
     //Delete http request for case by ID
     @DeleteMapping("/case/{id}")
-    public ResponseEntity<?> deleteCase(@PathVariable(value = "id") Long CaseId , HttpServletRequest request) {
+    public ResponseEntity<?> deleteCase(@PathVariable(value = "id") Long caseId , HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
-        //call the corresponding service logical function
-        caseService.deleteCase(CaseId);
+        logger.trace( request.getRemoteAddr() );
+        caseService.deleteCase(caseId);
         //Check deletion
         return ResponseEntity.ok().build();
     }

@@ -31,7 +31,7 @@ public class CoolingController {
     @GetMapping("/coolings")
     public List<Cooling> getAllCoolings( HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return coolingService.getAllCoolings();
     }
@@ -40,7 +40,7 @@ public class CoolingController {
     @GetMapping("/cooling/{id}")
     public Cooling getCoolingById(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return coolingService.getCoolingById(coolingId);
     }
@@ -50,7 +50,7 @@ public class CoolingController {
     //request body with object to post
     public Cooling createCooling(@Valid @RequestBody Cooling cooling, HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return coolingService.createCooling(cooling);
     }
@@ -59,7 +59,7 @@ public class CoolingController {
     @DeleteMapping("/cooling/{id}")
     public ResponseEntity<?> deleteCooling(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         coolingService.deleteCooling(coolingId);
         //Check deletion
