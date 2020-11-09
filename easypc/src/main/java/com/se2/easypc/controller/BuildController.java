@@ -1,6 +1,5 @@
 package com.se2.easypc.controller;
 
-import com.se2.easypc.data_access.model.Build;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.pojo.BuildPOJO;
 import com.se2.easypc.service.BuildService;
