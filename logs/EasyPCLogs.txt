@@ -74,3 +74,7 @@
 2020-11-08 21:33:49 WARN  com.se2.easypc.service.BuildService BuildService getBuildById:49 - com.se2.easypc.exception.ResourceNotFoundException: Build not found with id : '99999'
 2020-11-08 21:54:15 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
 2020-11-08 21:54:20 TRACE com.se2.easypc.controller.BuildController BuildController getAllBuilds:40 - 0:0:0:0:0:0:0:1
+2020-11-08 22:09:37 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 22:10:09 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
+2020-11-08 22:10:09 TRACE com.se2.easypc.service.QuizService QuizService getRecommendedBuild:63 - Quiz answers received
+2020-11-08 22:10:37 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
