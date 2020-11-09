@@ -25,7 +25,7 @@ public class MouseService {
         try{
             return mouseRepository.findAll();
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -35,7 +35,7 @@ public class MouseService {
         try{
             return mouseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Mouse", "id", id));
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -45,7 +45,7 @@ public class MouseService {
         try{
             return mouseRepository.save(mouse);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -56,7 +56,7 @@ public class MouseService {
             Mouse mouse = mouseRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Mouse", "id", id));
             mouseRepository.delete(mouse);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         

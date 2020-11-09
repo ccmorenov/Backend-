@@ -31,7 +31,7 @@ public class MotherboardController {
     @GetMapping("/motherboards")
     public List<Motherboard> getAllMotherboards(HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.getAllMotherboards();
     }
@@ -40,7 +40,7 @@ public class MotherboardController {
     @GetMapping("/motherboard/{id}")
     public Motherboard getMotherboardById(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.getMotherboardById(motherboardId);
     }
@@ -50,16 +50,16 @@ public class MotherboardController {
     //request body with object to post
     public Motherboard createMotherboard(@Valid @RequestBody Motherboard motherboard,HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.createMotherboard(motherboard);
     }
 
     //Delete http request for motherboard by ID
     @DeleteMapping("/motherboard/{id}")
-    public ResponseEntity<?> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
+    public ResponseEntity<Void> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         motherboardService.deleteMotherboard(motherboardId);
         //Check deletion
@@ -70,7 +70,7 @@ public class MotherboardController {
     @GetMapping("/motherboard/compatible/{id}")
     public List<CPU> getCompatibleCPUsById(@PathVariable(value = "id") Long motheboardId, HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.getCompatibleCPUsById(motheboardId);
     }
@@ -79,7 +79,7 @@ public class MotherboardController {
     @PostMapping("/motherboard/compatible")
     public List<CPU> getCompatibleCPUs(@Valid @RequestBody Motherboard motherboard, HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return motherboardService.getMotherboardById( motherboard.getIdMotherboard() ).getCompatibleCPUs();
     }
@@ -88,7 +88,7 @@ public class MotherboardController {
     @PostMapping("/motherboard/compatible-cpus/{id}")
     public Motherboard updateCompatibleCPUs( @PathVariable(value = "id") Long motheboardId , @Valid @RequestBody List<CPU> cpus, HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         Motherboard motherboard = motherboardService.getMotherboardById(motheboardId);
         motherboard.setCompatibleCPUs(cpus);

@@ -1,5 +1,6 @@
 package com.se2.easypc.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import com.se2.easypc.data_access.model.CPU;
@@ -25,7 +26,7 @@ public class MotherboardService {
         try{
             return motherboardRepository.findAll();
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -34,7 +35,7 @@ public class MotherboardService {
         try{
             return motherboardRepository.findById(i).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", i));
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -43,7 +44,7 @@ public class MotherboardService {
         try{
             return motherboardRepository.save(motherboard);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -53,14 +54,14 @@ public class MotherboardService {
             Motherboard motherboard = motherboardRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Motherboard", "id", id));
             motherboardRepository.delete(motherboard);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
 
     public List<CPU> getCompatibleCPUsById( Long motheboardId ) { // returns all compatible CPUs given the id of a motherboard
         Motherboard motherboard = getMotherboardById(motheboardId);
-        if( motherboard == null ) return null;
+        if( motherboard == null ) return Collections.emptyList();
         return motherboard.getCompatibleCPUs();
     }
 

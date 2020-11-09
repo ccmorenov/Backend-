@@ -27,7 +27,7 @@ public class UserService {
         try{
             return userRepository.findAll();
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -37,7 +37,7 @@ public class UserService {
         try{
             return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
        
@@ -49,7 +49,7 @@ public class UserService {
             user.setPassword(passwordEncoder.encode( user.getPassword() ) );
             return userRepository.save(user);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -60,7 +60,7 @@ public class UserService {
             User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
             userRepository.delete(user);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }

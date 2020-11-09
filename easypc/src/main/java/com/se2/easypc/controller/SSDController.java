@@ -31,7 +31,7 @@ public class SSDController {
     @GetMapping("/ssds")
     public List<SSD> getAllSSDs(HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return ssdService.getAllSSDs();
     }
@@ -40,7 +40,7 @@ public class SSDController {
     @GetMapping("/ssd/{id}")
     public SSD getSSDById(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return ssdService.getSSDById(ssdId);
     }
@@ -50,16 +50,16 @@ public class SSDController {
     //request body with object to post
     public SSD createSSD(@Valid @RequestBody SSD ssd, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return ssdService.createSSD(ssd);
     }
 
     //Delete http request for ssd by ID
     @DeleteMapping("/ssd/{id}")
-    public ResponseEntity<?> deleteSSD(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteSSD(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         ssdService.deleteSSD(ssdId);
         //Check deletion

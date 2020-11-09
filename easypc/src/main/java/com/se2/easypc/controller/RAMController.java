@@ -31,7 +31,7 @@ public class RAMController {
     @GetMapping("/rams")
     public List<RAM> getAllRAMs(HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return ramService.getAllRAMs();
     }
@@ -40,7 +40,7 @@ public class RAMController {
     @GetMapping("/ram/{id}")
     public RAM getRAMById(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return ramService.getRAMById(ramId);
     }
@@ -50,16 +50,16 @@ public class RAMController {
     //request body with object to post
     public RAM createRAM(@Valid @RequestBody RAM ram, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return ramService.createRAM(ram);
     }
 
     //Delete http request for ram by ID
     @DeleteMapping("/ram/{id}")
-    public ResponseEntity<?> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         ramService.deleteRAM(ramId);
         //Check deletion

@@ -29,7 +29,7 @@ public class MonitorController {
     @GetMapping("/monitors")
     public List<Monitor> getAllMonitors(HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return monitorService.getAllMonitors();
     }
@@ -38,7 +38,7 @@ public class MonitorController {
     @GetMapping("/monitor/{id}")
     public Monitor getMonitorById(@PathVariable(value = "id") Long monitorId,HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return monitorService.getMonitorById(monitorId);
     }
@@ -48,16 +48,16 @@ public class MonitorController {
     //request body with object to post
     public Monitor createMonitor(@Valid @RequestBody Monitor monitor,HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return monitorService.createMonitor(monitor);
     }
 
     //Delete http request for monitor by ID
     @DeleteMapping("/monitor/{id}")
-    public ResponseEntity<?> deleteMonitor(@PathVariable(value = "id") Long monitorId,HttpServletRequest request) {
+    public ResponseEntity<Void> deleteMonitor(@PathVariable(value = "id") Long monitorId,HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         monitorService.deleteMonitor(monitorId);
         //Check deletion

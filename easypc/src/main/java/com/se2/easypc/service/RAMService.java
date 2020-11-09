@@ -25,7 +25,7 @@ public class RAMService {
         try{
             return ramRepository.findAll();
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -35,7 +35,7 @@ public class RAMService {
         try{
             return ramRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("RAM", "id", id));
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -45,7 +45,7 @@ public class RAMService {
         try{
             return ramRepository.save(ram);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
         
@@ -56,7 +56,7 @@ public class RAMService {
             RAM ram = ramRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("RAM", "id", id));
             ramRepository.delete(ram);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }

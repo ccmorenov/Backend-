@@ -31,7 +31,7 @@ public class PowerSupplyController {
     @GetMapping("/power-supplies")
     public List<PowerSupply> getAllPowerSupplies(HttpServletRequest request ) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return powerSupplyService.getAllPowerSupplies();
     }
@@ -40,7 +40,7 @@ public class PowerSupplyController {
     @GetMapping("/power-supply/{id}")
     public PowerSupply getPowerSupplyById(@PathVariable(value = "id") Long powerSupplyId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return powerSupplyService.getPowerSupplyById(powerSupplyId);
     }
@@ -50,16 +50,16 @@ public class PowerSupplyController {
     //request body with object to post
     public PowerSupply createPowerSupply(@Valid @RequestBody PowerSupply powerSupply, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return powerSupplyService.createPowerSupply(powerSupply);
     }
 
     //Delete http request for power-supply by ID
     @DeleteMapping("/power-supply/{id}")
-    public ResponseEntity<?> deletePowerSupply(@PathVariable(value = "id") Long powerSupplyId, HttpServletRequest request) {
+    public ResponseEntity<Void> deletePowerSupply(@PathVariable(value = "id") Long powerSupplyId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         powerSupplyService.deletePowerSupply(powerSupplyId);
         //Check deletion

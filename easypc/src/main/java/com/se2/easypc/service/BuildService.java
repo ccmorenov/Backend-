@@ -8,6 +8,7 @@ import com.se2.easypc.data_access.model.Build;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.data_access.repository.BuildRepository;
 import com.se2.easypc.exception.ResourceNotFoundException;
+import com.se2.easypc.pojo.BuildByPartsPOJO;
 import com.se2.easypc.pojo.BuildPOJO;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,45 @@ public class BuildService {
     @Autowired
     UserService userService;
 
+    @Autowired
+    CaseService caseService;
+
+    @Autowired
+    CoolingService coolingService;
+
+    @Autowired
+    CPUService cpuService;
+
+    @Autowired
+    GPUService gpuService;
+
+    @Autowired
+    HDDService hddService;
+
+    @Autowired
+    KeyboardService keyboardService;
+
+    @Autowired
+    MonitorService monitorService;
+
+    @Autowired
+    MotherboardService motherboardService;
+
+    @Autowired
+    MouseService mouseService;
+
+    @Autowired
+    PowerSupplyService powerSupplyService;
+
+    @Autowired
+    RAMService ramService;
+
+    @Autowired
+    SSDService ssdService;
+
+    private static final String BuildString = "Build";
+    private static final String IdString = "id";
+
     public List<BuildPOJO> getAllBuilds() { // returns a list with all Builds in the database
         try{
             List<BuildPOJO> builds = new ArrayList<>();
@@ -43,7 +83,7 @@ public class BuildService {
 
     public BuildPOJO getBuildById( Long id ) { // returns the Build with the requested ID or an exception if it does not exist
         try{
-            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
+            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, id));
             return new BuildPOJO(build);
         }catch( Exception e ){
             logger.warn( e );
@@ -69,7 +109,7 @@ public class BuildService {
 
     public void deleteBuild( Long id ) { // deletes the Build with the requested ID or an exception if it does not exist
         try{
-            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
+            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, id));
             buildRepository.delete(build);
         }catch( Exception e ){
             logger.warn( e );
@@ -79,12 +119,29 @@ public class BuildService {
 
     public Integer getBuildPriceById( Long id ) { // returns the price of an spcefic build
         try{
-            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Build", "id", id));
+            Build build = buildRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, id));
             return build.getPrice();
         }catch( Exception e ){
             logger.warn( e );
             throw e;
         }
+    }
+
+    public BuildPOJO makeBuildFromParts( BuildByPartsPOJO buildParts ){
+        BuildPOJO build = new BuildPOJO();
+        if( buildParts.getIdCase() != null ) build.setCaseObj( caseService.getCaseById( buildParts.getIdCase() ) );
+        if( buildParts.getIdCooling() != null ) build.setCooling( coolingService.getCoolingById( buildParts.getIdCooling() ) );
+        if( buildParts.getIdCPU() != null ) build.setCpu( cpuService.getCPUById( buildParts.getIdCPU() ) );
+        if( buildParts.getIdGPU() != null ) build.setGpu( gpuService.getGPUById( buildParts.getIdGPU() ) );
+        if( buildParts.getIdHDD() != null ) build.setHdd( hddService.getHDDById( buildParts.getIdHDD() ) );
+        if( buildParts.getIdKeyboard() != null ) build.setKeyboard( keyboardService.getKeyboardById( buildParts.getIdKeyboard() ) );
+        if( buildParts.getIdMonitor() != null ) build.setMonitor( monitorService.getMonitorById( buildParts.getIdMonitor() ) );
+        if( buildParts.getIdMotherboard() != null ) build.setMotherboard( motherboardService.getMotherboardById( buildParts.getIdMotherboard() ) );
+        if( buildParts.getIdMouse() != null ) build.setMouse( mouseService.getMouseById( buildParts.getIdMouse() ) );
+        if( buildParts.getIdPowerSupply() != null ) build.setPowerSupply( powerSupplyService.getPowerSupplyById( buildParts.getIdPowerSupply() ) );
+        if( buildParts.getIdRAM() != null ) build.setRam( ramService.getRAMById( buildParts.getIdRAM() ) );
+        if( buildParts.getIdSSD() != null ) build.setSsd( ssdService.getSSDById( buildParts.getIdSSD() ) );
+        return build;
     }
     
 }

@@ -31,7 +31,7 @@ public class KeyboardController {
     @GetMapping("/keyboards")
     public List<Keyboard> getAllKeyboards( HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return keyboardService.getAllKeyboards();
     }
@@ -40,7 +40,7 @@ public class KeyboardController {
     @GetMapping("/keyboard/{id}")
     public Keyboard getKeyboardById(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return keyboardService.getKeyboardById(keyboardId);
     }
@@ -50,16 +50,16 @@ public class KeyboardController {
     //request body with object to post
     public Keyboard createKeyboard(@Valid @RequestBody Keyboard keyboard, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         return keyboardService.createKeyboard(keyboard);
     }
 
     //Delete http request for keyboard by ID
     @DeleteMapping("/keyboard/{id}")
-    public ResponseEntity<?> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
         //append to log
-        logger.trace( new Object(){}.getClass().getEnclosingMethod().getName() + " query at " + this.getClass().getSimpleName() + " from " + request.getRemoteAddr() );
+        logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
         keyboardService.deleteKeyboard(keyboardId);
         //Check deletion

@@ -1,5 +1,6 @@
 package com.se2.easypc.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import com.se2.easypc.data_access.model.CPU;
@@ -26,7 +27,7 @@ public class CPUService {
         try{
             return cpuRepository.findAll();
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -35,7 +36,7 @@ public class CPUService {
         try{
             return cpuRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("CPU", "id", id));
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -44,7 +45,7 @@ public class CPUService {
         try{
             return cpuRepository.save(cpu);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
@@ -54,14 +55,14 @@ public class CPUService {
             CPU cpu = cpuRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("CPU", "id", id));
             cpuRepository.delete(cpu);
         }catch( Exception e ){
-            logger.warn( "Exception at " + new Object(){}.getClass().getEnclosingMethod().getName() + " method of " + this.getClass().getSimpleName() + ": " + e );
+            logger.warn( e );
             throw e;
         }
     }
 
     public List<Motherboard> getCompatibleMotherboardsById( Long cpuId ) { // returns compatible Motherboards with the CPU of the given id
         CPU cpu = getCPUById(cpuId);
-        if( cpu == null ) return null;
+        if( cpu == null ) return Collections.emptyList();
         return cpu.getCompatibleMotherboards();
     }
 
