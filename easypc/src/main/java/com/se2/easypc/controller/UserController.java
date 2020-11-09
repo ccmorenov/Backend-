@@ -57,7 +57,7 @@ public class UserController {
 
     //Delete http request for user by ID
     @DeleteMapping("/user/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long userId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteUser(@PathVariable(value = "id") Long userId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

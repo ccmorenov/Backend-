@@ -57,7 +57,7 @@ public class HDDController {
 
     //Delete http request for hdd by ID
     @DeleteMapping("/hdd/{id}")
-    public ResponseEntity<?> deleteHDD(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteHDD(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

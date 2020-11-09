@@ -57,7 +57,7 @@ public class GPUController {
 
     //Delete http request for gpu by ID
     @DeleteMapping("/gpu/{id}")
-    public ResponseEntity<?> deleteGPU(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteGPU(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

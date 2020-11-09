@@ -55,7 +55,7 @@ public class MonitorController {
 
     //Delete http request for monitor by ID
     @DeleteMapping("/monitor/{id}")
-    public ResponseEntity<?> deleteMonitor(@PathVariable(value = "id") Long monitorId,HttpServletRequest request) {
+    public ResponseEntity<Void> deleteMonitor(@PathVariable(value = "id") Long monitorId,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

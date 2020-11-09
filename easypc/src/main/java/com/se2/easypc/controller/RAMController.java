@@ -57,7 +57,7 @@ public class RAMController {
 
     //Delete http request for ram by ID
     @DeleteMapping("/ram/{id}")
-    public ResponseEntity<?> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

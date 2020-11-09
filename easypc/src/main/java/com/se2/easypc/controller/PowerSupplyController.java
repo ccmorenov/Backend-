@@ -57,7 +57,7 @@ public class PowerSupplyController {
 
     //Delete http request for power-supply by ID
     @DeleteMapping("/power-supply/{id}")
-    public ResponseEntity<?> deletePowerSupply(@PathVariable(value = "id") Long powerSupplyId, HttpServletRequest request) {
+    public ResponseEntity<Void> deletePowerSupply(@PathVariable(value = "id") Long powerSupplyId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

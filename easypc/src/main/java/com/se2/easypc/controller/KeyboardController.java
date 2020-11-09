@@ -57,7 +57,7 @@ public class KeyboardController {
 
     //Delete http request for keyboard by ID
     @DeleteMapping("/keyboard/{id}")
-    public ResponseEntity<?> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

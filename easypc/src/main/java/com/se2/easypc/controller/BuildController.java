@@ -68,7 +68,7 @@ public class BuildController {
 
     //Delete http request for build by ID
     @DeleteMapping("/build/{id}")
-    public ResponseEntity<?> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
+    public ResponseEntity<Void> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

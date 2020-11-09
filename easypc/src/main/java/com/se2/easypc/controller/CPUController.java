@@ -58,7 +58,7 @@ public class CPUController {
 
     //Delete http request for cpu by ID
     @DeleteMapping("/cpu/{id}")
-    public ResponseEntity<?> deleteCPU(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
+    public ResponseEntity<Void> deleteCPU(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
