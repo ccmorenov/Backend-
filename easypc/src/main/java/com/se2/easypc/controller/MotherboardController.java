@@ -57,7 +57,7 @@ public class MotherboardController {
 
     //Delete http request for motherboard by ID
     @DeleteMapping("/motherboard/{id}")
-    public ResponseEntity<?> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
+    public ResponseEntity<Void> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

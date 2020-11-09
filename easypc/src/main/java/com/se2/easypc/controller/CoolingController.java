@@ -57,7 +57,7 @@ public class CoolingController {
 
     //Delete http request for cooling by ID
     @DeleteMapping("/cooling/{id}")
-    public ResponseEntity<?> deleteCooling(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
+    public ResponseEntity<Void> deleteCooling(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function

@@ -78,3 +78,12 @@
 2020-11-08 22:10:09 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - getRecommendedBuild query at QuizController from 0:0:0:0:0:0:0:1
 2020-11-08 22:10:09 TRACE com.se2.easypc.service.QuizService QuizService getRecommendedBuild:63 - Quiz answers received
 2020-11-08 22:10:37 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - getAllCPUs query at CPUController from 0:0:0:0:0:0:0:1
+2020-11-08 22:25:26 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-08 22:25:35 TRACE com.se2.easypc.controller.CPUController CPUController deleteCPU:63 - 0:0:0:0:0:0:0:1
+2020-11-08 22:25:35 WARN  com.se2.easypc.service.CPUService CPUService deleteCPU:57 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '12'
+2020-11-08 22:25:39 TRACE com.se2.easypc.controller.CPUController CPUController deleteCPU:63 - 0:0:0:0:0:0:0:1
+2020-11-08 22:25:46 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-08 22:30:49 TRACE com.se2.easypc.controller.CPUController CPUController getCPUById:44 - 0:0:0:0:0:0:0:1
+2020-11-08 22:30:49 WARN  com.se2.easypc.service.CPUService CPUService getCPUById:38 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '55'
+2020-11-08 22:31:00 TRACE com.se2.easypc.controller.CPUController CPUController getCPUById:44 - 0:0:0:0:0:0:0:1
+2020-11-08 22:31:00 WARN  com.se2.easypc.service.CPUService CPUService getCPUById:38 - com.se2.easypc.exception.ResourceNotFoundException: CPU not found with id : '88'

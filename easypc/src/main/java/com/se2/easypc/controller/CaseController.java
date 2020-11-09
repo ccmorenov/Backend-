@@ -57,7 +57,7 @@ public class CaseController {
 
     //Delete http request for case by ID
     @DeleteMapping("/case/{id}")
-    public ResponseEntity<?> deleteCase(@PathVariable(value = "id") Long caseId , HttpServletRequest request) {
+    public ResponseEntity<Void> deleteCase(@PathVariable(value = "id") Long caseId , HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         caseService.deleteCase(caseId);

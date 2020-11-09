@@ -57,7 +57,7 @@ public class MouseController {
 
     //Delete http request for mouse by ID
     @DeleteMapping("/mouse/{id}")
-    public ResponseEntity<?> deleteMouse(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
+    public ResponseEntity<Void> deleteMouse(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
