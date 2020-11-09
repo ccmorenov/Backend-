@@ -1,4 +1,4 @@
-package com.SE2.EasyPC.dataAccess.model;
+package com.se2.easypc.dataAccess.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
