@@ -90,3 +90,30 @@
 2020-11-08 23:34:15 TRACE com.se2.easypc.controller.BuildController BuildController getBuildById:50 - 0:0:0:0:0:0:0:1
 2020-11-08 23:37:35 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
 2020-11-08 23:37:35 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:19:41 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - 0:0:0:0:0:0:0:1
+2020-11-13 11:19:41 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuildPrice:45 - 0:0:0:0:0:0:0:1
+2020-11-13 11:19:41 TRACE com.se2.easypc.service.QuizService QuizService getRecommendedBuild:66 - Quiz answers received
+2020-11-13 11:19:41 TRACE com.se2.easypc.service.QuizService QuizService getRecommendedBuild:66 - Quiz answers received
+2020-11-13 11:21:05 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:08 TRACE com.se2.easypc.controller.CPUController CPUController getCompatibleMotherboardsById:74 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:10 TRACE com.se2.easypc.controller.RAMController RAMController getAllRAMs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:13 TRACE com.se2.easypc.controller.GPUController GPUController getAllGPUs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:15 TRACE com.se2.easypc.controller.CoolingController CoolingController getAllCoolings:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:18 TRACE com.se2.easypc.controller.SSDController SSDController getAllSSDs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:21 TRACE com.se2.easypc.controller.HDDController HDDController getAllHDDs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:25 TRACE com.se2.easypc.controller.PowerSupplyController PowerSupplyController getAllPowerSupplies:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:28 TRACE com.se2.easypc.controller.MouseController MouseController getAllMice:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:31 TRACE com.se2.easypc.controller.KeyboardController KeyboardController getAllKeyboards:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:34 TRACE com.se2.easypc.controller.MonitorController MonitorController getAllMonitors:32 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:37 TRACE com.se2.easypc.controller.CaseController CaseController getAllCases:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController getBuildById:50 - 0:0:0:0:0:0:0:1
+2020-11-13 11:21:50 TRACE com.se2.easypc.controller.BuildController BuildController getBuildPriceById:85 - 0:0:0:0:0:0:0:1
+2020-11-13 11:24:42 TRACE com.se2.easypc.controller.UserController UserController getAllUsers:34 - 0:0:0:0:0:0:0:1
+2020-11-13 11:29:53 TRACE com.se2.easypc.controller.UserController UserController createUser:53 - 0:0:0:0:0:0:0:1
+2020-11-13 11:38:48 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-13 11:38:48 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:40:03 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
+2020-11-13 11:40:03 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
+2020-11-13 11:54:59 TRACE com.se2.easypc.controller.BuildController BuildController getBuildsByUser:104 - 0:0:0:0:0:0:0:1

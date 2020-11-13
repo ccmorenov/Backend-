@@ -96,4 +96,15 @@ public class BuildController {
         BuildPOJO build = buildService.makeBuildFromParts(buildParts);
         return createBuild(build, request).getIdBuild();
     }
+
+    //Get list of builds by user
+    @GetMapping("/builds-user")
+    public List<BuildPOJO> getBuildsByUser(HttpServletRequest request ) {
+        //append to log
+        logger.trace( request.getRemoteAddr() );
+        //return the corresponding service logical function
+        String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
+        User user = userService.findByUsername( username );
+        return buildService.getBuildsByUser(user);
+    }
 }

@@ -144,4 +144,11 @@ public class BuildService {
         return build;
     }
     
+    public List<BuildPOJO> getBuildsByUser(User user){
+        List<BuildPOJO> builds = new ArrayList<>();
+        for (Build b : user.getBuilds()){
+            builds.add(new BuildPOJO(b));
+        }
+        return builds;
+    }
 }
