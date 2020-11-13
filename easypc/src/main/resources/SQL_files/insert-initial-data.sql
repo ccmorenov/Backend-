@@ -214,10 +214,9 @@ INSERT INTO easypc.ssd values(3,'M2 NVMe 512GB XPG SPECTRIX S40G RGB',0,512,3500
 INSERT INTO easypc.ssd values(4,'NVMe 1TB XPG GAMMIX S50 5000 x 4400',0,1000,5000,1080000,null,null,'https://speedlogic.com.co/producto/disco-solido-m2-nvme-1tb-xpg-gammix-s50-5000-x-4400/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/09/13093.png','https://ssd.userbenchmark.com/SpeedTest/953258/NVMe-XPG-GAMMIX-S50');
 
 delete from easypc.user;
-insert into easypc.user values(4455,"Brendon","Urie");
 insert into easypc.user values(1,"Invitado","$2a$10$P4egRIenJyO5P/XuaLcPHO9IpZ1EssYu1h0zhEyG.1DLvYClJurbm");
 
 INSERT INTO build (id_build,id_user, id_motherboard, id_cpu, id_gpu, id_ram, id_cooling, id_powersupply, id_case, date )
-	values (1,4455 , 1 , 1 , 1 , 1 , 1 , 1 , 1, "2020-10-10" );
+	values (1,1 , 1 , 1 , 1 , 1 , 1 , 1 , 1, "2020-10-10" );
 
 SET SQL_SAFE_UPDATES = 1;

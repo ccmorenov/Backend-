@@ -1,7 +1,9 @@
 package com.se2.easypc.controller;
 
+import com.se2.easypc.data_access.model.Role;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.pojo.NewPasswordPOJO;
+import com.se2.easypc.service.RoleService;
 import com.se2.easypc.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +31,9 @@ public class UserController {
     //declares corresponding service
     @Autowired
     UserService userService;
+
+    @Autowired
+    RoleService roleService;
 
     //get http request for all users
     @GetMapping("/users")
@@ -53,6 +59,8 @@ public class UserController {
     public User createUser(@Valid @RequestBody User user, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+        Role role = roleService.getRoleById(Role.ROLE_CLIENT);
+        user.setRoles(Collections.singletonList( role ));
         //return the corresponding service logical function
         return userService.createUser(user);
     }

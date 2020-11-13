@@ -127,3 +127,5 @@
 2020-11-13 12:46:45 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1
 2020-11-13 12:46:45 WARN  com.se2.easypc.service.UserService UserService createUser:52 - java.lang.IllegalArgumentException: rawPassword cannot be null
 2020-11-13 12:47:09 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1
+2020-11-13 13:18:01 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
+2020-11-13 13:22:35 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
