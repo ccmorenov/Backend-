@@ -46,7 +46,7 @@ public class KeyboardController {
     }
 
     //Post http request for keyboard
-    @PostMapping("/keyboard")
+    @PostMapping("create/keyboard")
     //request body with object to post
     public Keyboard createKeyboard(@Valid @RequestBody Keyboard keyboard, HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class KeyboardController {
     }
 
     //Delete http request for keyboard by ID
-    @DeleteMapping("/keyboard/{id}")
+    @DeleteMapping("delete/keyboard/{id}")
     public ResponseEntity<Void> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

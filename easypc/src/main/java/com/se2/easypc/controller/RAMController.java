@@ -46,7 +46,7 @@ public class RAMController {
     }
 
     //Post http request for ram
-    @PostMapping("/ram")
+    @PostMapping("create/ram")
     //request body with object to post
     public RAM createRAM(@Valid @RequestBody RAM ram, HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class RAMController {
     }
 
     //Delete http request for ram by ID
-    @DeleteMapping("/ram/{id}")
+    @DeleteMapping("delete/ram/{id}")
     public ResponseEntity<Void> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

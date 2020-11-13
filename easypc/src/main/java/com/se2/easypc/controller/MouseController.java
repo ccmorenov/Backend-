@@ -46,7 +46,7 @@ public class MouseController {
     }
 
     //Post http request for mouse
-    @PostMapping("/mouse")
+    @PostMapping("create/mouse")
     //request body with object to post
     public Mouse createMouse(@Valid @RequestBody Mouse mouse, HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class MouseController {
     }
 
     //Delete http request for mouse by ID
-    @DeleteMapping("/mouse/{id}")
+    @DeleteMapping("delete/mouse/{id}")
     public ResponseEntity<Void> deleteMouse(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
