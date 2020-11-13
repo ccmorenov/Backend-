@@ -117,3 +117,13 @@
 2020-11-13 11:40:03 TRACE com.se2.easypc.controller.BuildController BuildController getSavedBuildByParts:94 - 0:0:0:0:0:0:0:1
 2020-11-13 11:40:03 TRACE com.se2.easypc.controller.BuildController BuildController createBuild:60 - 0:0:0:0:0:0:0:1
 2020-11-13 11:54:59 TRACE com.se2.easypc.controller.BuildController BuildController getBuildsByUser:104 - 0:0:0:0:0:0:0:1
+2020-11-13 12:22:00 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:24:59 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:28:32 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:30:02 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:31:26 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:32:57 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:33:46 TRACE com.se2.easypc.controller.UserController UserController changePassword:74 - 0:0:0:0:0:0:0:1
+2020-11-13 12:46:45 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1
+2020-11-13 12:46:45 WARN  com.se2.easypc.service.UserService UserService createUser:52 - java.lang.IllegalArgumentException: rawPassword cannot be null
+2020-11-13 12:47:09 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1

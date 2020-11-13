@@ -69,4 +69,9 @@ public class UserService {
         return userRepository.findByUsername( username );
     }
 
+    public User changePassword(User user,String newPass){
+        user.setPassword(newPass);
+        return createUser(user);
+    }
+
 }
