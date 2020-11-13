@@ -47,7 +47,7 @@ public class CPUController {
     }
 
     //Post http request for cpu
-    @PostMapping("/cpu")
+    @PostMapping("create/cpu")
     //request body with object to post
     public CPU createCPU(@Valid @RequestBody CPU cpu, HttpServletRequest request ) {
         //append to log
@@ -57,7 +57,7 @@ public class CPUController {
     }
 
     //Delete http request for cpu by ID
-    @DeleteMapping("/cpu/{id}")
+    @DeleteMapping("delete/cpu/{id}")
     public ResponseEntity<Void> deleteCPU(@PathVariable(value = "id") Long cpuId, HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );

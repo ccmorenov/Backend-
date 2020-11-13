@@ -46,7 +46,7 @@ public class MotherboardController {
     }
 
     //Post http request for motherboard
-    @PostMapping("/motherboard")
+    @PostMapping("create/motherboard")
     //request body with object to post
     public Motherboard createMotherboard(@Valid @RequestBody Motherboard motherboard,HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class MotherboardController {
     }
 
     //Delete http request for motherboard by ID
-    @DeleteMapping("/motherboard/{id}")
+    @DeleteMapping("delete/motherboard/{id}")
     public ResponseEntity<Void> deleteMotherboard(@PathVariable(value = "id") Long motherboardId,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

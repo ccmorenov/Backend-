@@ -46,7 +46,7 @@ public class HDDController {
     }
 
     //Post http request for hdd
-    @PostMapping("/hdd")
+    @PostMapping("create/hdd")
     //request body with object to post
     public HDD createHDD(@Valid @RequestBody HDD hdd, HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class HDDController {
     }
 
     //Delete http request for hdd by ID
-    @DeleteMapping("/hdd/{id}")
+    @DeleteMapping("delete/hdd/{id}")
     public ResponseEntity<Void> deleteHDD(@PathVariable(value = "id") Long hddId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

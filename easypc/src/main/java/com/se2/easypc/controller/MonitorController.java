@@ -44,7 +44,7 @@ public class MonitorController {
     }
 
     //Post http request for monitor
-    @PostMapping("/monitor")
+    @PostMapping("create/monitor")
     //request body with object to post
     public Monitor createMonitor(@Valid @RequestBody Monitor monitor,HttpServletRequest request) {
         //append to log
@@ -54,7 +54,7 @@ public class MonitorController {
     }
 
     //Delete http request for monitor by ID
-    @DeleteMapping("/monitor/{id}")
+    @DeleteMapping("delete/monitor/{id}")
     public ResponseEntity<Void> deleteMonitor(@PathVariable(value = "id") Long monitorId,HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

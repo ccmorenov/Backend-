@@ -46,7 +46,7 @@ public class CoolingController {
     }
 
     //Post http request for cooling
-    @PostMapping("/cooling")
+    @PostMapping("create/cooling")
     //request body with object to post
     public Cooling createCooling(@Valid @RequestBody Cooling cooling, HttpServletRequest request ) {
         //append to log
@@ -56,7 +56,7 @@ public class CoolingController {
     }
 
     //Delete http request for cooling by ID
-    @DeleteMapping("/cooling/{id}")
+    @DeleteMapping("delete/cooling/{id}")
     public ResponseEntity<Void> deleteCooling(@PathVariable(value = "id") Long coolingId, HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );

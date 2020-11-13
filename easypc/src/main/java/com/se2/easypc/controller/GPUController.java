@@ -46,7 +46,7 @@ public class GPUController {
     }
 
     //Post http request for gpu
-    @PostMapping("/gpu")
+    @PostMapping("create/gpu")
     //request body with object to post
     public GPU createGPU(@Valid @RequestBody GPU gpu, HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class GPUController {
     }
 
     //Delete http request for gpu by ID
-    @DeleteMapping("/gpu/{id}")
+    @DeleteMapping("delete/gpu/{id}")
     public ResponseEntity<Void> deleteGPU(@PathVariable(value = "id") Long gpuId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

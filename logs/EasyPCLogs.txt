@@ -127,3 +127,19 @@
 2020-11-13 12:46:45 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1
 2020-11-13 12:46:45 WARN  com.se2.easypc.service.UserService UserService createUser:52 - java.lang.IllegalArgumentException: rawPassword cannot be null
 2020-11-13 12:47:09 TRACE com.se2.easypc.controller.UserController UserController changePassword:75 - 0:0:0:0:0:0:0:1
+2020-11-13 13:18:01 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
+2020-11-13 13:22:35 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
+2020-11-13 13:48:32 TRACE com.se2.easypc.controller.CaseController CaseController getAllCases:34 - 0:0:0:0:0:0:0:1
+2020-11-13 13:48:40 TRACE com.se2.easypc.controller.CaseController CaseController getCaseById:43 - 0:0:0:0:0:0:0:1
+2020-11-13 13:50:12 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 13:55:18 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 13:56:43 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 14:09:37 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 14:12:24 TRACE com.se2.easypc.controller.CaseController CaseController createCase:53 - 0:0:0:0:0:0:0:1
+2020-11-13 14:13:06 TRACE com.se2.easypc.controller.UserController UserController createUser:61 - 0:0:0:0:0:0:0:1
+2020-11-13 14:15:16 TRACE com.se2.easypc.controller.CaseController CaseController deleteCase:62 - 0:0:0:0:0:0:0:1
+2020-11-13 14:24:39 TRACE com.se2.easypc.controller.CPUController CPUController getAllCPUs:35 - 0:0:0:0:0:0:0:1
+2020-11-13 14:26:22 TRACE com.se2.easypc.controller.MotherboardController MotherboardController updateCompatibleCPUs:91 - 0:0:0:0:0:0:0:1
+2020-11-13 14:29:46 TRACE com.se2.easypc.controller.MotherboardController MotherboardController updateCompatibleCPUs:91 - 0:0:0:0:0:0:0:1
+2020-11-13 14:30:55 TRACE com.se2.easypc.controller.GPUController GPUController getAllGPUs:34 - 0:0:0:0:0:0:0:1
+2020-11-13 14:33:43 TRACE com.se2.easypc.controller.GPUController GPUController createGPU:53 - 0:0:0:0:0:0:0:1
