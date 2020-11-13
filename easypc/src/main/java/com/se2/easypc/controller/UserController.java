@@ -1,10 +1,12 @@
 package com.se2.easypc.controller;
 
 import com.se2.easypc.data_access.model.User;
+import com.se2.easypc.pojo.NewPasswordPOJO;
 import com.se2.easypc.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -64,6 +66,18 @@ public class UserController {
         userService.deleteUser(userId);
         //Check deletion
         return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/user/change-password")
+    //request body with object to post
+    public User changePassword(@Valid @RequestBody NewPasswordPOJO newPass, HttpServletRequest request) {
+        //append to log
+        logger.trace( request.getRemoteAddr() );
+        System.out.println("NUEVA CONTRASEÑA:" + newPass.getNewPassword());
+        String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
+        User user = userService.findByUsername( username );
+        //return the corresponding service logical function
+        return userService.changePassword(user,newPass.getNewPassword());
     }
 
 }
