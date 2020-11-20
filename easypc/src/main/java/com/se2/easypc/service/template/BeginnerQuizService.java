@@ -1,4 +1,4 @@
-package com.se2.easypc.service;
+package com.se2.easypc.service.template;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,15 @@ import java.util.List;
 import com.se2.easypc.data_access.model.Build;
 import com.se2.easypc.data_access.repository.BuildRepository;
 import com.se2.easypc.exception.ResourceNotFoundException;
-import com.se2.easypc.pojo.BuildPOJO;
-import com.se2.easypc.service.strategies.BuildChooser;
+import com.se2.easypc.service.CPUService;
+import com.se2.easypc.service.CaseService;
+import com.se2.easypc.service.CoolingService;
+import com.se2.easypc.service.GPUService;
+import com.se2.easypc.service.HDDService;
+import com.se2.easypc.service.MotherboardService;
+import com.se2.easypc.service.PowerSupplyService;
+import com.se2.easypc.service.RAMService;
+import com.se2.easypc.service.SSDService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +22,9 @@ import org.springframework.stereotype.Service;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// Business logic layer for the beginner quiz
 @Service
-public class QuizService {
-    
+public class BeginnerQuizService extends RecommendBuild {
+
     private static final Logger logger = LogManager.getLogger();
     
     @Autowired
@@ -42,29 +48,30 @@ public class QuizService {
     @Autowired
     CaseService caseService;
 
-    private BuildChooser buildChooser;
-
-    public void setStrategy( BuildChooser buildChooser ){
-        this.buildChooser =  buildChooser;
-    }
-
     private static final String BuildString = "Build";
     private static final String IdString = "id";
 
-    public BuildPOJO getRecommendedBuild( List<String> answers ) {
-        long budget = 0;
+    private long budget;
+
+    @Override
+    public boolean checkAnswers(List<String> answers) {
+        budget = 0;
         if( answers.size() != 5 ){
             logger.error( "Incorrect number of quiz answers" );
-            return null;
+            return false;
         }
         try{
             budget = Long.parseLong( answers.get(0) );
         }catch( Exception e ){
             logger.error( "Quiz answer for budget is not a number" );
-            return null;
+            return false;
         }
         logger.trace( "Quiz answers received" );
-        // concatenate all other answers into a single String
+        return true;
+    }
+
+    @Override
+    public List<Build> getOptionsList(List<String> answers) {
         Build basic = buildRepository.findById( (long)2 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 2));
         Build mid = buildRepository.findById( (long)3 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 3));
         Build ultra = buildRepository.findById( (long)4 ).orElseThrow(() -> new ResourceNotFoundException(BuildString, IdString, 4));
@@ -110,10 +117,7 @@ public class QuizService {
                 options.add( workCPU );
             }
         }
-
-        Build recommendation = buildChooser.chooseBuild(options);
-        
-        return new BuildPOJO( recommendation );
+        return options;
     }
-
+    
 }

@@ -143,3 +143,7 @@
 2020-11-13 14:29:46 TRACE com.se2.easypc.controller.MotherboardController MotherboardController updateCompatibleCPUs:91 - 0:0:0:0:0:0:0:1
 2020-11-13 14:30:55 TRACE com.se2.easypc.controller.GPUController GPUController getAllGPUs:34 - 0:0:0:0:0:0:0:1
 2020-11-13 14:33:43 TRACE com.se2.easypc.controller.GPUController GPUController createGPU:53 - 0:0:0:0:0:0:0:1
+2020-11-20 13:08:13 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - 0:0:0:0:0:0:0:1
+2020-11-20 13:08:13 TRACE com.se2.easypc.service.template.BeginnerQuizService BeginnerQuizService checkAnswers:69 - Quiz answers received
+2020-11-20 13:09:13 TRACE com.se2.easypc.controller.QuizController QuizController getRecommendedBuild:36 - 0:0:0:0:0:0:0:1
+2020-11-20 13:09:13 TRACE com.se2.easypc.service.template.BeginnerQuizService BeginnerQuizService checkAnswers:69 - Quiz answers received
