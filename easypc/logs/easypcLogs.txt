@@ -7,3 +7,5 @@
 2020-11-20 15:01:45 TRACE com.se2.easypc.controller.BuildController BuildController getBuildsByUser:104 - 0.0.0.0
 2020-11-20 15:23:38 TRACE com.se2.easypc.controller.UserController UserController changePassword:83 - 0.0.0.0
 2020-11-20 15:32:03 TRACE com.se2.easypc.controller.UserController UserController changePassword:83 - 0.0.0.0
+2020-11-20 17:08:44 WARN  com.se2.easypc.service.UserService UserService deleteUser:63 - org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-20 17:14:29 WARN  com.se2.easypc.service.UserService UserService deleteUser:63 - org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
