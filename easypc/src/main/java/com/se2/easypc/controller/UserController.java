@@ -81,7 +81,6 @@ public class UserController {
     public User changePassword(@Valid @RequestBody NewPasswordPOJO newPass, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        System.out.println("NUEVA CONTRASEÑA:" + newPass.getNewPassword());
         String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
         User user = userService.findByUsername( username );
         //return the corresponding service logical function
