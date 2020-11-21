@@ -3,6 +3,7 @@ package com.se2.easypc.controller;
 import com.se2.easypc.data_access.model.Role;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.pojo.NewPasswordPOJO;
+import com.se2.easypc.pojo.UserPOJO;
 import com.se2.easypc.service.RoleService;
 import com.se2.easypc.service.UserService;
 
@@ -45,12 +46,16 @@ public class UserController {
     }
 
     //get http request for user by specific ID
-    @GetMapping("/user/{id}")
-    public User getUsersById(@PathVariable(value = "id") Long userId, HttpServletRequest request ) {
+    @GetMapping("/user/by-token")
+    public UserPOJO getUserByToken( HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
+
+        String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
+        User user = userService.findByUsername( username );
+        UserPOJO filteredUser = new UserPOJO(user);
         //return the corresponding service logical function
-        return userService.getUserById(userId);
+        return filteredUser;
     }
 
     //Post http request for user
