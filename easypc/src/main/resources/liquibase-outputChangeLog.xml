@@ -994,5 +994,8 @@
     <changeSet id="Add-descriptions" author="Andres+Gabriel+Alejandra">
         <sqlFile dbms="mysql" path="SQL_files/insert-descriptions.sql"/>
     </changeSet>
+    <changeSet id="Create-initial-admin" author="Andres+Gabriel+Alejandra">
+        <sqlFile dbms="mysql" path="SQL_files/create-admin.sql"/>
+    </changeSet>
     <!---->
 </databaseChangeLog>

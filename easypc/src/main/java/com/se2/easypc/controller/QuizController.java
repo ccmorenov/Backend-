@@ -2,8 +2,8 @@ package com.se2.easypc.controller;
 
 import com.se2.easypc.data_access.model.Build;
 import com.se2.easypc.pojo.BuildPOJO;
-import com.se2.easypc.service.QuizService;
 import com.se2.easypc.service.strategies.MostExpensiveBuild;
+import com.se2.easypc.service.template.BeginnerQuizService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +26,7 @@ public class QuizController {
 
      //declares corresponding service
      @Autowired
-     QuizService quizService;
+     BeginnerQuizService quizService;
 
     //Get http request for build
     @PostMapping("/quiz-beginner")

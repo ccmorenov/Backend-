@@ -46,7 +46,7 @@ public class CaseController {
     }
 
     //Post http request for case
-    @PostMapping("/case")
+    @PostMapping("/create/case")
     //request body with object to post
     public Case createCase(@Valid @RequestBody Case caseObj , HttpServletRequest request ) {
         //append to log
@@ -56,7 +56,7 @@ public class CaseController {
     }
 
     //Delete http request for case by ID
-    @DeleteMapping("/case/{id}")
+    @DeleteMapping("/delete/case/{id}")
     public ResponseEntity<Void> deleteCase(@PathVariable(value = "id") Long caseId , HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

@@ -46,7 +46,7 @@ public class PowerSupplyController {
     }
 
     //Post http request for power-supply
-    @PostMapping("/power-supply")
+    @PostMapping("create/power-supply")
     //request body with object to post
     public PowerSupply createPowerSupply(@Valid @RequestBody PowerSupply powerSupply, HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class PowerSupplyController {
     }
 
     //Delete http request for power-supply by ID
-    @DeleteMapping("/power-supply/{id}")
+    @DeleteMapping("delete/power-supply/{id}")
     public ResponseEntity<Void> deletePowerSupply(@PathVariable(value = "id") Long powerSupplyId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

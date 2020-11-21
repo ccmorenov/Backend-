@@ -46,7 +46,7 @@ public class SSDController {
     }
 
     //Post http request for ssd
-    @PostMapping("/ssd")
+    @PostMapping("create/ssd")
     //request body with object to post
     public SSD createSSD(@Valid @RequestBody SSD ssd, HttpServletRequest request) {
         //append to log
@@ -56,7 +56,7 @@ public class SSDController {
     }
 
     //Delete http request for ssd by ID
-    @DeleteMapping("/ssd/{id}")
+    @DeleteMapping("delete/ssd/{id}")
     public ResponseEntity<Void> deleteSSD(@PathVariable(value = "id") Long ssdId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );

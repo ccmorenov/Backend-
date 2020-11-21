@@ -9,15 +9,15 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableResourceServer
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter{
 
-    private static final String[] publicResources = new String[]{ "/public/**" };
-    private static final String[] adminResources = new String[]{ "/admin/**" };
+    private static final String[] publicResources = new String[]{ "/api/**" };
+    private static final String[] adminResources = new String[]{"/api/create/**","/api/delete/**","/api/motherboard/compatible-cpus/**"};
 
     @Override
     public void configure( HttpSecurity httpSecurity ) throws Exception{
         httpSecurity
                 .authorizeRequests( )
+                .antMatchers( adminResources ).hasAuthority("ROLE_ADMIN")
                 .antMatchers( publicResources ).permitAll( )
-                .antMatchers( adminResources ).hasAuthority( "ROLE_ADMIN" )
                 .and( ).cors( ).disable( );
     }
 
