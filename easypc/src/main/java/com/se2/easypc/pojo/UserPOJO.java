@@ -45,4 +45,20 @@ public class UserPOJO {
         this.roles = roles;
     }
 
+    @Override
+    public boolean equals( Object obj){
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        UserPOJO user = (UserPOJO) obj;
+        if( user.getIdUser() == this.getIdUser() && user.getUsername() == this.getUsername() && user.getRoles() == this.getRoles()){
+            return true;
+        }
+        return false;
+
+    }
+
 }

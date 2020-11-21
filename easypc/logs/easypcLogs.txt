@@ -9,3 +9,13 @@
 2020-11-20 15:32:03 TRACE com.se2.easypc.controller.UserController UserController changePassword:83 - 0.0.0.0
 2020-11-20 17:08:44 WARN  com.se2.easypc.service.UserService UserService deleteUser:63 - org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
 2020-11-20 17:14:29 WARN  com.se2.easypc.service.UserService UserService deleteUser:63 - org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-11-21 18:19:30 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:21:54 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:22:59 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:24:08 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:26:12 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:28:05 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:28:19 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:35:09 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:44:02 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
+2020-11-21 18:44:26 TRACE com.se2.easypc.controller.UserController UserController getUserByToken:52 - 0.0.0.0
