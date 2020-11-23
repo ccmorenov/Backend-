@@ -1,0 +1,27 @@
+version: '2.1'
+
+services:
+  docker-mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=easypc
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+    ports:
+      - 3306:3306
+    healthcheck:
+      test: "mysqlcheck -u$$MYSQL_USER -p$$MYSQL_ROOT_PASSWORD $$MYSQL_DATABASE"
+      interval: 20s
+      timeout: 5s
+      retries: 15
+
+  ezpc:
+    image: ezpc:latest
+    ports:
+       - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/easypc?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    depends_on:
+      docker-mysql:
+        condition: service_healthy
