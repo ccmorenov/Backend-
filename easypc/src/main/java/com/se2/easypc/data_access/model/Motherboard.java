@@ -47,7 +47,7 @@ public class Motherboard {//Motherboard class definition
 
     @JsonIgnore
     @ManyToMany
-    @JoinTable(name = "CompatibleCPU", joinColumns = {@JoinColumn(name = "id_motherboard")},
+    @JoinTable(name = "compatiblecpu", joinColumns = {@JoinColumn(name = "id_motherboard")},
     inverseJoinColumns = {@JoinColumn(name = "id_cpu")})
     private List<CPU> compatibleCPUs;
 
