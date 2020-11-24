@@ -1,0 +1,43 @@
+version: '2.1'
+
+services:
+  ezpc-MySQL:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: easypc
+      MYSQL_USER: root
+    ports:
+      - "3306:3306"
+    networks:
+      - routine-net
+    healthcheck:
+      test: "mysqlcheck -u$$MYSQL_USER -p$$MYSQL_ROOT_PASSWORD $$MYSQL_DATABASE"
+      interval: 20s
+      timeout: 5s
+      retries: 15
+
+  easypc:
+      image: easypc-image
+      build: .
+      ports:
+        - "8080:8080"
+      networks:
+        - routine-net
+      depends_on:
+        ezpc-MySQL:
+          condition: service_healthy
+
+      links:
+        - ezpc-MySQL
+
+      environment:
+        - DATABASE_HOST=ezpc-MySQL
+        - DATABASE_USER=root 
+        - DATABASE_PASSWORD=password
+        - DATABASE_NAME=easypc
+        - DATABASE_PORT=3306
+
+networks:
+  routine-net:
+    driver: bridge
