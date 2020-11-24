@@ -6,9 +6,9 @@ CREATE TABLE IF NOT EXISTS `woja38qpioj7dt3x`.`role` (
   PRIMARY KEY (`id_role`))
 ;
 
-DROP TABLE IF EXISTS `woja38qpioj7dt3x`.`User_role` ;
+DROP TABLE IF EXISTS `woja38qpioj7dt3x`.`user_role` ;
 
-CREATE TABLE IF NOT EXISTS `woja38qpioj7dt3x`.`User_role` (
+CREATE TABLE IF NOT EXISTS `woja38qpioj7dt3x`.`user_role` (
   `id_user` INT NOT NULL,
   `id_role` INT NOT NULL,
   PRIMARY KEY (`id_user`, `id_role`),
