@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Column;
 @Entity
-@Table(name="Cooling")
+@Table(name="cooling")
 public class Cooling {//Cooling class definition
 	//Cooling attributes
     @Column(name = "id_cooling")

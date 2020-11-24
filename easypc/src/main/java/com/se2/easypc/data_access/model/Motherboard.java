@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "Motherboard" )
+@Table( name = "motherboard" )
 public class Motherboard {//Motherboard class definition
     //Motherboard attributes    
     @Column(name="id_motherboard")

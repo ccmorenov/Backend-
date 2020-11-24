@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table( name = "Build" )
+@Table( name = "build" )
 public class Build {//Build class definition
 
     //Build attributes

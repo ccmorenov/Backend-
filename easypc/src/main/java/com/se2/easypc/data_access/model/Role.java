@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table( name = "easypc.role" )
+@Table( name = "woja38qpioj7dt3x.role" )
 public class Role {//Role class definition
 
     public static final Long ROLE_CLIENT = (long)1;
