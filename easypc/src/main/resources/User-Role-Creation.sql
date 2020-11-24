@@ -26,5 +26,5 @@ CREATE TABLE IF NOT EXISTS `heroku_1cd996d0bc8bc84`.`User_role` (
     ON UPDATE NO ACTION)
 ;
 
-insert into heroku_1cd996d0bc8bc84.role values(1,"client");
-insert into heroku_1cd996d0bc8bc84.role values(2,"admin");
+insert into heroku_1cd996d0bc8bc84.role (id_role,role_name) values(1,"client");
+insert into heroku_1cd996d0bc8bc84.role (id_role,role_name) values(2,"admin");
