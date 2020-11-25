@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "GPU" )
+@Table( name = "gpu" )
 public class GPU {//GPU class definition
     //GPU attributes
     @Column(name = "id_gpu")
