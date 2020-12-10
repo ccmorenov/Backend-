@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "motherboard" )
+@Table( name = "Motherboard" )
 public class Motherboard {//Motherboard class definition
     //Motherboard attributes    
     @Column(name="id_motherboard")
@@ -47,7 +47,7 @@ public class Motherboard {//Motherboard class definition
 
     @JsonIgnore
     @ManyToMany
-    @JoinTable(name = "compatiblecpu", joinColumns = {@JoinColumn(name = "id_motherboard")},
+    @JoinTable(name = "CompatibleCPU", joinColumns = {@JoinColumn(name = "id_motherboard")},
     inverseJoinColumns = {@JoinColumn(name = "id_cpu")})
     private List<CPU> compatibleCPUs;
 

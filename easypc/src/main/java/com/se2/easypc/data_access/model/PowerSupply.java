@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Column;
 @Entity
-@Table(name="powersupply")
+@Table(name="Powersupply")
 public class PowerSupply {//PowerSupply class definition
 	//PowerSupply attributes
     @Column(name = "id_powersupply")

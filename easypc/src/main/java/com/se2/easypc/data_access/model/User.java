@@ -18,7 +18,7 @@ import java.util.List;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "user" )
+@Table( name = "User" )
 public class User {//User class definition
     //User attributes
     @Column(name="id_user")

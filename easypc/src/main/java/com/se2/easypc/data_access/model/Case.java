@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 @Entity
-@Table(name="woja38qpioj7dt3x.case") // To avoid reserved SQL word Case
+@Table(name="easypc.case") // To avoid reserved SQL word Case
 public class Case{//Case class definition
 	//Case attributes
     @Column(name = "id_case")

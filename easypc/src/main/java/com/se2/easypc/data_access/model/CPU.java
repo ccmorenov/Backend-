@@ -14,7 +14,7 @@ import java.util.List;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "cpu" )
+@Table( name = "CPU" )
 public class CPU {//CPU class definition
     //CPU attributes
     @Column(name = "id_cpu")

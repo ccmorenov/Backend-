@@ -480,252 +480,252 @@
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="case"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-case-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="case"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-case-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="case"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-case-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="case"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cooling-sl">  
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cooling"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cooling-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cooling"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-cooling-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cooling"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-cooling-link_picture3"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cooling"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cpu-sl">  
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-cpu-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-cpu-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-cpu-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-cpu-link_benchmark"> 
         <modifyDataType 
                 columnName="link_benchmark"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-gpu-sl">  
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="gpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-gpu-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="gpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-gpu-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="gpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-gpu-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="gpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-gpu-link_benchmark"> 
         <modifyDataType 
                 columnName="link_benchmark"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="gpu"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-hdd-sl">  
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="hdd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-hdd-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="hdd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-hdd-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="hdd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-hdd-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="hdd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-hdd-link_benchmark"> 
         <modifyDataType 
                 columnName="link_benchmark"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="hdd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-keyboard-sl">  
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="keyboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-keyboard-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="keyboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-keyboard-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="keyboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-keyboard-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="keyboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-monitor-sl">  
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="monitor"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-monitor-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="monitor"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-monitor-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="monitor"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-monitor-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="monitor"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-motherboard-sl">  
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="motherboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-motherboard-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="motherboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-motherboard-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="motherboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-motherboard-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="motherboard"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-motherboard-link_benchmark"> 
         <modifyDataType 
                 columnName="link_benchmark"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="motherboard"/>
     </changeSet>
     <!--SSD-->
@@ -733,35 +733,35 @@
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ssd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-ssd-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ssd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-ssd-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ssd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-ssd-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ssd"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-ssd-link_benchmark"> 
         <modifyDataType 
                 columnName="link_benchmark"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ssd"/>
     </changeSet>
 <!---->
@@ -771,35 +771,35 @@
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ram"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-ram-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ram"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-ram-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ram"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-ram-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ram"/>
     </changeSet>
         <changeSet  author="Andres+Alejandra"  id="_fix-length-ram-link_benchmark"> 
         <modifyDataType 
                 columnName="link_benchmark"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ram"/>
     </changeSet>
 <!---->
@@ -809,28 +809,28 @@
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="powersupply"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-powersupply-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="powersupply"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-powersupply-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="powersupply"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-powersupply-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="powersupply"/>
     </changeSet>
     <!---->
@@ -840,28 +840,28 @@
         <modifyDataType 
                 columnName="link_sl"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="mouse"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-link-length-mouse-tauret"> 
         <modifyDataType 
                 columnName="link_tauret"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="mouse"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-mouse-link_cyp"> 
         <modifyDataType 
                 columnName="link_cyp"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="mouse"/>
     </changeSet>
     <changeSet  author="Andres+Alejandra"  id="_fix-length-mouse-link_picture2"> 
         <modifyDataType 
                 columnName="link_picture"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="mouse"/>
     </changeSet>
 
@@ -869,94 +869,94 @@
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="case"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-cooling"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cooling"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-cpu"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="cpu"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-gpu"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="gpu"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-hdd"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="hdd"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-keyboard"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="keyboard"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-monitor"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="monitor"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-motherboard"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="motherboard"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-mouse"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="mouse"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-powersupply"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="powersupply"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-ram"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ram"/>
     </changeSet>
     <changeSet  author="Andres"  id="fix-length-model-ssd"> 
         <modifyDataType 
                 columnName="model"  
                 newDataType="VARCHAR(100)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="ssd"/>
     </changeSet>
     <changeSet  author="Andres+Gabriel+Alejandra"  id="dropTable-RAMCompatibilty">  
         <dropTable  cascadeConstraints="false"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="compatibleram"/>  
     </changeSet>
     <changeSet  author="Andres+Gabriel+Alejandra"  id="dropTable-Admin">  
         <dropTable  cascadeConstraints="false"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="admin"/>  
     </changeSet>
     <changeSet id="User-Roles-Creation" author="Andres+Gabriel+Alejandra">
@@ -966,7 +966,7 @@
         <modifyDataType 
                 columnName="password"  
                 newDataType="VARCHAR(400)"  
-                schemaName="woja38qpioj7dt3x"  
+                schemaName="easypc"  
                 tableName="user"/>
     </changeSet>
     <changeSet id="Default-User-Creation" author="Andres+Gabriel+Alejandra">
@@ -998,4 +998,40 @@
         <sqlFile dbms="mysql" path="SQL_files/create-admin.sql"/>
     </changeSet>
     <!---->
+    <!-- AUDIT EVENTS CRIPTO-->
+    <changeSet id="audit-event" author="Gabriel+Alejandra4Ever">
+        <sqlFile dbms="mysql" path="SQL_files/audit-event.sql"/>
+    </changeSet>
+
+    <changeSet id="insert-audit-event" author="Gabriel+Alejandra4Ever">
+        <sqlFile dbms="mysql" path="SQL_files/insert-audit-event.sql"/>
+    </changeSet>
+
+<!--
+    <changeSet author="Alejandra" id="create-audit-eventlog">
+        <createTable tableName="auditeventlog">
+            <column autoIncrement="true" name="id_log" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="date" type="date">
+                <constraints nullable="true"/>
+            </column>
+            <column name="detail" type="VARCHAR(200)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="client_ip" type="VARCHAR(45)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_event" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_user" type="INT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+-->
+
+
+
 </databaseChangeLog>

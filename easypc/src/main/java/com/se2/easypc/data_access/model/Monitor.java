@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "monitor" )
+@Table( name = "Monitor" )
 public class Monitor {//Monitor class definition
     //Monitor attributes    
     @Column(name = "id_monitor")

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "mouse" )
+@Table( name = "Mouse" )
 public class Mouse {//Mouse class definition
     //Mouse attributes
     
