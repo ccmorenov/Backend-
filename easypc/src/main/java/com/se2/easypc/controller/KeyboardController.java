@@ -2,12 +2,10 @@ package com.se2.easypc.controller;
 
 import com.se2.easypc.data_access.model.Keyboard;
 import com.se2.easypc.service.KeyboardService;
-import com.se2.easypc.service.AuditEventLogService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.se2.easypc.data_access.model.User;
-import com.se2.easypc.service.UserService;
 
 import java.util.List;
 
@@ -28,12 +26,6 @@ public class KeyboardController {
     //declares corresponding service
     @Autowired
     KeyboardService keyboardService;
-    
-    @Autowired
-    AuditEventLogService AEservice;
-
-    @Autowired
-    UserService userService;
     
     //get http request for all keyboards
     @GetMapping("/keyboards")
@@ -59,8 +51,6 @@ public class KeyboardController {
     public Keyboard createKeyboard(@Valid @RequestBody Keyboard keyboard, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        User admin = userService.getUserById(2L);
-        AEservice.Insert(this.getClass().getSimpleName() + " of Keyboard with model " + keyboard.getModel(), admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return keyboardService.createKeyboard(keyboard);
     }
@@ -70,9 +60,6 @@ public class KeyboardController {
     public ResponseEntity<Void> deleteKeyboard(@PathVariable(value = "id") Long keyboardId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        User admin = userService.getUserById(2L);
-        AEservice.Delete(this.getClass().getSimpleName() + " of Keyboard with id " + keyboardId, admin,  request.getRemoteAddr());
-
         //call the corresponding service logical function
         keyboardService.deleteKeyboard(keyboardId);
         //Check deletion

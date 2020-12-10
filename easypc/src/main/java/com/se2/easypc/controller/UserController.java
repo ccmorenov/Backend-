@@ -1,5 +1,5 @@
 package com.se2.easypc.controller;
-import com.se2.easypc.service.AuditEventLogService;
+
 import com.se2.easypc.data_access.model.Role;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.pojo.NewPasswordPOJO;
@@ -36,11 +36,6 @@ public class UserController {
     @Autowired
     RoleService roleService;
 
-    @Autowired
-    AuditEventLogService AEservice;
-
-    
-
     //get http request for all users
     @GetMapping("/users")
     public List<User> getAllUsers( HttpServletRequest request ) {
@@ -71,10 +66,8 @@ public class UserController {
         logger.trace( request.getRemoteAddr() );
         Role role = roleService.getRoleById(Role.ROLE_CLIENT);
         user.setRoles(Collections.singletonList( role ));
-        User new_user = userService.createUser(user);
-        AEservice.Insert(this.getClass().getSimpleName()+ " of User with username "+new_user.getUsername() , new_user,  request.getRemoteAddr());
         //return the corresponding service logical function
-        return new_user;
+        return userService.createUser(user);
     }
 
     //Delete http request for user by ID
@@ -83,8 +76,6 @@ public class UserController {
         //append to log
         logger.trace( request.getRemoteAddr() );
         //call the corresponding service logical function
-        User admin = userService.getUserById(2L);
-        AEservice.Insert(this.getClass().getSimpleName()+ " of User with username "+userId , admin,  request.getRemoteAddr());
         userService.deleteUser(userId);
         //Check deletion
         return ResponseEntity.ok().build();
@@ -97,7 +88,6 @@ public class UserController {
         logger.trace( request.getRemoteAddr() );
         String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
         User user = userService.findByUsername( username );
-        AEservice.Insert(this.getClass().getSimpleName()+ " of User with username "+username , user,  request.getRemoteAddr());
         //return the corresponding service logical function
         return userService.changePassword(user,newPass.getNewPassword());
     }

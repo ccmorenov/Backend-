@@ -1,9 +1,8 @@
 package com.se2.easypc.controller;
-import com.se2.easypc.data_access.model.User;
-import com.se2.easypc.service.UserService;
+
 import com.se2.easypc.data_access.model.Mouse;
 import com.se2.easypc.service.MouseService;
-import com.se2.easypc.service.AuditEventLogService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,12 +26,6 @@ public class MouseController {
     //declares corresponding service
     @Autowired
     MouseService mouseService;
-
-    @Autowired
-    AuditEventLogService AEservice;
-
-    @Autowired
-    UserService userService;
 
     //get http request for all mice
     @GetMapping("/mice")
@@ -58,8 +51,6 @@ public class MouseController {
     public Mouse createMouse(@Valid @RequestBody Mouse mouse, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        User admin = userService.getUserById(2L);
-        AEservice.Insert(this.getClass().getSimpleName()+ " of Mouse with model "+mouse.getModel() , admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return mouseService.createMouse(mouse);
     }
@@ -69,8 +60,6 @@ public class MouseController {
     public ResponseEntity<Void> deleteMouse(@PathVariable(value = "id") Long mouseId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        User admin = userService.getUserById(2L);
-        AEservice.Delete(this.getClass().getSimpleName() +" of Mouse with id "+ mouseId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         mouseService.deleteMouse(mouseId);
         //Check deletion

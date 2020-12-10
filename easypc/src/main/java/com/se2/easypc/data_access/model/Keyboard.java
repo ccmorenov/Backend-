@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 @Entity
-@Table( name = "Keyboard" )
+@Table( name = "keyboard" )
 public class Keyboard {//Keyboard class definition
     //Keyboard attributes
     

@@ -3,7 +3,6 @@ package com.se2.easypc.controller;
 import com.se2.easypc.data_access.model.User;
 import com.se2.easypc.pojo.BuildByPartsPOJO;
 import com.se2.easypc.pojo.BuildPOJO;
-import com.se2.easypc.service.AuditEventLogService;
 import com.se2.easypc.service.BuildService;
 import com.se2.easypc.service.UserService;
 
@@ -35,10 +34,6 @@ public class BuildController {
     @Autowired
     UserService userService;
 
-    @Autowired
-    AuditEventLogService AEservice;
-
-
     //get http request for all builds
     @GetMapping("/builds")
     public List<BuildPOJO> getAllBuilds( HttpServletRequest request ) {
@@ -69,9 +64,6 @@ public class BuildController {
         }
         String username = SecurityContextHolder.getContext( ).getAuthentication( ).getName( );
         User user = userService.findByUsername( username );
-
-        //log de auditoria
-        AEservice.Insert(this.getClass().getSimpleName() + " of Build with id " + build.getIdBuild(), user,  request.getRemoteAddr());
         return buildService.createBuild(build,user);
     }
 
@@ -80,9 +72,6 @@ public class BuildController {
     public ResponseEntity<Void> deleteBuild(@PathVariable(value = "id") Long buildId,  HttpServletRequest request ) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-         //log de auditoria
-         User admin = userService.getUserById(2L);
-        AEservice.Delete(this.getClass().getSimpleName() + " of Build with id " + buildId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         buildService.deleteBuild(buildId);
         //Check deletion
@@ -105,11 +94,7 @@ public class BuildController {
         logger.trace( request.getRemoteAddr() );
         //return the corresponding service logical function
         BuildPOJO build = buildService.makeBuildFromParts(buildParts);
-        //log de auditoria
-        User invitado = userService.getUserById(1L);
-        Long idBuild = createBuild(build, request).getIdBuild();
-        AEservice.Insert(this.getClass().getSimpleName() + "of Build with id " + idBuild, invitado,  request.getRemoteAddr());
-        return idBuild;
+        return createBuild(build, request).getIdBuild();
     }
 
     //Get list of builds by user
