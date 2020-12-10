@@ -1,13 +1,12 @@
 package com.se2.easypc.controller;
-import com.se2.easypc.data_access.model.User;
-import com.se2.easypc.service.UserService;
+
 import com.se2.easypc.data_access.model.RAM;
 import com.se2.easypc.service.RAMService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.se2.easypc.service.AuditEventLogService;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,12 +27,6 @@ public class RAMController {
     @Autowired
     RAMService ramService;
 
-    @Autowired
-    AuditEventLogService AEservice;
-
-    @Autowired
-    UserService userService;
-
     //get http request for all rams
     @GetMapping("/rams")
     public List<RAM> getAllRAMs(HttpServletRequest request ) {
@@ -48,7 +41,6 @@ public class RAMController {
     public RAM getRAMById(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        
         //return the corresponding service logical function
         return ramService.getRAMById(ramId);
     }
@@ -59,8 +51,6 @@ public class RAMController {
     public RAM createRAM(@Valid @RequestBody RAM ram, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        User admin = userService.getUserById(2L);
-        AEservice.Insert(this.getClass().getSimpleName()+ " of RAM with model "+ram.getModel() , admin,  request.getRemoteAddr());
         //return the corresponding service logical function
         return ramService.createRAM(ram);
     }
@@ -70,8 +60,6 @@ public class RAMController {
     public ResponseEntity<Void> deleteRAM(@PathVariable(value = "id") Long ramId, HttpServletRequest request) {
         //append to log
         logger.trace( request.getRemoteAddr() );
-        User admin = userService.getUserById(2L);
-        AEservice.Delete(this.getClass().getSimpleName() +" of RAM with id "+ ramId, admin,  request.getRemoteAddr());
         //call the corresponding service logical function
         ramService.deleteRAM(ramId);
         //Check deletion

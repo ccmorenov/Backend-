@@ -8,29 +8,29 @@ insert into mouse (model, price_sl, price_tauret, price_cyp, link_sl, link_taure
 	,null,"https://clonesyperifericos.com/comprar/mouse-gamer-logitech-g502-hero-rgb/","https://speedlogic.com.co/wp-content/uploads/2020/08/19075.png");
 
 # Case
-delete from easypc.case;
-insert into easypc.case
+delete from woja38qpioj7dt3x.case;
+insert into woja38qpioj7dt3x.case
 	values (1,"CAJA ATX REDRAGON GC-530 RATCHET GAMING",207000,null,null,
 		"https://speedlogic.com.co/producto/caja-atx-redragon-gc-530-ratchet-gaming/",
 		null,
 		null,
 		"https://speedlogic.com.co/wp-content/uploads/2020/10/16225.png");  
 
-insert into easypc.case
+insert into woja38qpioj7dt3x.case
 	values (2,"CAJA ATX XPG BATTLECRUISER",543000,null,null,
 		"https://speedlogic.com.co/producto/caja-atx-xpg-battlecruiser/",
 		null,
 		null,
 		"https://speedlogic.com.co/wp-content/uploads/2020/09/16203.png");
 
-insert into easypc.case
+insert into woja38qpioj7dt3x.case
 	values (3,"CAJA ATX CORSAIR ICUE 465X RGB BLANCO 3 FAN RGB",763000,null,null,
 		"https://speedlogic.com.co/producto/caja-atx-corsair-icue-465x-rgb-blanco-3-fan-rgb/",
 		null,
 		null,
 		"https://speedlogic.com.co/wp-content/uploads/2020/09/16186.5.png");
  
-insert into easypc.case
+insert into woja38qpioj7dt3x.case
 	values (4,"CAJA ATX CORSAIR CRYSTAL 570X VIDRIO TEMPLADO RGB",1023000,null,null,
 		"https://speedlogic.com.co/producto/caja-atx-corsair-crystal-570x-vidrio-templado-rgb/",
 		null,
@@ -196,25 +196,25 @@ insert into cpu
         "https://cpu.userbenchmark.com/AMD-Ryzen-9-3950X/Rating/4057");
 
 delete from ram;
-INSERT INTO easypc.ram values(1,'DDR4 8G 3000MHz ADATA XPG SPECTRIX D41 RGB',0,8,240000,204000,null,240000,'https://speedlogic.com.co/producto/memoria-ram-ddr4-8g-3000mhz-adata-xpg-spectrix-d41-rgb/',null,'https://clonesyperifericos.com/comprar/memoria-ram-xpg-spectrix-d41-8gb-3000mhz-rgb/','https://speedlogic.com.co/wp-content/uploads/2020/09/5225.png',null);
-INSERT INTO easypc.ram values(2,'DDR4 8G 3000 MHz CORSAIR VENGEANCE LPX',0,8,240000,200000,null,215000,'https://speedlogic.com.co/producto/memoria-para-pc-ddr4-8g-3000-mhz-corsair-vengeance-lpx-negra/',null,'https://clonesyperifericos.com/comprar/memoria-ram-corsair-vengeance-lpx-8gb-1x8gb-ddr4-3000mhz/','https://speedlogic.com.co/wp-content/uploads/2020/08/5096.png','https://ram.userbenchmark.com/Corsair-Vengeance-LPX-DDR4-3000-C15-2x8GB/Rating/3546');
-INSERT INTO easypc.ram values(3,'DDR4 16G 3000MHz CORSAIR VENGEANCE RGB PRO NEGRA',0,16,240000,361000,null,561000,'https://speedlogic.com.co/producto/memoria-ram-ddr4-16g-3000mhz-corsair-vengeance-rgb-pro-negra/',null,'https://clonesyperifericos.com/comprar/memoria-dram-ddr4-a-3600-mhz-vengeance-rgb-pro/','https://speedlogic.com.co/wp-content/uploads/2020/09/5164.png',null);
-INSERT INTO easypc.ram values(4,'DDR4 16G 3600MHz XPG SPECTRIX D60 RGB',0,16,28800,430000,null,504000,'https://speedlogic.com.co/producto/memoria-ram-ddr4-16g-3600mhz-xpg-spectrix-d60-rgb/',null,'https://clonesyperifericos.com/comprar/memoria-ram-adata-xpg-spectrix-d60g-ddr4-2x8gb-3200mhz/','https://speedlogic.com.co/wp-content/uploads/2020/09/5271.png',null);
+INSERT INTO woja38qpioj7dt3x.ram values(1,'DDR4 8G 3000MHz ADATA XPG SPECTRIX D41 RGB',0,8,240000,204000,null,240000,'https://speedlogic.com.co/producto/memoria-ram-ddr4-8g-3000mhz-adata-xpg-spectrix-d41-rgb/',null,'https://clonesyperifericos.com/comprar/memoria-ram-xpg-spectrix-d41-8gb-3000mhz-rgb/','https://speedlogic.com.co/wp-content/uploads/2020/09/5225.png',null);
+INSERT INTO woja38qpioj7dt3x.ram values(2,'DDR4 8G 3000 MHz CORSAIR VENGEANCE LPX',0,8,240000,200000,null,215000,'https://speedlogic.com.co/producto/memoria-para-pc-ddr4-8g-3000-mhz-corsair-vengeance-lpx-negra/',null,'https://clonesyperifericos.com/comprar/memoria-ram-corsair-vengeance-lpx-8gb-1x8gb-ddr4-3000mhz/','https://speedlogic.com.co/wp-content/uploads/2020/08/5096.png','https://ram.userbenchmark.com/Corsair-Vengeance-LPX-DDR4-3000-C15-2x8GB/Rating/3546');
+INSERT INTO woja38qpioj7dt3x.ram values(3,'DDR4 16G 3000MHz CORSAIR VENGEANCE RGB PRO NEGRA',0,16,240000,361000,null,561000,'https://speedlogic.com.co/producto/memoria-ram-ddr4-16g-3000mhz-corsair-vengeance-rgb-pro-negra/',null,'https://clonesyperifericos.com/comprar/memoria-dram-ddr4-a-3600-mhz-vengeance-rgb-pro/','https://speedlogic.com.co/wp-content/uploads/2020/09/5164.png',null);
+INSERT INTO woja38qpioj7dt3x.ram values(4,'DDR4 16G 3600MHz XPG SPECTRIX D60 RGB',0,16,28800,430000,null,504000,'https://speedlogic.com.co/producto/memoria-ram-ddr4-16g-3600mhz-xpg-spectrix-d60-rgb/',null,'https://clonesyperifericos.com/comprar/memoria-ram-adata-xpg-spectrix-d60g-ddr4-2x8gb-3200mhz/','https://speedlogic.com.co/wp-content/uploads/2020/09/5271.png',null);
 
 delete from powersupply;
-INSERT INTO easypc.powersupply values(1,'Thermaltake Smart 430w 80 Plus',430,null,null,225000,null,null,'https://clonesyperifericos.com/comprar/fuente-de-poder-thermlatake-smart-430w-80-plus/','https://www.computerevolution.com.co/wp-content/uploads/2020/09/fuente-smart-430-80plus-blanca-800x800.png');
-INSERT INTO easypc.powersupply values(2,'CORSAIR CV650W 80 PLUS BRONZE',650,332000,null,null,'https://speedlogic.com.co/producto/fuente-corsair-cv650w-80-plus-bronze/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/09/14121.1.png');
-INSERT INTO easypc.powersupply values(3,'Thermaltake 750w Smart Bx1 Rgb 80 Plus Bronce',750,null,475000,null,null,'https://tauretcomputadores.com/product/fuente-thermaltake-750w-smart-bx1-rgb-80-plus-bronce',null,'https://www.tauretcomputadores.com/images/products/Product_202009051126381955941516.png');
-INSERT INTO easypc.powersupply values(4,'CORSAIR RM1000 80 PLUS GOLD MODULAR',1000,990000,null,null,'https://speedlogic.com.co/producto/fuente-corsair-rm1000-80-plus-gold-modular/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/09/14128.png');
+INSERT INTO woja38qpioj7dt3x.powersupply values(1,'Thermaltake Smart 430w 80 Plus',430,null,null,225000,null,null,'https://clonesyperifericos.com/comprar/fuente-de-poder-thermlatake-smart-430w-80-plus/','https://www.computerevolution.com.co/wp-content/uploads/2020/09/fuente-smart-430-80plus-blanca-800x800.png');
+INSERT INTO woja38qpioj7dt3x.powersupply values(2,'CORSAIR CV650W 80 PLUS BRONZE',650,332000,null,null,'https://speedlogic.com.co/producto/fuente-corsair-cv650w-80-plus-bronze/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/09/14121.1.png');
+INSERT INTO woja38qpioj7dt3x.powersupply values(3,'Thermaltake 750w Smart Bx1 Rgb 80 Plus Bronce',750,null,475000,null,null,'https://tauretcomputadores.com/product/fuente-thermaltake-750w-smart-bx1-rgb-80-plus-bronce',null,'https://www.tauretcomputadores.com/images/products/Product_202009051126381955941516.png');
+INSERT INTO woja38qpioj7dt3x.powersupply values(4,'CORSAIR RM1000 80 PLUS GOLD MODULAR',1000,990000,null,null,'https://speedlogic.com.co/producto/fuente-corsair-rm1000-80-plus-gold-modular/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/09/14128.png');
 
 delete from ssd;
-INSERT INTO easypc.ssd values(1,'120GB PNY CS900',0,120,515,110000,null,null,'https://speedlogic.com.co/producto/disco-solido-ssd-120gb-pny-cs900/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/10/12076.png','https://ssd.userbenchmark.com/SpeedTest/175702/PNY-CS900-120GB-SSD');
-INSERT INTO easypc.ssd values(2,'M2 NVMe 250GB CRUCIAL P2',0,250,2100,259000,null,null,'https://speedlogic.com.co/producto/disco-solido-m2-nvme-250gb-crucial-p2/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/08/13085.png','https://ssd.userbenchmark.com/SpeedTest/1239408/CT250P5SSD8');
-INSERT INTO easypc.ssd values(3,'M2 NVMe 512GB XPG SPECTRIX S40G RGB',0,512,3500,433000,null,430000,'https://speedlogic.com.co/producto/disco-solido-m2-nvme-512gb-xpg-spectrix-s40g-rgb/',null,'https://clonesyperifericos.com/comprar/ssd-adata-xpg-gammix-s40g-m2-2280-512gb-rgb/','https://speedlogic.com.co/wp-content/uploads/2020/08/13071.png',null);
-INSERT INTO easypc.ssd values(4,'NVMe 1TB XPG GAMMIX S50 5000 x 4400',0,1000,5000,1080000,null,null,'https://speedlogic.com.co/producto/disco-solido-m2-nvme-1tb-xpg-gammix-s50-5000-x-4400/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/09/13093.png','https://ssd.userbenchmark.com/SpeedTest/953258/NVMe-XPG-GAMMIX-S50');
+INSERT INTO woja38qpioj7dt3x.ssd values(1,'120GB PNY CS900',0,120,515,110000,null,null,'https://speedlogic.com.co/producto/disco-solido-ssd-120gb-pny-cs900/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/10/12076.png','https://ssd.userbenchmark.com/SpeedTest/175702/PNY-CS900-120GB-SSD');
+INSERT INTO woja38qpioj7dt3x.ssd values(2,'M2 NVMe 250GB CRUCIAL P2',0,250,2100,259000,null,null,'https://speedlogic.com.co/producto/disco-solido-m2-nvme-250gb-crucial-p2/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/08/13085.png','https://ssd.userbenchmark.com/SpeedTest/1239408/CT250P5SSD8');
+INSERT INTO woja38qpioj7dt3x.ssd values(3,'M2 NVMe 512GB XPG SPECTRIX S40G RGB',0,512,3500,433000,null,430000,'https://speedlogic.com.co/producto/disco-solido-m2-nvme-512gb-xpg-spectrix-s40g-rgb/',null,'https://clonesyperifericos.com/comprar/ssd-adata-xpg-gammix-s40g-m2-2280-512gb-rgb/','https://speedlogic.com.co/wp-content/uploads/2020/08/13071.png',null);
+INSERT INTO woja38qpioj7dt3x.ssd values(4,'NVMe 1TB XPG GAMMIX S50 5000 x 4400',0,1000,5000,1080000,null,null,'https://speedlogic.com.co/producto/disco-solido-m2-nvme-1tb-xpg-gammix-s50-5000-x-4400/',null,null,'https://speedlogic.com.co/wp-content/uploads/2020/09/13093.png','https://ssd.userbenchmark.com/SpeedTest/953258/NVMe-XPG-GAMMIX-S50');
 
-delete from easypc.user;
-insert into easypc.user values(1,"Invitado","$2a$10$P4egRIenJyO5P/XuaLcPHO9IpZ1EssYu1h0zhEyG.1DLvYClJurbm");
+delete from woja38qpioj7dt3x.user;
+insert into woja38qpioj7dt3x.user values(1,"Invitado","$2a$10$P4egRIenJyO5P/XuaLcPHO9IpZ1EssYu1h0zhEyG.1DLvYClJurbm");
 
 INSERT INTO build (id_build,id_user, id_motherboard, id_cpu, id_gpu, id_ram, id_cooling, id_powersupply, id_case, date )
 	values (1,1 , 1 , 1 , 1 , 1 , 1 , 1 , 1, "2020-10-10" );
