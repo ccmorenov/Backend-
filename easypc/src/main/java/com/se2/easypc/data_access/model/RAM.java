@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ram")
+@Table(name = "RAM")
 public class RAM {//RAM class definition
     //RAM attributes
     @Id

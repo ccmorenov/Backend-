@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Column;
 @Entity
-@Table(name="ssd")
+@Table(name="SSD")
 public class SSD {//SSD class definition
 	//SSD attributes
     @Column(name = "id_ssd")
